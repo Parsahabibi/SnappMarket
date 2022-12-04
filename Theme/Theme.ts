@@ -12,6 +12,34 @@ const Theme = createTheme({
         },
       },
     },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: "outlined" },
+          style: {
+            color: "primary.main",
+            backgrond: "white",
+            border: "0.01rem solid rgb(230,235,254)",
+            borderRadius: "1.7rem",
+            padding: "0 1.6rem",
+            height: "3.4rem",
+            fontWeight: "500",
+            fontSize: "1.2rem",
+            "&:hover": {
+              background: "rgb(36,71,250)",
+              color: "white",
+            },
+          },
+        },
+        {
+          props: { variant: "contained" },
+          style: {
+            background: "rgb(7,188,32)",
+            color: "white",
+          },
+        },
+      ],
+    },
   },
   palette: {
     primary: {
@@ -19,10 +47,10 @@ const Theme = createTheme({
       light: "rgb(51,123,240)", //lightblue
     },
     secondary: {
-      main: "rgb(250,15,27)", //green
+      main: "rgb(250,15,27)", //red
     },
     success: {
-      main: "rgb(7,188,32)", //red
+      main: "rgb(7,188,32)", //green
     },
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
