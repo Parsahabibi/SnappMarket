@@ -57,6 +57,7 @@ const Theme = createTheme({
     },
   },
   typography: {
+    fontFamily:"Regular",
     h1: {
       fontSize: "1.9rem",
       fontWeight: "bold",
