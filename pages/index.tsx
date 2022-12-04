@@ -11,13 +11,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
       <Grid>
-        <CssBaseLine />
-        <Grid height="30px" bgcolor="secondary.main">
-          <Typography variant="h2">Hello World</Typography>
-          <Button variant="outlined">افزودن به سبد</Button>
-          <Button variant="contained">نهایی کردن خرید</Button>
-          <Grid color="primary.main"> dffsdafsdafdsa</Grid>
-        </Grid>
+        <CssBaseLine/>
       </Grid>
     </ThemeProvider>
   );

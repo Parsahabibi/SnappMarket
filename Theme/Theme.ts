@@ -65,6 +65,9 @@ const Theme = createTheme({
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
     },
+    warning:{
+      main:"rgb(255 , 111 , 0)"
+    }
   },
   typography: {
     fontFamily:"IranSans",
