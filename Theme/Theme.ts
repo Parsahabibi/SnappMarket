@@ -36,6 +36,13 @@ const Theme = createTheme({
           style: {
             background: "rgb(7,188,32)",
             color: "white",
+            fontSize: "1.8rem",
+            borderRadius: "0.5rem",
+            height: "4.5rem",
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            padding: "0 1rem",
           },
         },
       ],
