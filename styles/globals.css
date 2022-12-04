@@ -1,10 +1,9 @@
 @font-face {
-  font-family: "Regular";
-  src:url("./assets/fonts/IRANSansWeb(FaNum).woff") format("woff");
-  font-weight: normal;
+    font-family: "IranSans";
+    src: url('../assets/fonts/IRANSansWeb(FaNum).woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
-@font-face {
-  font-family: "Bold";
-  src:url("./assets/fonts/IRANSansWeb(FaNum) Bold.woff") format("woff");
-  font-weight: bold;
-}
+
+

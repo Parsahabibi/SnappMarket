@@ -36,6 +36,16 @@ const Theme = createTheme({
           style: {
             background: "rgb(7,188,32)",
             color: "white",
+            fontSize: "1.8rem",
+            borderRadius: "0.5rem",
+            height: "4.5rem",
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            padding: "0 1rem",
+            "&:hover": {
+              background: "rgb(5,139,24)",
+            },
           },
         },
       ],
@@ -57,7 +67,7 @@ const Theme = createTheme({
     },
   },
   typography: {
-    fontFamily:"Regular",
+    fontFamily:"IranSans",
     h1: {
       fontSize: "1.9rem",
       fontWeight: "bold",
