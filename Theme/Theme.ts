@@ -43,6 +43,9 @@ const Theme = createTheme({
             justifyContent: "center",
             width: "100%",
             padding: "0 1rem",
+            "&:hover": {
+              background: "rgb(5,139,24)",
+            },
           },
         },
       ],
@@ -61,6 +64,9 @@ const Theme = createTheme({
     },
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
+    },
+    warning: {
+      main: "rgb(41,41,41)", //recycle top basket color
     },
   },
   typography: {
