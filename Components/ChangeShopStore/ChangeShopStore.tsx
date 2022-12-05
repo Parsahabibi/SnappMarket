@@ -10,7 +10,7 @@ type Props = {};
 
 const ChangeShopStore = (props: Props) => {
   return (
-    <Grid display="flex" justifyContent="center" alignItems="center">
+    <Grid display="flex" justifyContent="center" alignSelf="flex-start">
       <Image
         alt=""
         style={{
@@ -21,19 +21,19 @@ const ChangeShopStore = (props: Props) => {
         }}
         src={Hyperstorelogo}
       />
-      <Typography marginLeft="10px" color="white">
+      <Typography alignSelf="center" marginLeft="10px" color="white">
         خرید از هایپراستار صبا
       </Typography>
       <ButtonBase
         sx={{
           color: "primary.main",
-          padding: "2px",
           bgcolor: "white",
           borderRadius: "15px",
+          height: "30px",
+          alignSelf: "center",
         }}
       >
         <Typography variant="subtitle2" sx={{ fontSize: "0.7rem", mr: "3px" }}>
-          {" "}
           تغییر فروشگاه
         </Typography>
         <KeyboardArrowDownOutlinedIcon />

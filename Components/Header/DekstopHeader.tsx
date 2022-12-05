@@ -8,8 +8,16 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import Typography from "@mui/material/Typography";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ChangeShopStore from "../ChangeShopStore/ChangeShopStore";
+import CategorySelectorButton from "../CategorySelectorButton/CategorySelectorButton";
+import SearchBar from "../SearchBar/SearchBar";
+import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 
 type Props = {};
+
+const styled = {
+  backgroundImage: `url('${BackgroundHeaderImage.src}')`,
+  backgroundSize: "cover",
+};
 
 const DekstopHeader = (props: Props) => {
   return (
@@ -18,9 +26,10 @@ const DekstopHeader = (props: Props) => {
       display="flex"
       padding="20px"
       bgcolor="success.main"
-      height="14rem"
+      height="15rem"
+      style={styled}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Grid
           p="10px"
           borderBottom="0.1rem solid rgba(255,255,255,0.16)"
@@ -42,7 +51,12 @@ const DekstopHeader = (props: Props) => {
           <Grid>
             <Grid mt="20px" display="flex" flexDirection="column">
               <ChangeShopStore />
-              <Typography>hello</Typography>
+              <Grid display="flex" mt="15px">
+                <CategorySelectorButton />
+                <Grid width={{ xs: "15rem", md: "25rem" }}>
+                  <SearchBar />
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
           <Grid
