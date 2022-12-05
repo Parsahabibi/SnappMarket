@@ -15,10 +15,13 @@ const ProfileButtonHeader = (props: Props) => {
         color: "white",
         display: "flex",
         alignItems: "center",
+        ":hover": {
+          color: "rgb(220, 220, 220)",
+        },
       }}
     >
-      <Typography>ahmad </Typography>
       <Person2OutlinedIcon sx={{ ml: "5px" }} />
+      <Typography>ahmad mohtadi</Typography>
     </ButtonBase>
   );
 };

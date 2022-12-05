@@ -93,7 +93,7 @@ const Theme = createTheme({
       color: "rgb(97,100,117)",
     },
     subtitle2: {
-      fontSize: "",
+      fontSize: "0.8rem",
     },
     caption: {
       fontSize: "1.4rem",

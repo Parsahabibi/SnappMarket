@@ -19,6 +19,8 @@ const ShoppingBasketButton = (props: Props) => {
           justifyContent: "space-evenly",
         }}
       >
+        <ShoppingBagOutlinedIcon sx={{ color: "primary.main" }} />
+        <Typography color="primary.main">سبد خرید</Typography>
         <Box
           sx={{
             background: "rgb(242,247,255)",
@@ -34,8 +36,6 @@ const ShoppingBasketButton = (props: Props) => {
         >
           1
         </Box>
-        <Typography color="primary.main">سبد خرید</Typography>
-        <ShoppingBagOutlinedIcon sx={{ color: "primary.main" }} />
       </ButtonBase>
     </Grid>
   );
