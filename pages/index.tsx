@@ -5,6 +5,7 @@ import Theme from "../Theme/Theme";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
+import { dataSlider } from "../Data/DataSlider/DataSlider";
 
 
 
@@ -13,7 +14,9 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine/>
-        <Slider/>
+        {dataSlider.map(item=>(
+          <Slider color={item.color} title={item.title}/>
+        ))}
       </Grid>
     </ThemeProvider>
   );

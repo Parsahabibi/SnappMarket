@@ -20,9 +20,12 @@ import { Container } from '@mui/system';
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
 
-type Props = {}
+type Props = {
+  title:string,
+  color:string
+}
 
-const Slider = (props: Props) => {
+const Slider = ({color,title}: Props) => {
 
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
@@ -44,9 +47,10 @@ const Slider = (props: Props) => {
   useEffect(() => {
     swiperRef.current.swiper.slideTo(page)
   }, [page])
+  console.log(color)
   return (
     <Container>
-      <Grid style={styling} bgcolor={'secondary.main'} color={'common.white'} position={'relative'}>
+      <Grid style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
         {page > 0 ?
           <Grid position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
@@ -59,7 +63,7 @@ const Slider = (props: Props) => {
             virtual
           >
             <SwiperSlide >
-              <Typography height={'400px'} display={'flex'} justifyContent={'center'} alignItems={'center'} >تخفیف ویژه</Typography>
+              <Typography height={'400px'} display={'flex'} justifyContent={'center'} alignItems={'center'} >{title}</Typography>
             </SwiperSlide>
 
             {dataCard.map(slide => (
