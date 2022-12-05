@@ -53,7 +53,7 @@ const DekstopHeader = (props: Props) => {
               <ChangeShopStore />
               <Grid display="flex" mt="15px">
                 <CategorySelectorButton />
-                <Grid width={{ xs: "15rem", md: "25rem" }}>
+                <Grid alignSelf="center" width={{ xs: "15rem", md: "25rem" }}>
                   <SearchBar />
                 </Grid>
               </Grid>
@@ -66,7 +66,7 @@ const DekstopHeader = (props: Props) => {
             justifyContent="flex-start"
             minWidth="300px"
           >
-            <Grid display="flex" flexDirection="column">
+            <Grid display="flex" flexDirection="column" flexWrap="wrap">
               <Grid mb="10px" display="flex" justifyContent="flex-start">
                 <Typography
                   variant="subtitle2"

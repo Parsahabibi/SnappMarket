@@ -1,5 +1,6 @@
-import { TextField, styled } from "@mui/material";
+import { TextField, styled, Button } from "@mui/material";
 import React from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 type Props = {};
 const StyledTextField = styled(TextField)(({ theme }) => ({
@@ -17,7 +18,15 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 }));
 
 const SearchBar = (props: Props) => {
-  return <StyledTextField fullWidth sx={{ alignSelf: "center", mt: "5px" }} />;
+  return (
+    <StyledTextField
+      placeholder="جست و جوی برند یا محصول"
+      fullWidth
+      sx={{ position: "relative", alignSelf: "center", mt: "5px" }}
+    >
+      <Button sx={{ zIndex: "100" }}>hello</Button>
+    </StyledTextField>
+  );
 };
 
 export default SearchBar;
