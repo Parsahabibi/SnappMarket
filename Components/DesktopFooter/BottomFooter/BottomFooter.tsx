@@ -40,7 +40,7 @@ const BottomFooter = (props: Props) => {
                     ))}
                 </ul>
             </Grid>
-            <Grid item xs={3} pr={1} display={'flex'} gap={3} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap'}>   
+            <Grid item xs={3.2}  display={'flex'}  justifyContent={'space-evenly'} alignItems={'center'} gap={1} flexWrap={{xs:'wrap',lg:'nowrap'}}>   
                 {dataLogoFooter.map(item => (
                     <Grid  bgcolor={'common.white'} boxShadow={3} borderRadius={1}>
                         <Image src={item.image} alt={'logo'} width={100} height={100} />
