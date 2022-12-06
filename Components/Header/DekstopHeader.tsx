@@ -12,6 +12,7 @@ import CategorySelectorButton from "../CategorySelectorButton/CategorySelectorBu
 import SearchBar from "../SearchBar/SearchBar";
 import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 import CategoryModal from "../CategoryModal/CategoryModal";
+import AddressAndShopStoreModal from "../Address&ShopStoreModal/AddressAndShopStoreModal";
 
 type Props = {};
 
@@ -41,6 +42,7 @@ const DekstopHeader = (props: Props) => {
             <Grid ml="20px" color="white" width="57px">
               Snap Market!
             </Grid>
+
             <AddressButton />
           </Grid>
           <Grid display="flex" justifyContent="space-evenly">
@@ -94,6 +96,7 @@ const DekstopHeader = (props: Props) => {
           </Grid>
         </Grid>
         <CategoryModal />
+        <AddressAndShopStoreModal />
       </Container>
     </Grid>
   );
