@@ -1,16 +1,16 @@
 import {Box} from "@mui/system";
 import Grid from "@mui/material/Grid";
-import {Typography} from "@mui/material";
+import {Button, Typography} from "@mui/material";
 import Image from "next/image";
 import sample from "../../../assets/Images/image6.jpg"
 
 const SecondarySwiperCard = () => {
 
     return(
-        <Grid border={1}
+        <Grid
               m={"12px"}
               display={"flex"}
-              sx={{backgroundColor:"common.white" , width:"310px" , height:"205px" , borderRadius:"5px" ,flexDirection:"column"}}>
+              sx={{backgroundColor:"common.white" , width:"330px" , height:"220px" , borderRadius:"5px" ,flexDirection:"column"}}>
            <Grid display={"flex"} p={"12px"} width={"100%"} justifyContent={"space-between"}>
                <Typography sx={{fontSize:"14px" , fontWeight:500}}>
                    {"پک آماده مصرف"}
@@ -43,6 +43,7 @@ const SecondarySwiperCard = () => {
                 </Box>
             </Grid>
             <Grid marginY={"5px"}
+                  marginX={"12px"}
                   display={"flex"}
                   alignItems={"center"}
                   width={"100%"}>
@@ -53,12 +54,31 @@ const SecondarySwiperCard = () => {
                     {"با خرید این بسته"}
                 </Typography>
             </Grid>
-            <Grid display={"flex"}>
+            <Grid display={"flex"}
+                  mr={"12px"} mt={1}>
                 <Box bgcolor={"secondary.main"}
                      p={0.1}
-                     sx={{color:"common.white" , fontSize:"14px"}}>
+                     ml={1}
+                     sx={{color:"common.white" , fontSize:"14px" , borderRadius:"3px"}}>
                     {"27%"}
                 </Box>
+                <del style={{fontSize:"14px"}}>
+                    {"22,000"}
+                </del>
+            </Grid>
+            <Grid display={"flex"}
+                  justifyContent={"space-between"}
+                  width={"90%"}
+                  marginX={"12px"}
+                  mt={1}
+                  alignItems={"center"}>
+                <Typography sx={{fontSize:"16px"}}>
+                    {"16,016 تومان"}
+                </Typography>
+                <Button variant={"outlined"}
+                        sx={{height:"32px" , fontSize:"12px" , width:"max-content" , padding:"2px"}}>
+                    {"افزودن"}
+                </Button>
             </Grid>
         </Grid>
     )
