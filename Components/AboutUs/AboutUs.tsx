@@ -6,7 +6,7 @@ type Props = {}
 const AboutUs = (props: Props) => {
     return (
         <Container>
-            <Grid sx={{direction:'rtl',border:'1px solid rgba(163, 163, 163, 0.25)',padding:'30px 15px 30px 10px'}} bgcolor={'common.white'} borderRadius={1} >
+            <Grid item display={{xs:'none',md:'flex'}} flexDirection={'column'} sx={{direction:'rtl',border:'1px solid rgba(163, 163, 163, 0.25)',padding:'30px 15px 30px 10px'}} bgcolor={'common.white'} borderRadius={1} >
                 <Typography variant='h1'sx={{lineHeight:1.5,fontSize:'1.2rem',color:'rgb(117, 117, 117)',fontWeight:'bold'}}>
                     {'سوپرمارکت اینترنتی اسنپ مارکت'}
                 </Typography>
