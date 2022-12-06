@@ -11,6 +11,7 @@ import ChangeShopStore from "../ChangeShopStore/ChangeShopStore";
 import CategorySelectorButton from "../CategorySelectorButton/CategorySelectorButton";
 import SearchBar from "../SearchBar/SearchBar";
 import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
+import CategoryModal from "../CategoryModal/CategoryModal";
 
 type Props = {};
 
@@ -92,6 +93,7 @@ const DekstopHeader = (props: Props) => {
             </Grid>
           </Grid>
         </Grid>
+        <CategoryModal />
       </Container>
     </Grid>
   );

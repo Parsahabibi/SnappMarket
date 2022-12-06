@@ -8,11 +8,14 @@ type Props = {};
 
 const AddressButton = (props: Props) => {
   return (
-    <ButtonBase>
+    <ButtonBase sx={{ ":hover": { color: "rgb(220, 220, 220)" } }}>
       <LocationOnOutlinedIcon
         sx={{ color: "white", width: "20px", height: "20px", ml: "8px" }}
       />
-      <Typography variant="subtitle2" sx={{ color: "white" }}>
+      <Typography
+        sx={{ color: "white", ":hover": { color: "rgb(220, 220, 220)" } }}
+        variant="subtitle2"
+      >
         تهران، دانشگاه تهران، کارگر شمالی، 16 آذر، پارسی تقاطع مهر، خوابگاه 16
         آذر پلاک 23 واحد 22
       </Typography>

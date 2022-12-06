@@ -1,10 +1,9 @@
 import { TextField, styled, Button } from "@mui/material";
 import React from "react";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 type Props = {};
 const StyledTextField = styled(TextField)(({ theme }) => ({
-  height: "40px",
+  height: "45px",
   background: "white",
   borderRadius: "30px",
   "& label": {
@@ -13,7 +12,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
   "& .MuiOutlinedInput-root": {
     borderRadius: "30px",
-    height: "40px",
+    height: "45px",
   },
 }));
 
@@ -23,9 +22,7 @@ const SearchBar = (props: Props) => {
       placeholder="جست و جوی برند یا محصول"
       fullWidth
       sx={{ position: "relative", alignSelf: "center", mt: "5px" }}
-    >
-      <Button sx={{ zIndex: "100" }}>hello</Button>
-    </StyledTextField>
+    ></StyledTextField>
   );
 };
 
