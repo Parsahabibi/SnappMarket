@@ -76,7 +76,7 @@ const SecondarySwiperContainer = () => {
                             </Grid>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Grid display={"flex"} >
+                            <Grid display={"flex"}>
                                 <SecondarySwiperCard/>
                                 <SecondarySwiperCard/>
                                 <SecondarySwiperCard/>

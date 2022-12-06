@@ -11,7 +11,7 @@ const SeeAllCard = () => {
               m={"12px"}
               width={"150px"}
               bgcolor={"common.white"}
-              sx={{borderRadius:"5px"}}
+              sx={{borderRadius:"5px" , cursor:"pointer"}}
               height={"220px"}>
               <Typography sx={{color:"primary.main"}}>
                   {"مشاهده همه"}
