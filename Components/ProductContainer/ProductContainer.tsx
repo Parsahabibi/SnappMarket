@@ -21,28 +21,45 @@ import Link from 'next/link';
 
 // import { Button, Grid, Typography } from '@mui/material';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import CardProductSwiper from '../CardProductSwiper/CardProductSwiper'
-import { dataCard } from '../../../Data/DataCardProductSwiperV1/DataCardProductSwiperV1';
+// import CardProductSwiper from '../CardProductSwiper/CardProductSwiper'
+// import { data } from '../../../Data/dataProductSwiperV1/dataProductSwiperV1';
 import backgroundImage from '../../../assets/Images/image15.png'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+// import React, { useCallback, useEffect, useRef, useState } from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 // import { Container } from '@mui/system';
 
+
+
 interface Props {
 
 }
 
 const ProductContainer = (props: Props) => {
+
+
+    const [page, setPage] = useState(0)
+    const swiperRef = useRef<any>(null)
+
+    const handleNextSlide = useCallback(() => {
+        page === data.length + 7 ? setPage(prev => 0) : setPage(prev => prev + 7)
+    }, [page])
+    const handlePrevSlide = useCallback(() => {
+        page === 0 ? setPage(data.length - 7) : setPage(prev => prev - 7)
+    }, [page])
+    useEffect(() => {
+        swiperRef.current.swiper.slideTo(page)
+    }, [page])
+
     return (
-        <Container sx={{width:"auto"}}>
+        <Container sx={{ width: "auto" }}>
             <Grid sx={{ direction: "rtl" }}>
                 <Grid border={0.05} borderColor={"info.main"}>
                     <Grid container justifyContent={"space-between"} alignItems={"center"} bgcolor={'common.white'}>
@@ -54,43 +71,46 @@ const ProductContainer = (props: Props) => {
                             <KeyboardArrowLeftIcon sx={{ color: "primary.main" }} />
                         </Grid>
                     </Grid>
-                    <Grid sx={{ display: "flex", flexDirection: "row", overflowX: "auto", alignItems: "stretch", justifyContent: "baseline" }} borderTop={0.1} borderColor={"info.main"}>
-                        {data.map(item => (
-                            <Grid key={item.name} sx={{ minHeight: '100%', display: "flex", alignItems: "stretch", justifyContent: "center" }}>
-                                <Card sx={{ width: "19.5rem", borderRadius: '0px' }}>
-                                    <Grid container justifyContent={"center"} pt={2}>
-                                        <Image src={item.image} alt={item.name} width={163} height={163} />
+                    <Swiper slidesPerView={4.7} ref={swiperRef} virtual>
+                        <Grid sx={{ display: "flex", flexDirection: "row", overflowX: "auto", alignItems: "stretch", justifyContent: "baseline" }} borderTop={0.1} borderColor={"info.main"}>
+                            {data.map(item => (
+                                <SwiperSlide key={item.name}>
+                                    <Grid key={item.name} sx={{ minHeight: '100%', display: "flex", alignItems: "stretch", justifyContent: "center" }}>
+                                        <Card sx={{ width: "19.5rem", borderRadius: '0px' }}>
+                                            <Grid container justifyContent={"center"} pt={2}>
+                                                <Image src={item.image} alt={item.name} width={163} height={163} />
+                                            </Grid>
+                                            <CardContent>
+                                                <Grid mb={3}>
+                                                    <Typography>
+                                                        {item.name}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid mb={1.5} container alignItems={"center"}>
+                                                    <Typography variant="body2">
+                                                        {item.description}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid container alignItems={"baseline"}>
+                                                    <Grid ml={1} p={1} container justifyContent={"center"} alignItems={"center"} sx={{ width: 30, height: 30, color: "common.white", borderRadius: "5px", textAlign: "center" }}>
+                                                        {
+                                                            item.Discount <= 10 ? <Typography p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}%</Typography> : <Typography p={0.5} borderRadius={1} bgcolor={"secondary.main"}>{item.Discount}%</Typography>
+                                                        }
+                                                    </Grid>
+                                                    <Grid sx={{ textDecoration: "line-through" }}>{item.oprice}</Grid>
+                                                </Grid>
+                                                <Grid container alignItems={"flex-end"} justifyContent={"space-between"}>
+                                                    <Typography>{item.price}تومان</Typography>
+                                                    <Grid mr={3}>
+                                                        <Button variant='outlined'>افزودن به سبد </Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </CardContent>
+                                        </Card>
                                     </Grid>
-                                    <CardContent>
-                                        <Grid mb={3}>
-                                            <Typography>
-                                                {item.name}
-                                            </Typography>
-                                        </Grid>
-                                        <Grid mb={1.5} container alignItems={"center"}>
-                                            <Typography variant="body2">
-                                                {item.description}
-                                            </Typography>
-                                        </Grid>
-                                        <Grid container alignItems={"baseline"}>
-                                            <Grid ml={1} p={1} container justifyContent={"center"} alignItems={"center"} sx={{ width: 30, height: 30, color: "common.white", borderRadius: "5px", textAlign: "center" }}>
-                                                {
-                                                    item.Discount <= 10 ? <Typography p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}%</Typography> : <Typography p={0.5} borderRadius={1} bgcolor={"secondary.main"}>{item.Discount}%</Typography>
-                                                }
-                                            </Grid>
-                                            <Grid sx={{ textDecoration: "line-through" }}>{item.oprice}</Grid>
-                                        </Grid>
-                                        <Grid container alignItems={"flex-end"} justifyContent={"space-between"}>
-                                            <Typography>{item.price}تومان</Typography>
-                                            <Grid mr={3}>
-                                                <Button variant='outlined'>افزودن به سبد </Button>
-                                            </Grid>
-                                        </Grid>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        ))}
-                        {/* <Grid >
+                                </SwiperSlide>
+                            ))}
+                            {/* <Grid >
                             <Card>
                                 <Grid sx={{ minHeight: '100%', width: "10rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                     <Link href={"www.google.com"}>
@@ -102,23 +122,24 @@ const ProductContainer = (props: Props) => {
                                 </Grid>
                             </Card>
                         </Grid> */}
-                        <Grid >
-                            <Card>
-                                <Grid>
-                                </Grid>
-                                <Grid>
-                                    <Link href={"www.google.com"}>
-                                        <Typography>مشاهده همه</Typography>
-                                    </Link>
-                                </Grid>
-                                <Grid>
-                                </Grid>
-                            </Card>
+                            <Grid >
+                                <Card>
+                                    <Grid>
+                                    </Grid>
+                                    <Grid>
+                                        <Link href={"www.google.com"}>
+                                            <Typography>مشاهده همه</Typography>
+                                        </Link>
+                                    </Grid>
+                                    <Grid>
+                                    </Grid>
+                                </Card>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Swiper>
                 </Grid>
             </Grid>
-        </Container>
+        </Container >
     )
 }
 
