@@ -9,7 +9,8 @@ type Props = {}
 
 const DesktopFooter = (props: Props) => {
     return (
-        <Container>
+       <Grid display={{xs:'none',md:'flex'}}>
+         <Container>
             <SendGoodsFooter />
             <ApplicationFooter />
             <BottomFooter />
@@ -21,6 +22,7 @@ const DesktopFooter = (props: Props) => {
                 </Typography>
             </Grid>
         </Container>
+       </Grid>
     )
 }
 
