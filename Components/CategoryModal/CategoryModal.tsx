@@ -4,6 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
 type Props = {};
+const style = {};
 
 const CategoryModal = (props: Props) => {
   return (
@@ -22,7 +23,132 @@ const CategoryModal = (props: Props) => {
       <Grid
         sx={{
           pr: "0.5rem",
-          width: "237px",
+          width: "300px",
+          height: "70px",
+          ml: "20px",
+          cursor: "pointer",
+        }}
+        color="primary.main"
+      >
+        <List sx={{ padding: "0" }}>
+          <ListItem sx={{ padding: "0", margin: "0px" }}>
+            * آرایشی و بهداشتی
+          </ListItem>
+          <ListItem
+            sx={{
+              color: "rgb(175,175,175)",
+              padding: "10px 10px 0 0",
+              margin: "0px",
+            }}
+          >
+            محصولات آرایشی
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        sx={{
+          pr: "0.5rem",
+          width: "300px",
+          height: "70px",
+          ml: "20px",
+          cursor: "pointer",
+        }}
+        color="primary.main"
+      >
+        <List sx={{ padding: "0" }}>
+          <ListItem sx={{ padding: "0", margin: "0px" }}>
+            * آرایشی و بهداشتی
+          </ListItem>
+          <ListItem
+            sx={{
+              color: "rgb(175,175,175)",
+              padding: "10px 10px 0 0",
+              margin: "0px",
+            }}
+          >
+            محصولات آرایشی
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        sx={{
+          pr: "0.5rem",
+          width: "300px",
+          height: "70px",
+          ml: "20px",
+          cursor: "pointer",
+        }}
+        color="primary.main"
+      >
+        <List sx={{ padding: "0" }}>
+          <ListItem sx={{ padding: "0", margin: "0px" }}>
+            * آرایشی و بهداشتی
+          </ListItem>
+          <ListItem
+            sx={{
+              color: "rgb(175,175,175)",
+              padding: "10px 10px 0 0",
+              margin: "0px",
+            }}
+          >
+            محصولات آرایشی
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        sx={{
+          pr: "0.5rem",
+          width: "300px",
+          height: "70px",
+          ml: "20px",
+          cursor: "pointer",
+        }}
+        color="primary.main"
+      >
+        <List sx={{ padding: "0" }}>
+          <ListItem sx={{ padding: "0", margin: "0px" }}>
+            * آرایشی و بهداشتی
+          </ListItem>
+          <ListItem
+            sx={{
+              color: "rgb(175,175,175)",
+              padding: "10px 10px 0 0",
+              margin: "0px",
+            }}
+          >
+            محصولات آرایشی
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        sx={{
+          pr: "0.5rem",
+          width: "300px",
+          height: "70px",
+          ml: "20px",
+          cursor: "pointer",
+        }}
+        color="primary.main"
+      >
+        <List sx={{ padding: "0" }}>
+          <ListItem sx={{ padding: "0", margin: "0px" }}>
+            * آرایشی و بهداشتی
+          </ListItem>
+          <ListItem
+            sx={{
+              color: "rgb(175,175,175)",
+              padding: "10px 10px 0 0",
+              margin: "0px",
+            }}
+          >
+            محصولات آرایشی
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        sx={{
+          pr: "0.5rem",
+          width: "300px",
           height: "70px",
           ml: "20px",
           cursor: "pointer",

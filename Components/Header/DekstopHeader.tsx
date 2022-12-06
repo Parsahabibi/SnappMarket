@@ -13,6 +13,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 import CategoryModal from "../CategoryModal/CategoryModal";
 import AddressAndShopStoreModal from "../Address&ShopStoreModal/AddressAndShopStoreModal";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
 type Props = {};
 
@@ -96,7 +97,12 @@ const DekstopHeader = (props: Props) => {
           </Grid>
         </Grid>
         <CategoryModal />
-        <AddressAndShopStoreModal />
+        <Grid mt="20px">
+          <AddressAndShopStoreModal />
+        </Grid>
+        <Grid mt="20px">
+          <ProfileModal />
+        </Grid>
       </Container>
     </Grid>
   );
