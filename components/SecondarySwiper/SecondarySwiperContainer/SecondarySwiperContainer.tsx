@@ -1,4 +1,4 @@
-import {Box, padding} from "@mui/system";
+import {Box} from "@mui/system";
 import SecondarySwiperCard from "../SecondarySwiperCard/SecondarySwiperCard";
 import Grid from "@mui/material/Grid";
 import {Typography} from "@mui/material";

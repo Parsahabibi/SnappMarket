@@ -11,7 +11,6 @@ export default function Home() {
         <ThemeProvider theme={Theme}>
             <Grid>
                 <CssBaseLine/>
-                <SecondarySwiperContainer/>
             </Grid>
         </ThemeProvider>
     );
