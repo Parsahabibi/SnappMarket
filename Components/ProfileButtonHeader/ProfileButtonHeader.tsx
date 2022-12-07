@@ -3,9 +3,11 @@ import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import { Grid, Typography } from "@mui/material";
 import ButtonBase from "@mui/material/ButtonBase";
 
-type Props = {};
+type ProfileButtonProps = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const ProfileButtonHeader = (props: Props) => {
+const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
   return (
     <ButtonBase
       sx={{
@@ -19,6 +21,7 @@ const ProfileButtonHeader = (props: Props) => {
           color: "rgb(220, 220, 220)",
         },
       }}
+      onClick={onClick}
     >
       <Person2OutlinedIcon sx={{ ml: "5px" }} />
       <Typography>ahmad mohtadi</Typography>

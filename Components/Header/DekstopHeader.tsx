@@ -16,6 +16,7 @@ import AddressAndShopStoreModal from "../Address&ShopStoreModal/AddressAndShopSt
 import ProfileModal from "../ProfileModal/ProfileModal";
 import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
 import HeaderAddressLayout from "../HeaderAddressLayout/HeaderAddressLayout";
+import HeaderProfileLayout from "../HeaderProfileLAyout/HeaderProfileLayout";
 
 type Props = {};
 
@@ -48,7 +49,7 @@ const DekstopHeader = (props: Props) => {
             <HeaderAddressLayout />
           </Grid>
           <Grid display="flex" justifyContent="space-evenly">
-            <ProfileButtonHeader />
+            <HeaderProfileLayout />
             <ShoppingBasketButton />
           </Grid>
         </Grid>
