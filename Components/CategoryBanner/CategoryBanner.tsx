@@ -8,9 +8,8 @@ type Props = {}
 const CategoryBanner = (props: Props) => {
   return (
     <Container>
-      <Grid display={'flex'} justifyContent={'space-between'}>
-        {dataCategoryBannerCard.map(item => (<CategoryBannerCard  image={item.image} title={item.title} priceReduction={item.priceReduction} />))}
-
+      <Grid display={'flex'} justifyContent={'space-between'} gap={{md:'10px',lg:'0px'}} >
+        {dataCategoryBannerCard.map(item => (<CategoryBannerCard key={item.id} image={item.image} title={item.title} priceReduction={item.priceReduction} />))}
       </Grid>
     </Container>
   )
