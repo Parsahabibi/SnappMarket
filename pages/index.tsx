@@ -5,14 +5,14 @@ import Theme from "../Theme/Theme";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import AboutUs from "../Components/AboutUs/AboutUs";
+import SecondarySwiperContainer from "../components/SecondarySwiper/SecondarySwiperContainer/SecondarySwiperContainer";
 
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-        <AboutUs/>
+          <SecondarySwiperContainer/>
       </Grid>
     </ThemeProvider>
   );
