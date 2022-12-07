@@ -17,13 +17,16 @@ const CategoryModal = ({ onClose, open }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       onClose={onClose}
+      BackdropComponent={Backdrop}
     >
       <Grid
         sx={{
           bgcolor: "white",
-          width: "calc(100% - 3rem) !important",
+          width: "calc(100% - 25rem) !important",
           position: "relative",
-          right: 2,
+          top: 225,
+          right: 200,
+          left: 100,
           padding: "1.5rem 2rem 0.6rem",
           height: "auto",
           display: "flex",
