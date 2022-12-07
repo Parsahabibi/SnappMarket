@@ -3,6 +3,7 @@ import CssBaseLine from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
 import DesktopHeader from "../Components/Header/DekstopHeader";
+import HeaderCategoryLayout from "../Components/HeaderCategoryLayout/HeaderCategoryLayout";
 
 export default function Home() {
   return (

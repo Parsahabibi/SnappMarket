@@ -3,11 +3,14 @@ import ButtonBase from "@mui/material/ButtonBase";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import { Typography } from "@mui/material";
 
-type Props = {};
+type CategorySelectorProps = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const CategorySelectorButton = (props: Props) => {
+const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
   return (
     <ButtonBase
+      onClick={onClick}
       sx={{
         borderRadius: "10px",
         width: "7rem",

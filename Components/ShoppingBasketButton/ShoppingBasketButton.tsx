@@ -1,7 +1,8 @@
 import React from "react";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import Grid from "@mui/material/Grid";
-import { ButtonBase, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import ButtonBase from "@mui/material/ButtonBase";
 import { Box } from "@mui/system";
 
 type Props = {};

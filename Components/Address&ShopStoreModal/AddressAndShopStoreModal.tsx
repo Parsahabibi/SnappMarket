@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
@@ -10,6 +9,8 @@ import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 import BackgroundHeaderImageSecond from "../../assets/Images/backgroundSecond.png";
 import Image from "next/image";
 import Hyperstorelogo from "../../assets/Images/hyperlogo.jpg";
+import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
+import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 
 type Props = {};
 const styled2 = {
@@ -59,7 +60,9 @@ const AddressAndShopStoreModal = (props: Props) => {
                 انتخاب آدرس تحویل
               </Typography>
             </Grid>
-            <KeyboardArrowDownOutlinedIcon />
+            <ClearOutlinedIcon
+              sx={{ color: "rgb(125,125,125)", cursor: "pointer" }}
+            />
           </Grid>
           <Grid
             sx={{
@@ -69,13 +72,27 @@ const AddressAndShopStoreModal = (props: Props) => {
               alignItems: "center",
               padding: "15px",
               borderRadius: "10px",
-              mt: "10px",
+              mt: "15px",
             }}
           >
-            <Typography variant="subtitle2">
-              تهران، دانشگاه تهران، کارگر شمالی، 16 آذر، پارسی تقاطع مهر،
-              خوابگاه 16 آذر پلاک 23 واحد 22
-            </Typography>
+            <Grid display="flex" alignItems="center">
+              <DoneOutlinedIcon
+                sx={{
+                  bgcolor: "primary.main",
+                  alignSelf: "center",
+                  borderRadius: "15px",
+                  color: "white",
+                  ml: "10px",
+                  width: "20px",
+                  height: "20px",
+                }}
+              />
+              <Typography variant="subtitle2">
+                تهران، دانشگاه تهران، کارگر شمالی، 16 آذر، پارسی تقاطع مهر،
+                خوابگاه 16 آذر پلاک 23 واحد 22
+              </Typography>
+            </Grid>
+
             <Grid sx={{ display: "flex", alignSelf: "center" }}>
               <ModeEditOutlineOutlinedIcon
                 sx={{

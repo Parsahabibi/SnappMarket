@@ -14,6 +14,7 @@ import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 import CategoryModal from "../CategoryModal/CategoryModal";
 import AddressAndShopStoreModal from "../Address&ShopStoreModal/AddressAndShopStoreModal";
 import ProfileModal from "../ProfileModal/ProfileModal";
+import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
 
 type Props = {};
 
@@ -56,7 +57,7 @@ const DekstopHeader = (props: Props) => {
             <Grid mt="20px" display="flex" flexDirection="column">
               <ChangeShopStore />
               <Grid display="flex" mt="15px">
-                <CategorySelectorButton />
+                <HeaderCategoryLayout />
                 <Grid alignSelf="center" width={{ xs: "15rem", md: "25rem" }}>
                   <SearchBar />
                 </Grid>
