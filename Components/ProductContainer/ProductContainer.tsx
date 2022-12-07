@@ -16,7 +16,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 import Theme from "../../Theme/Theme"
 import data from "./DataProductContainer"
-import { Container } from '@mui/system';
+// import { Container } from '@mui/system';
 import Link from 'next/link';
 
 // import { Button, Grid, Typography } from '@mui/material';
@@ -29,12 +29,13 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 // import React, { useCallback, useEffect, useRef, useState } from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// import { Container } from '@mui/system';
+import { Container } from '@mui/system';
 
 
 
@@ -59,9 +60,8 @@ const ProductContainer = (props: Props) => {
     }, [page])
 
     return (
-        <Container sx={{ width: "auto" }}>
-            <Grid sx={{ direction: "rtl" }}>
-                <Grid border={0.05} borderColor={"info.main"}>
+        <Container>
+                <Grid border={0.05} borderColor={"info.main"} width={"auto"} sx={{ direction: "rtl" }}>
                     <Grid container justifyContent={"space-between"} alignItems={"center"} bgcolor={'common.white'}>
                         <Grid pr={3}>
                             <Typography borderBottom={5} borderColor={"primary.main"} color="common.black" variant='subtitle1'>لبنیات</Typography>
@@ -71,14 +71,26 @@ const ProductContainer = (props: Props) => {
                             <KeyboardArrowLeftIcon sx={{ color: "primary.main" }} />
                         </Grid>
                     </Grid>
-                    <Swiper slidesPerView={4.7} ref={swiperRef} virtual>
-                        <Grid sx={{ display: "flex", flexDirection: "row", overflowX: "auto", alignItems: "stretch", justifyContent: "baseline" }} borderTop={0.1} borderColor={"info.main"}>
-                            {data.map(item => (
-                                <SwiperSlide key={item.name}>
-                                    <Grid key={item.name} sx={{ minHeight: '100%', display: "flex", alignItems: "stretch", justifyContent: "center" }}>
-                                        <Card sx={{ width: "19.5rem", borderRadius: '0px' }}>
+                    <Grid borderTop={0.1} borderColor={"info.main"}>
+                        <Swiper
+                            slidesPerView={3.75}
+                            ref={swiperRef}
+                        >
+                            {page > 0 ?
+                                <Grid position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
+                                    <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
+                                </Grid>
+                                : ''}
+                            <Grid container justifyContent={"center"} alignItems={"center"}>
+                                {data.map(item => (
+                                    <SwiperSlide key={item.name}>
+                                        <Card sx={{ borderRadius: '0px', height: "25rem" }}>
                                             <Grid container justifyContent={"center"} pt={2}>
-                                                <Image src={item.image} alt={item.name} width={163} height={163} />
+                                                <Link href={"/"}>
+                                                    <Grid>
+                                                        <Image src={item.image} alt={item.name} width={163} height={163} />
+                                                    </Grid>
+                                                </Link>
                                             </Grid>
                                             <CardContent>
                                                 <Grid mb={3}>
@@ -94,7 +106,7 @@ const ProductContainer = (props: Props) => {
                                                 <Grid container alignItems={"baseline"}>
                                                     <Grid ml={1} p={1} container justifyContent={"center"} alignItems={"center"} sx={{ width: 30, height: 30, color: "common.white", borderRadius: "5px", textAlign: "center" }}>
                                                         {
-                                                            item.Discount <= 10 ? <Typography p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}%</Typography> : <Typography p={0.5} borderRadius={1} bgcolor={"secondary.main"}>{item.Discount}%</Typography>
+                                                            item.Discount <= 10 ? <Typography p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}%</Typography> : <Typography p={0.5} borderRadius={1} bgcolor={"secondary.main"}>{item.Discount}%</Typography>//null??
                                                         }
                                                     </Grid>
                                                     <Grid sx={{ textDecoration: "line-through" }}>{item.oprice}</Grid>
@@ -107,38 +119,41 @@ const ProductContainer = (props: Props) => {
                                                 </Grid>
                                             </CardContent>
                                         </Card>
-                                    </Grid>
-                                </SwiperSlide>
-                            ))}
-                            {/* <Grid >
-                            <Card>
-                                <Grid sx={{ minHeight: '100%', width: "10rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                    <Link href={"www.google.com"}>
-                                        <Grid sx={{display:"flex"}}>
-                                            <Typography textAlign={'center'}>مشاهده همه</Typography>
-                                            <KeyboardArrowLeftIcon sx={{ color: "primary.main" }} />
-                                        </Grid>
-                                    </Link>
-                                </Grid>
-                            </Card>
-                        </Grid> */}
-                            <Grid >
-                                <Card>
-                                    <Grid>
-                                    </Grid>
-                                    <Grid>
-                                        <Link href={"www.google.com"}>
-                                            <Typography>مشاهده همه</Typography>
-                                        </Link>
-                                    </Grid>
-                                    <Grid>
+                                    </SwiperSlide>
+                                ))}
+                            </Grid>
+                            <SwiperSlide>
+                                <Card sx={{ display: "flex", alignItems: "center", height: "400px", width: "auto" }}>
+                                    <Grid container justifyContent={"center"} alignItems={"center"}>
+                                        {/* <Grid>
+                                            {
+                                                data.map(item=>
+                                                    <Grid key={item.name} >
+                                                        ({item.id <4 ? <Image src={item.image} alt={item.name} width={163} height={163} /> : ""})
+                                                    </Grid>
+                                                    )
+                                            }
+                                        </Grid> */}
+                                        <CardContent>
+                                            <Link href={"www.google.com"}>
+                                                <Grid container justifyContent={"center"} alignItems={"center"}>
+                                                    مشاهده همه
+                                                    <KeyboardArrowLeftIcon sx={{ color: "primary.main" }} />
+                                                </Grid>
+                                            </Link>
+                                        </CardContent>
                                     </Grid>
                                 </Card>
-                            </Grid>
-                        </Grid>
-                    </Swiper>
+                            </SwiperSlide>
+                            {page < 2 ?
+                                <Grid position={'absolute'} top={'45%'} left={15} zIndex={99} display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} >
+                                    <Button sx={{ color: 'common.white' }} onClick={handleNextSlide}><ArrowBackIosIcon /></Button>
+                                </Grid>
+                                : ''}
+
+                        </Swiper>
+                    </Grid>
                 </Grid>
-            </Grid>
         </Container >
     )
 }
