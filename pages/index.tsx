@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Header from "../Components/MobileMenuHeader/Header";
 
 
 
@@ -12,6 +13,7 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine/>
+        <Header/>
       </Grid>
     </ThemeProvider>
   );
