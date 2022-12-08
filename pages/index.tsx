@@ -4,7 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import DesktopFooter from "../Components/DesktopFooter/DesktopFooter";
+import ProductContainer from "../Components/ProductContainer/ProductContainer";
 
 
 
@@ -13,7 +13,7 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine/>
-        <DesktopFooter/>
+        <ProductContainer/>
       </Grid>
     </ThemeProvider>
   );
