@@ -46,53 +46,65 @@ const SecondarySwiperContainer = () => {
     }
 
     return (
-       <Container>
-           <Grid display={"flex"} marginY={3} paddingY={"24px"} paddingX={"16px"} flexDirection={"column"} width={"100%"}
-                 sx={{backgroundColor: "primary.main" , borderRadius:"15px"}}>
-               <Grid display={"flex"}
-                     alignItems={"center"}
-                     width={"90%"}
-                     mr={4}
-                     marginY={"12px"}
-                     pr={"20px"}
-                     sx={{color: "common.white"}}
-                     justifyContent={"space-between"}>
-                   <Typography>
-                       {"خرید بیشتر، پرداخت کمتر"}
-                   </Typography>
-                   <ArrowBackIosNewIcon sx={{cursor: "pointer", fontSize: "14px"}}/>
-               </Grid>
-               <Grid display={"flex"} alignItems={"center"}>
-                   <Box sx={RightSliderButton}>
-                       <ArrowForwardIosIcon sx={{color: "common.white", cursor: "pointer", fontSize: "14px"}}/>
-                   </Box>
+        <Container>
+            <Grid display={"flex"} marginY={3} paddingY={"24px"} paddingX={"16px"} flexDirection={"column"}
+                  width={"100%"}
+                  sx={{backgroundColor: "primary.main", borderRadius: "15px"}}>
+                <Grid display={"flex"}
+                      alignItems={"center"}
+                      width={"90%"}
+                      mr={4}
+                      marginY={"12px"}
+                      pr={"20px"}
+                      sx={{color: "common.white"}}
+                      justifyContent={"space-between"}>
+                    <Typography>
+                        {"خرید بیشتر، پرداخت کمتر"}
+                    </Typography>
+                    <ArrowBackIosNewIcon sx={{cursor: "pointer", fontSize: "14px"}}/>
+                </Grid>
+                <Grid display={"flex"} alignItems={"center"}>
+                    {/*
+                    <Box sx={RightSliderButton}>
+                        <ArrowForwardIosIcon sx={{color: "common.white", cursor: "pointer", fontSize: "14px"}}/>
+                    </Box>
+                    */}
 
-                   <Swiper slidesPerView={0.9}>
-                       <Grid display={"flex"}>
-                           <SwiperSlide>
-                               <Grid display={"flex"}>
-                                   <SecondarySwiperCard/>
-                                   <SecondarySwiperCard/>
-                                   <SecondarySwiperCard/>
-                                   <SecondarySwiperCard/>
-                               </Grid>
-                           </SwiperSlide>
-                           <SwiperSlide>
-                               <Grid display={"flex"}>
-                                   <SecondarySwiperCard/>
-                                   <SecondarySwiperCard/>
-                                   <SecondarySwiperCard/>
-                                   <SeeAllCard/>
-                               </Grid>
-                           </SwiperSlide>
-                       </Grid>
-                   </Swiper>
-                   <Box sx={LeftSliderButton}>
-                       <ArrowBackIosNewIcon sx={{color: "common.white", cursor: "pointer", fontSize: "14px"}}/>
-                   </Box>
-               </Grid>
-           </Grid>
-       </Container>
+                    <Swiper breakpoints={{
+                        720: {
+                            slidesPerView: 0.1
+                        },
+                        900: {
+                            slidesPerView: 0.7
+                        }
+                    }}>
+                        <Grid display={"flex"}>
+                            <SwiperSlide>
+                                <Grid display={"flex"}>
+                                    <SecondarySwiperCard/>
+                                    <SecondarySwiperCard/>
+                                    <SecondarySwiperCard/>
+                                    <SecondarySwiperCard/>
+                                </Grid>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Grid display={"flex"}>
+                                    <SecondarySwiperCard/>
+                                    <SecondarySwiperCard/>
+                                    <SecondarySwiperCard/>
+                                    <SeeAllCard/>
+                                </Grid>
+                            </SwiperSlide>
+                        </Grid>
+                    </Swiper>
+                    {/*
+                    <Box sx={LeftSliderButton}>
+                        <ArrowBackIosNewIcon sx={{color: "common.white", cursor: "pointer", fontSize: "14px"}}/>
+                    </Box>
+                    */}
+                </Grid>
+            </Grid>
+        </Container>
     )
 }
 
