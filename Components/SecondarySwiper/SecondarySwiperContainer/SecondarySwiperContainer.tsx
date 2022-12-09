@@ -67,7 +67,7 @@ const SecondarySwiperContainer = () => {
                        <ArrowForwardIosIcon sx={{color: "common.white", cursor: "pointer", fontSize: "14px"}}/>
                    </Box>
 
-                   <Swiper slidesPerView={1.1}>
+                   <Swiper slidesPerView={0.9}>
                        <Grid display={"flex"}>
                            <SwiperSlide>
                                <Grid display={"flex"}>
