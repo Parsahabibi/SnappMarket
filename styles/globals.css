@@ -1,11 +1,9 @@
 @font-face {
-    font-family: "IranSans";
-    src: url('../assets/fonts/IRANSansWeb(FaNum).woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "IranSans";
+  src: url("../assets/fonts/IRANSansWeb(FaNum).woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
-body{
-    direction: rtl;
+body {
+  direction: rtl;
 }
