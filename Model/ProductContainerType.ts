@@ -4,7 +4,7 @@ interface data{
     image:any,
     name:string,
     description:string,
-    Discount:Number,
+    Discount:number,
     oprice?:string,
     price:string
 }
