@@ -16,7 +16,7 @@ const SecondarySwiperCard = () => {
                    {"پک آماده مصرف"}
                </Typography>
                <Typography sx={{fontSize:"12px" , fontWeight:400 , cursor:"pointer" , color:"primary.main"}}>
-                   {"مشاهده همه"}
+                   {"مشاهده کالاها"}
                </Typography>
            </Grid>
             <Grid marginY={"3px"} display={"flex"} position={"relative"} width={"100%"}>
