@@ -9,3 +9,8 @@ interface data{
     price:string
 }
 export default data;
+
+export interface image{
+    id:number ,
+    image:string|any
+}
