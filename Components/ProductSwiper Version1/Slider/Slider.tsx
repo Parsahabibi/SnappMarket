@@ -21,11 +21,11 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 
 
 type Props = {
-  title:string,
-  color:string
+  title: string,
+  color: string
 }
 
-const Slider = ({color,title}: Props) => {
+const Slider = ({ color, title }: Props) => {
 
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
@@ -52,13 +52,29 @@ const Slider = ({color,title}: Props) => {
     <Container>
       <Grid style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
         {page > 0 ?
-          <Grid  boxShadow={5} position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
+          <Grid boxShadow={5} position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
           </Grid>
           : ''}
         <Grid display={'flex'} justifyContent={'space-between'} >
           <Swiper
-            slidesPerView={4.7}
+            breakpoints={{
+              720: {
+                slidesPerView: 3
+              },
+              900: {
+                slidesPerView: 3.5
+              },
+              1024: {
+                slidesPerView: 4
+              },
+              1200: {
+                slidesPerView: 4.8
+              },
+              1440: {
+                slidesPerView: 4.8
+              },
+            }}
             ref={swiperRef}
             virtual
           >
@@ -78,7 +94,7 @@ const Slider = ({color,title}: Props) => {
 
           </Swiper>
           {page < 2 ?
-            <Grid position={'absolute'} top={'45%'} left={15} zIndex={99} display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'}boxShadow={5} >
+            <Grid position={'absolute'} top={'45%'} left={15} zIndex={99} display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} boxShadow={5} >
               <Button sx={{ color: 'common.white' }} onClick={handleNextSlide}><ArrowBackIosIcon /></Button>
             </Grid>
             : ''}
