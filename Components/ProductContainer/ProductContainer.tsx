@@ -61,7 +61,7 @@ const ProductContainer = (props: Props) => {
 
     return (
         <Container>
-                <Grid border={0.05} borderColor={"info.main"} width={"auto"} sx={{ direction: "rtl" }}>
+                <Grid border={0.5} borderColor={"info.main"} width={"auto"} sx={{ direction: "rtl" , borderRadius:"5px" }}>
                     <Grid container justifyContent={"space-between"} alignItems={"center"} bgcolor={'common.white'}>
                         <Grid pr={3}>
                             <Typography borderBottom={5} borderColor={"primary.main"} color="common.black" variant='subtitle1'>لبنیات</Typography>

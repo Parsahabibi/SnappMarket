@@ -20,9 +20,12 @@ import { Container } from '@mui/system';
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
 
-type Props = {}
+type Props = {
+  title:String,
+  color:String
+}
 
-const Slider = (props: Props) => {
+const Slider = ({title , color}: Props) => {
 
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
@@ -46,7 +49,7 @@ const Slider = (props: Props) => {
   }, [page])
   return (
     <Container>
-      <Grid style={styling} bgcolor={'secondary.main'} color={'common.white'} position={'relative'}>
+      <Grid marginY={3} style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
         {page > 0 ?
           <Grid position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
@@ -59,7 +62,7 @@ const Slider = (props: Props) => {
             virtual
           >
             <SwiperSlide >
-              <Typography height={'400px'} display={'flex'} justifyContent={'center'} alignItems={'center'} >تخفیف ویژه</Typography>
+              <Typography height={'400px'} display={'flex'} justifyContent={'center'} alignItems={'center'} >{title}</Typography>
             </SwiperSlide>
 
             {dataCard.map(slide => (
@@ -69,7 +72,7 @@ const Slider = (props: Props) => {
             ))}
 
             <SwiperSlide >
-              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'380px'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'380px'} display={'flex'} sx={{ borderRadius: '5px' , cursor:"pointer" }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
             </SwiperSlide>
 
           </Swiper>
