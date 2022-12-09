@@ -3,7 +3,7 @@ import React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Modal from "@mui/material/Modal";
-import Backdrop from "@mui/material/Backdrop";
+import { Container } from "@mui/material";
 
 type Props = {
   open: boolean;
@@ -17,173 +17,45 @@ const CategoryModal = ({ onClose, open }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       onClose={onClose}
-      BackdropComponent={Backdrop}
+      sx={{ position: "absolute", top: 225 }}
     >
-      <Grid
-        sx={{
-          bgcolor: "white",
-          width: "calc(100% - 25rem) !important",
-          position: "relative",
-          top: 225,
-          right: 200,
-          left: 100,
-          padding: "1.5rem 2rem 0.6rem",
-          height: "auto",
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
+      <Container>
         <Grid
           sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
+            bgcolor: "white",
+            padding: "1.5rem 2rem 0.6rem",
+            height: "auto",
+            display: "flex",
+            flexWrap: "wrap",
           }}
-          color="primary.main"
         >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
+          <Grid
+            sx={{
+              pr: "0.5rem",
+              width: "300px",
+              height: "70px",
+              ml: "20px",
+              cursor: "pointer",
+            }}
+            color="primary.main"
+          >
+            <List sx={{ padding: "0" }}>
+              <ListItem sx={{ padding: "0", margin: "0px" }}>
+                * آرایشی و بهداشتی
+              </ListItem>
+              <ListItem
+                sx={{
+                  color: "rgb(175,175,175)",
+                  padding: "10px 10px 0 0",
+                  margin: "0px",
+                }}
+              >
+                محصولات آرایشی
+              </ListItem>
+            </List>
+          </Grid>
         </Grid>
-        <Grid
-          sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
-          }}
-          color="primary.main"
-        >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid
-          sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
-          }}
-          color="primary.main"
-        >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid
-          sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
-          }}
-          color="primary.main"
-        >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid
-          sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
-          }}
-          color="primary.main"
-        >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid
-          sx={{
-            pr: "0.5rem",
-            width: "300px",
-            height: "70px",
-            ml: "20px",
-            cursor: "pointer",
-          }}
-          color="primary.main"
-        >
-          <List sx={{ padding: "0" }}>
-            <ListItem sx={{ padding: "0", margin: "0px" }}>
-              * آرایشی و بهداشتی
-            </ListItem>
-            <ListItem
-              sx={{
-                color: "rgb(175,175,175)",
-                padding: "10px 10px 0 0",
-                margin: "0px",
-              }}
-            >
-              محصولات آرایشی
-            </ListItem>
-          </List>
-        </Grid>
-      </Grid>
+      </Container>
     </Modal>
   );
 };

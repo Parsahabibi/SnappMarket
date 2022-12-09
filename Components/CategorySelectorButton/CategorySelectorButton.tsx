@@ -18,6 +18,7 @@ const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
         bgcolor: "white",
         display: "flex",
         justifyContent: "center",
+        position: "relative",
         p: "5px",
         mt: "10px",
         ml: "20px",

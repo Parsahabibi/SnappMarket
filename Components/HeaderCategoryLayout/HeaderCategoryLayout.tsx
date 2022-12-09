@@ -11,7 +11,7 @@ const HeaderCategoryLayout = (props: Props) => {
   const handleModalClose = () => setOpen(false);
 
   return (
-    <Grid position="relative">
+    <Grid>
       <CategorySelectorButton onClick={handleModalOpen} />
       <CategoryModal onClose={handleModalClose} open={open} />
     </Grid>
