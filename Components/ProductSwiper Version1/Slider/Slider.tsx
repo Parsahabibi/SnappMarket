@@ -57,7 +57,23 @@ const Slider = ({title , color}: Props) => {
           : ''}
         <Grid display={'flex'} justifyContent={'space-between'} >
           <Swiper
-            slidesPerView={4.7}
+              breakpoints={{
+                720: {
+                  slidesPerView: 3
+                },
+                900: {
+                  slidesPerView: 3.5
+                },
+                1024: {
+                  slidesPerView: 4
+                },
+                1200: {
+                  slidesPerView: 4.8
+                },
+                1440: {
+                  slidesPerView: 4.8
+                },
+              }}
             ref={swiperRef}
             virtual
           >
