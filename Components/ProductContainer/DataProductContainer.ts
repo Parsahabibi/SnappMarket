@@ -8,7 +8,7 @@ import mastharaz from "../../assets/Images/mastharaz.jpg"
 import mastseven from "../../assets/Images/mastseven.jpg"
 import chedarcheese from "../../assets/Images/chedarcheese.jpg"
 
-import data, { image } from "../../Model/ProductContainerType"
+import data , {image} from "../../Model/ProductContainerType"
 const data:data[] = [
     {id:1 ,  image: cheese, name: "پنیر لبنه پر چرب کاله", description: "350 گرم", Discount: 25, oprice: '39,900', price: '29,925' },
     {id:2 ,  image: khame, name: "خامه نیم چرب هراز", description: "200 گرم", Discount: 20, oprice: "23,900", price: '19,120' },
