@@ -6,9 +6,11 @@ import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
-type Props = {};
+type Props = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const ChangeShopStore = (props: Props) => {
+const ChangeShopStore = ({ onClick }: Props) => {
   return (
     <Grid display="flex" justifyContent="center" alignSelf="flex-start">
       <Image
@@ -32,6 +34,7 @@ const ChangeShopStore = (props: Props) => {
           height: "30px",
           alignSelf: "center",
         }}
+        onClick={onClick}
       >
         <Typography variant="subtitle2" sx={{ fontSize: "0.7rem", mr: "3px" }}>
           تغییر فروشگاه

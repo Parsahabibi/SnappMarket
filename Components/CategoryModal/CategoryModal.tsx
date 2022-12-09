@@ -17,7 +17,7 @@ const CategoryModal = ({ onClose, open }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       onClose={onClose}
-      sx={{ position: "absolute", top: 225 }}
+      sx={{ position: "absolute", top: 225, p: "0 20px 20px 20px" }}
     >
       <Container>
         <Grid

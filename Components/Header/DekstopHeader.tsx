@@ -11,6 +11,7 @@ import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
 import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
 import HeaderAddressLayout from "../HeaderAddressLayout/HeaderAddressLayout";
 import HeaderProfileLayout from "../HeaderProfileLAyout/HeaderProfileLayout";
+import HeaderAddressAndChangeShopLayout from "../HeaderAddressAndChangedShopLayout/HeaderAddressAndChangeShopLayout";
 
 type Props = {};
 
@@ -50,7 +51,7 @@ const DekstopHeader = (props: Props) => {
         <Grid justifyContent="space-between" display="flex">
           <Grid>
             <Grid mt="20px" display="flex" flexDirection="column">
-              <ChangeShopStore />
+              <HeaderAddressAndChangeShopLayout />
               <Grid display="flex" mt="15px" position="relative">
                 <HeaderCategoryLayout />
                 <Grid alignSelf="center" width={{ xs: "15rem", md: "25rem" }}>
