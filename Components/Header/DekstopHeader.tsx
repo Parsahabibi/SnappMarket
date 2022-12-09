@@ -2,18 +2,16 @@ import Grid from "@mui/material/Grid";
 import React from "react";
 import Container from "@mui/system/Container";
 import ShoppingBasketButton from "../ShoppingBasketButton/ShoppingBasketButton";
-import ProfileButtonHeader from "../ProfileButtonHeader/ProfileButtonHeader";
-import AddressButton from "../AddressButton/AddressButton";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import Typography from "@mui/material/Typography";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ChangeShopStore from "../ChangeShopStore/ChangeShopStore";
-import CategorySelectorButton from "../CategorySelectorButton/CategorySelectorButton";
 import SearchBar from "../SearchBar/SearchBar";
 import BackgroundHeaderImage from "../../assets/Images/headerbg.jpg";
-import CategoryModal from "../CategoryModal/CategoryModal";
-import AddressAndShopStoreModal from "../Address&ShopStoreModal/AddressAndShopStoreModal";
-import ProfileModal from "../ProfileModal/ProfileModal";
+import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
+import HeaderAddressLayout from "../HeaderAddressLayout/HeaderAddressLayout";
+import HeaderProfileLayout from "../HeaderProfileLAyout/HeaderProfileLayout";
+import HeaderAddressAndChangeShopLayout from "../HeaderAddressAndChangedShopLayout/HeaderAddressAndChangeShopLayout";
 
 type Props = {};
 
@@ -32,7 +30,7 @@ const DekstopHeader = (props: Props) => {
       height="15rem"
       style={styled}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           p="10px"
           borderBottom="0.1rem solid rgba(255,255,255,0.16)"
@@ -43,20 +41,19 @@ const DekstopHeader = (props: Props) => {
             <Grid ml="20px" color="white" width="57px">
               Snap Market!
             </Grid>
-
-            <AddressButton />
+            <HeaderAddressLayout />
           </Grid>
           <Grid display="flex" justifyContent="space-evenly">
-            <ProfileButtonHeader />
+            <HeaderProfileLayout />
             <ShoppingBasketButton />
           </Grid>
         </Grid>
         <Grid justifyContent="space-between" display="flex">
           <Grid>
             <Grid mt="20px" display="flex" flexDirection="column">
-              <ChangeShopStore />
-              <Grid display="flex" mt="15px">
-                <CategorySelectorButton />
+              <HeaderAddressAndChangeShopLayout />
+              <Grid display="flex" mt="15px" position="relative">
+                <HeaderCategoryLayout />
                 <Grid alignSelf="center" width={{ xs: "15rem", md: "25rem" }}>
                   <SearchBar />
                 </Grid>
@@ -95,13 +92,6 @@ const DekstopHeader = (props: Props) => {
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <CategoryModal />
-        <Grid mt="20px">
-          <AddressAndShopStoreModal />
-        </Grid>
-        <Grid mt="20px">
-          <ProfileModal />
         </Grid>
       </Container>
     </Grid>

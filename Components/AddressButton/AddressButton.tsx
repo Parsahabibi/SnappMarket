@@ -4,11 +4,16 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Typography from "@mui/material/Typography";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
-type Props = {};
+type Props = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const AddressButton = (props: Props) => {
+const AddressButton = ({ onClick }: Props) => {
   return (
-    <ButtonBase sx={{ ":hover": { color: "rgb(220, 220, 220)" } }}>
+    <ButtonBase
+      onClick={onClick}
+      sx={{ ":hover": { color: "rgb(220, 220, 220)" } }}
+    >
       <LocationOnOutlinedIcon
         sx={{ color: "white", width: "20px", height: "20px", ml: "8px" }}
       />
