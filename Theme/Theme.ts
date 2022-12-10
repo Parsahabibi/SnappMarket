@@ -10,9 +10,17 @@ const Theme = createTheme({
         },
         body: {
           backgroundColor: "rgb(250,250,250)",
-        },
-        a: {
-          textDecoration: "none",
+          a: {
+            textDecoration: "none",
+            fontSize:"1.3rem"
+          },
+          label:{
+            fontSize:"1.6rem",
+            fontWeight:500
+          },
+          stronge:{
+            fontSize:"2.2rem"
+          }
         },
       },
     },
@@ -59,6 +67,7 @@ const Theme = createTheme({
     primary: {
       main: "rgb(36,70,245)", //darkblue
       light: "rgb(51,123,240)", //lightblue
+      dark:"rgb(48,53,75)"
     },
     secondary: {
       main: "rgb(250,15,27)", //red
@@ -70,6 +79,8 @@ const Theme = createTheme({
     },
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
+      light:"rgb(117 , 117 , 117)",
+      dark:"rgb(97 , 100 , 117)"
     },
     warning: {
       main: "rgb(255 , 111 , 0)",
@@ -78,7 +89,7 @@ const Theme = createTheme({
   typography: {
     fontFamily: "IranSans",
     h1: {
-      fontSize: "1.9rem",
+      fontSize: "2rem",
       fontWeight: "bold",
     },
     h2: {
@@ -93,6 +104,7 @@ const Theme = createTheme({
       fontWeight: "normal",
       lineHeight: "normal",
     },
+    //this is p setting
     subtitle1: {
       fontSize: "1.2rem", //card
       color: "rgb(97,100,117)",
