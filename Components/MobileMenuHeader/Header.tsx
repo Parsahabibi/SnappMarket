@@ -28,18 +28,18 @@ const Header = (props: Props) => {
             // color: "rgb(141,141,141)",
         },
         "& .MuiOutlinedInput-root": {
-            fontSize: "14px",
+            fontSize: "16px",
             color: 'rgb(155, 158, 174)',
             borderRadius: "0.8rem",
-            height: "45px",
+            height: "52.5px",
         },
     }));
-//parsa
     return (
         <Grid>
-            <Grid sx={{ display: "flex", justifyContent: "space-around", alignItems: "stretch" }} borderBottom={0.5} borderColor={"gray"} pt={2} pr={2} pl={2}>
+            <Grid sx={{ display: "flex", justifyContent: "space-around", alignItems: "stretch" }} borderBottom={0.5} borderColor={"info.main"} pt={2} pr={2} pl={2}>
+                {/* color?? */}
                 <Grid container pb={2}>
-                    <Typography>اطراف شما</Typography>
+                    <Typography >اطراف شما</Typography>
                     <KeyboardArrowDownIcon />
                 </Grid>
                 <Grid>
@@ -49,18 +49,18 @@ const Header = (props: Props) => {
             <Container>
                 <Grid mb={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <Grid pt={2}>
-                        <Box display={"flex"} border={1} borderRadius={"50%"}>
+                        <Grid display={"flex"} border={1} borderRadius={"50%"}>
                             <Image style={{ borderRadius: "50%" }} width={50} src={image} alt={"hyper"} />
-                        </Box>
+                        </Grid>
                     </Grid>
-                    <Grid pt={1.75} pr={1}>
-                        <Typography fontSize={'17px'}>هایپر استار صبا</Typography>
-                        <Typography fontSize={'13px'} maxWidth={112}>ارسال رایگان بالای 200 هزار تومان</Typography>
+                    <Grid pt={1.75} pr={0.5}>
+                        <Typography fontSize={'1.07rem'}>هایپر استار صبا</Typography>
+                        <Typography fontSize={'0.8rem'} maxWidth={112}>ارسال رایگان بالای 200 هزار تومان</Typography>
                     </Grid>
                     <Grid>
-                        <Button variant='outlined' sx={{ fontSize: '10px', padding: '0 1rem', height: '2rem' }}>
+                        <Button variant='outlined' sx={{ padding: '0 1rem', height: '2.25rem' , marginRight:'auto' }}>
                             <Grid container alignItems={"center"}>
-                                تغییر فروشگاه
+                                <Typography fontSize={'12px'}>تغییر فروشگاه</Typography>
                                 {/* Typography */}
                                 <KeyboardArrowDownIcon />
                             </Grid>
@@ -73,8 +73,8 @@ const Header = (props: Props) => {
                         id="filled-hidden-label-small"
                         defaultValue=" جست و جو در برند یا محصول"
                         InputProps={{
-                            endAdornment: <SearchIcon style={{margin:"0 10px"}}/>
-                          }}
+                            endAdornment: <SearchIcon style={{ margin: "0 10px" }} />
+                        }}
                     />
                 </Grid>
             </Container>
