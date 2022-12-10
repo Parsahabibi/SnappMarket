@@ -6,7 +6,7 @@ type Props = {}
 const ButtonProductCardSwiper = (props: Props) => {
   return (
     <Grid>
-        <Button variant='outlined' sx={{fontSize:'10px',padding:'0 1rem',height:'2rem'}}>{'افزودن به سبد '}</Button>
+        <Button variant='outlined' >{'افزودن به سبد '}</Button>
     </Grid>
   )
 }

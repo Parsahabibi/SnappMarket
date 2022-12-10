@@ -4,6 +4,9 @@ const Theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        html: {
+          fontSize: "62.5%",
+        },
         body: {
           backgroundColor: "rgb(250,250,250)",
         },
