@@ -10,7 +10,7 @@ const SecondarySwiperCard = () => {
         <Grid
               m={"12px"}
               display={"flex"}
-              sx={{backgroundColor:"common.white" , width:"330px" , height:"220px" , borderRadius:"5px" ,flexDirection:"column"}}>
+              sx={{backgroundColor:"common.white" , width:"330px" , height:"205px" , borderRadius:2 ,flexDirection:"column"}}>
            <Grid display={"flex"} p={"12px"} width={"100%"} justifyContent={"space-between"}>
                <Typography sx={{fontSize:"14px" , fontWeight:500}}>
                    {"پک آماده مصرف"}
@@ -70,9 +70,8 @@ const SecondarySwiperCard = () => {
                   justifyContent={"space-between"}
                   width={"90%"}
                   marginX={"12px"}
-                  mt={1}
                   alignItems={"center"}>
-                <Typography sx={{fontSize:"16px"}}>
+                <Typography variant={"h2"}>
                     {"16,016 تومان"}
                 </Typography>
                 <Button variant={"outlined"}

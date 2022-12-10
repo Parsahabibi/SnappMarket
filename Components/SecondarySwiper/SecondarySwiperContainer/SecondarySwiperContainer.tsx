@@ -47,18 +47,21 @@ const SecondarySwiperContainer = () => {
 
     return (
         <Container>
-            <Grid display={"flex"} marginY={3} paddingY={"24px"} paddingX={"16px"} flexDirection={"column"}
+            <Grid display={"flex"} marginY={3}
+                  paddingY={3}
+                  justifyContent={"center"}
+                  paddingX={2}
+                  flexDirection={"column"}
                   width={"100%"}
                   sx={{backgroundColor: "primary.main", borderRadius: "15px"}}>
                 <Grid display={"flex"}
                       alignItems={"center"}
-                      width={"90%"}
-                      mr={4}
-                      marginY={"12px"}
-                      pr={"20px"}
+                      paddingX={3}
+                      pb={1}
+                      width={"100%"}
                       sx={{color: "common.white"}}
                       justifyContent={"space-between"}>
-                    <Typography>
+                    <Typography variant={"caption"} color={"common.white"}>
                         {"خرید بیشتر، پرداخت کمتر"}
                     </Typography>
                     <ArrowBackIosNewIcon sx={{cursor: "pointer", fontSize: "14px"}}/>
@@ -75,7 +78,7 @@ const SecondarySwiperContainer = () => {
                             slidesPerView: 0.1
                         },
                         900: {
-                            slidesPerView: 0.7
+                            slidesPerView: 0.9
                         }
                     }}>
                         <Grid display={"flex"}>
