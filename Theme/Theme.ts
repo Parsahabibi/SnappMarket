@@ -1,10 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 
 const Theme = createTheme({
-  direction:"rtl",
+  direction: "rtl",
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        html: {
+          fontSize: "62.5%",
+        },
         body: {
           backgroundColor: "rgb(250,250,250)",
         },
@@ -66,12 +69,12 @@ const Theme = createTheme({
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
     },
-    warning:{
-      main:"rgb(255 , 111 , 0)"
+    warning: {
+      main: "rgb(255 , 111 , 0)"
     }
   },
   typography: {
-    fontFamily:"IranSans",
+    fontFamily: "IranSans",
     h1: {
       fontSize: "1.9rem",
       fontWeight: "bold",
@@ -93,7 +96,9 @@ const Theme = createTheme({
       color: "rgb(97,100,117)",
     },
     subtitle2: {
-      fontSize: "",
+      fontSize: "1.2rem",
+      color: "rgb(26, 28, 35)",
+      fontWeight: "500",
     },
     caption: {
       fontSize: "1.4rem",
