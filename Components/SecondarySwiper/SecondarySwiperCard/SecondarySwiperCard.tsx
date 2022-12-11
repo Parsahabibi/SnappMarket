@@ -8,7 +8,7 @@ const SecondarySwiperCard = () => {
 
     return(
         <Grid
-              m={"12px"}
+              m={1}
               display={"flex"}
               sx={{backgroundColor:"common.white" , width:"330px" , height:"205px" , borderRadius:2 ,flexDirection:"column"}}>
            <Grid display={"flex"} p={"12px"} width={"100%"} justifyContent={"space-between"}>

@@ -8,11 +8,11 @@ const SeeAllCard = () => {
         <Grid display={"flex"}
               alignItems={"center"}
               justifyContent={"center"}
-              m={"12px"}
+              m={1}
               width={"150px"}
               bgcolor={"common.white"}
-              sx={{borderRadius:"5px" , cursor:"pointer"}}
-              height={"220px"}>
+              sx={{borderRadius:2 , cursor:"pointer"}}
+              height={"205px"}>
               <Typography sx={{color:"primary.main"}}>
                   {"مشاهده همه"}
               </Typography>
