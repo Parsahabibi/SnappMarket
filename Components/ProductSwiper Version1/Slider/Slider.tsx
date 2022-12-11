@@ -13,7 +13,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Container } from '@mui/system';
-
+import Link from 'next/link';
 
 
 // install Virtual module
@@ -30,7 +30,6 @@ const Slider = ({ color, title }: Props) => {
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
     width: "100%",
-    height: "400px",
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
 
@@ -47,7 +46,7 @@ const Slider = ({ color, title }: Props) => {
   useEffect(() => {
     swiperRef.current.swiper.slideTo(page)
   }, [page])
-  console.log(color)
+
   return (
     <Container>
       <Grid style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
@@ -56,7 +55,7 @@ const Slider = ({ color, title }: Props) => {
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
           </Grid>
           : ''}
-        <Grid display={'flex'} justifyContent={'space-between'} >
+        <Grid display={'flex'}  justifyContent={'space-between'} >
           <Swiper
             breakpoints={{
               720: {
@@ -78,20 +77,21 @@ const Slider = ({ color, title }: Props) => {
             ref={swiperRef}
             virtual
           >
-            <SwiperSlide >
-              <Typography height={'400px'} display={'flex'} justifyContent={'center'} alignItems={'center'} >{title}</Typography>
+            <SwiperSlide>
+              <Grid height={'100%'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                <Link href={'#'}>
+                  <Typography variant='h2' color={'common.white'}>{title}</Typography>
+                </Link>
+              </Grid>
             </SwiperSlide>
-
             {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid mt={1} display={'flex'} alignItems={'center'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
               </SwiperSlide>
             ))}
-
             <SwiperSlide >
-              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'380px'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'35.7rem'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
             </SwiperSlide>
-
           </Swiper>
           {page < 2 ?
             <Grid position={'absolute'} top={'45%'} left={15} zIndex={99} display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} boxShadow={5} >
@@ -99,8 +99,6 @@ const Slider = ({ color, title }: Props) => {
             </Grid>
             : ''}
         </Grid>
-
-
       </Grid>
     </Container>
   )
