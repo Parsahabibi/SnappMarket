@@ -21,7 +21,7 @@ const MobileMenuItem = (props: Props) => {
                     </Link>
                 </Grid>
                 <Grid pt={1}>
-                    <Link href={""}>
+                    <Link href={"/"}>
                         <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"rgb(26, 28, 35)"}>
                             <QrCodeOutlinedIcon style={{width:"25px" , height:"25px"}} />
                             <Typography variant='subtitle2'>دسته بندی ها</Typography>
