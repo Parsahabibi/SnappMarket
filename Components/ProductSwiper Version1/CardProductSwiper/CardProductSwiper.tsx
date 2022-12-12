@@ -22,7 +22,7 @@ const CardProductSwiper = ({title,image,Price,Weight,priceReduction,Discount}:da
           </Grid>
           <Grid display='flex' justifyContent={'space-between'} >
             <Typography pt={1.2} sx={{ fontSize: '12px' }} color={'common.black'} pb={5}>{Price}تومان</Typography>
-            <ButtonProductCardSwiper />
+            <ButtonProductCardSwiper title={'افزودن به سبد'}/>
           </Grid>
         </Grid>
       {/* )} */}
