@@ -5,6 +5,9 @@ const Theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        html: {
+          fontSize: "62.5%",
+        },
         body: {
           backgroundColor: "rgb(250,250,250)",
         },
@@ -54,17 +57,22 @@ const Theme = createTheme({
   },
   palette: {
     primary: {
-      main: "rgb(36,71,250)", //darkblue
+      main: "rgb(36,70,245)", //darkblue
       light: "rgb(51,123,240)", //lightblue
+      dark:"rgb(48,53,75)"
     },
     secondary: {
       main: "rgb(250,15,27)", //red
+      light: "rgb(255, 149, 24)", //orange
     },
     success: {
       main: "rgb(7,188,32)", //green
+      light: "rgb(14, 188, 131)", //green light
     },
     info: {
       main: "rgba(48,53,75,0.4)", //discountPrice(grey)
+      light:"rgb(117 , 117 , 117)",
+      dark:"rgb(97 , 100 , 117)"
     },
     warning:{
       main:"rgb(255 , 111 , 0)"
@@ -93,7 +101,9 @@ const Theme = createTheme({
       color: "rgb(97,100,117)",
     },
     subtitle2: {
-      fontSize: "",
+      fontSize: "1.2rem",
+      color: "rgb(26, 28, 35)",
+      fontWeight: "500",
     },
     caption: {
       fontSize: "1.4rem",
