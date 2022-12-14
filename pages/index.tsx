@@ -3,6 +3,8 @@ import CssBaseLine from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
 import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStoreSelectore";
+import MobileCategoryPage from "../Components/MobileCategoryPage/MobileCategoryPage";
+import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
 
 
 export default function Home() {
@@ -10,7 +12,8 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          <MobileStoreSelectore/>
+          <MobileCategoryPage/>
+          {/* <Slider/> */}
       </Grid>
     </ThemeProvider>
   );

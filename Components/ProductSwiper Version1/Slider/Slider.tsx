@@ -57,26 +57,26 @@ const Slider = ({ color, title }: Props) => {
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
           </Grid>
           : ''}
-        <Grid display={'flex'}  justifyContent={'space-between'} >
+        <Grid display={'flex'} justifyContent={'space-between'} >
           <Swiper
 
-              breakpoints={{
-                720: {
-                  slidesPerView: 3
-                },
-                900: {
-                  slidesPerView: 3.5
-                },
-                1024: {
-                  slidesPerView: 4
-                },
-                1200: {
-                  slidesPerView: 4.8
-                },
-                1440: {
-                  slidesPerView: 4.8
-                },
-              }}
+            breakpoints={{
+              720: {
+                slidesPerView: 3
+              },
+              900: {
+                slidesPerView: 3.5
+              },
+              1024: {
+                slidesPerView: 4
+              },
+              1200: {
+                slidesPerView: 4.8
+              },
+              1440: {
+                slidesPerView: 4.8
+              },
+            }}
 
             ref={swiperRef}
             virtual
@@ -90,7 +90,7 @@ const Slider = ({ color, title }: Props) => {
             </SwiperSlide>
             {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
+                <Grid mt={1} display={'flex'} alignItems={'center'}> <CardProductSwiper bottom={'4%'} left={'5%'} heightImage={170} widthImage={170} titleBtn={'افزودن به سبد'} width='400px' title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >
