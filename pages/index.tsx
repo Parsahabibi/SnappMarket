@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Header from "../Components/MobileMenuHeader/Header";
 import MobileMenuItem from "../Components/MobileMenuItem/MobileMenuItem";
 import Category from "../Components/CategotyMobileMenu/Category";
+import Account from "../Components/AccountMobileMenu/Account";
 
 
 
@@ -17,7 +18,8 @@ export default function Home() {
         <CssBaseLine/>
         {/* <Header/>
         <MobileMenuItem/> */}
-        <Category/>
+        {/* <Category/> */}
+        <Account />
       </Grid>
     </ThemeProvider>
   );
