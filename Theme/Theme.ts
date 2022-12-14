@@ -5,9 +5,6 @@ const Theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        html: {
-          fontSize: "62.5%",
-        },
         body: {
           backgroundColor: "rgb(250,250,250)",
           a: {
@@ -85,9 +82,12 @@ const Theme = createTheme({
     warning: {
       main: "rgb(255 , 111 , 0)",
     },
+    warning:{
+      main:"rgb(255 , 111 , 0)"
+    }
   },
   typography: {
-    fontFamily: "IranSans",
+    fontFamily:"IranSans",
     h1: {
       fontSize: "2rem",
       fontWeight: "bold",
@@ -104,7 +104,6 @@ const Theme = createTheme({
       fontWeight: "normal",
       lineHeight: "normal",
     },
-    //this is p setting
     subtitle1: {
       fontSize: "1.2rem", //card
       color: "rgb(97,100,117)",
@@ -114,6 +113,18 @@ const Theme = createTheme({
       color: "rgb(26, 28, 35)",
       fontWeight: "500",
     },
+    body2:{
+      height:'2.5rem',
+      padding:'0px 0.4rem',
+      fontWeight:'500',
+      borderRadius:'0.4rem',
+      fontSize:'1.6rem',
+      backgroundColor:'rgb(250, 15, 27)',
+      color:'#fff',
+      textAlign:'center',
+      border:'0.1rem solid transparent'
+    },
+  
     caption: {
       fontSize: "1.4rem",
       color: "rgb(66,66,66)", //

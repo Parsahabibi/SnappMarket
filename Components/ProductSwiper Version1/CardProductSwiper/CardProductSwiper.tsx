@@ -5,8 +5,10 @@ import ButtonProductCardSwiper from '../../ButtonProductCardSwiper/ButtonProduct
 import { dataCardSliderType } from "../../../Model/DataCardSliderV1Type";
 
 
-const CardProductSwiper = ({title,image,Price,Weight,priceReduction,Discount}:dataCardSliderType) => {
+
+const CardProductSwiper = ({ title, image, Price, Weight, priceReduction, Discount }: dataCardSliderType) => {
   return (
+
     <Grid display='flex' gap={2} width={'400px'} sx={{cursor:"pointer"}} >
         <Grid bgcolor={'common.white'} borderRadius={'0.5rem'} width={234} height={'100%'} px={2}>
           <Grid display='flex' justifyContent={'center'} my={1}>
@@ -20,9 +22,10 @@ const CardProductSwiper = ({title,image,Price,Weight,priceReduction,Discount}:da
           </Grid>
           <Grid display='flex' justifyContent={'space-between'} >
             <Typography pt={1.2} sx={{ fontSize: '12px' }} color={'common.black'} pb={5}>{Price}تومان</Typography>
-            <ButtonProductCardSwiper title={'افزودن به سبد'}/>
+            <ButtonProductCardSwiper value={'افزودن به سبد'} title={''} bgcolor={''} icon={''}/>
           </Grid>
         </Grid>
+
     </Grid>
   )
 }
