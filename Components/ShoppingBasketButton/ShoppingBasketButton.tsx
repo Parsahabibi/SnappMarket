@@ -5,9 +5,11 @@ import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import { Box } from "@mui/system";
 
-type Props = {};
+type Props = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const ShoppingBasketButton = (props: Props) => {
+const ShoppingBasketButton = ({ onClick }: Props) => {
   return (
     <Grid>
       <ButtonBase
@@ -19,6 +21,7 @@ const ShoppingBasketButton = (props: Props) => {
           display: "flex",
           justifyContent: "space-evenly",
         }}
+        onClick={onClick}
       >
         <ShoppingBagOutlinedIcon sx={{ color: "primary.main" }} />
         <Typography color="primary.main">سبد خرید</Typography>

@@ -12,6 +12,7 @@ import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
 import HeaderAddressLayout from "../HeaderAddressLayout/HeaderAddressLayout";
 import HeaderProfileLayout from "../HeaderProfileLAyout/HeaderProfileLayout";
 import HeaderAddressAndChangeShopLayout from "../HeaderAddressAndChangedShopLayout/HeaderAddressAndChangeShopLayout";
+import HeaderBasketLayout from "../HeaderBasketLayout/HeaderBasketLayout";
 
 type Props = {};
 
@@ -45,7 +46,7 @@ const DekstopHeader = (props: Props) => {
           </Grid>
           <Grid display="flex" justifyContent="space-evenly">
             <HeaderProfileLayout />
-            <ShoppingBasketButton />
+            <HeaderBasketLayout />
           </Grid>
         </Grid>
         <Grid justifyContent="space-between" display="flex">
