@@ -8,6 +8,8 @@ import Header from "../Components/MobileMenuHeader/Header";
 import MobileMenuItem from "../Components/MobileMenuItem/MobileMenuItem";
 import Category from "../Components/CategotyMobileMenu/Category";
 import Account from "../Components/AccountMobileMenu/Account";
+import Basket from "../Components/BasketMobileMenu/Basket";
+import Search from "../Components/SearchMobileMenu/SearchPage";
 
 
 
@@ -19,7 +21,9 @@ export default function Home() {
         {/* <Header/>
         <MobileMenuItem/> */}
         {/* <Category/> */}
-        <Account />
+        {/* <Account /> */}
+        <Basket />
+        {/* <Search /> */}
       </Grid>
     </ThemeProvider>
   );
