@@ -1,4 +1,4 @@
-import { ButtonBase, Drawer, Grid } from "@mui/material";
+import { ButtonBase, Drawer, Grid, Typography, Button } from "@mui/material";
 import React from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
@@ -66,7 +66,39 @@ const BasketLayout = ({ onClose, open }: Props) => {
             هزینه ارسال رایگان است
           </Grid>
         </Grid>
-        <ProductBasketCard />
+        <Grid height="41rem" overflow="hidden auto">
+          <ProductBasketCard />
+        </Grid>
+        <Grid p="10px" borderTop="1px solid rgb(244,244,244)">
+          <Grid
+            bgcolor="rgb(242,247,255)"
+            p="20px"
+            height="3.6rem"
+            borderRadius="10px"
+            display="flex"
+            justifyContent="center"
+            mb="5px"
+          >
+            <Typography sx={{ color: "primary.main" }}>
+              23٬220 تومان سود خرید{" "}
+            </Typography>
+          </Grid>
+          <Grid>
+            <Button variant="contained">
+              نهایی کردن خرید
+              <Grid
+                bgcolor="rgb(6,150,26)"
+                alignSelf="center"
+                mr="20px"
+                fontSize="1.4rem"
+                p="5px"
+                borderRadius="5px"
+              >
+                23,220
+              </Grid>
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
     </Drawer>
   );
