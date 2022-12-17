@@ -5,6 +5,7 @@ import Theme from "../Theme/Theme";
 import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStoreSelectore";
 import MobileCategoryPage from "../Components/MobileCategoryPage/MobileCategoryPage";
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
+import LoginModal from "../Components/LoginModal/LoginModal";
 
 
 export default function Home() {
@@ -12,8 +13,9 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          <MobileCategoryPage/>
+          {/* <MobileCategoryPage/> */}
           {/* <Slider/> */}
+          <LoginModal/>
       </Grid>
     </ThemeProvider>
   );
