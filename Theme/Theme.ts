@@ -5,6 +5,9 @@ const Theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        html:{
+          fontSize:'62.5%'
+        },
         body: {
           backgroundColor: "rgb(250,250,250)",
           a: {
@@ -82,9 +85,7 @@ const Theme = createTheme({
     warning: {
       main: "rgb(255 , 111 , 0)",
     },
-    warning:{
-      main:"rgb(255 , 111 , 0)"
-    }
+  
   },
   typography: {
     fontFamily:"IranSans",
@@ -99,7 +100,6 @@ const Theme = createTheme({
     },
     h3: {
       fontSize: "1.4rem",
-      minHeight: "4.2rem",
       color: "rgb(48,53,75)",
       fontWeight: "normal",
       lineHeight: "normal",
