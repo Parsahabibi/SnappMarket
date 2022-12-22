@@ -20,7 +20,6 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 
 
 type Props = {
-
   title: string,
   color: string
 }
@@ -47,6 +46,8 @@ const Slider = ({ color, title }: Props) => {
   useEffect(() => {
     swiperRef.current.swiper.slideTo(page)
   }, [page])
+  const hoverStyle = {}
+  const normalStyle = {}
 
   return (
     <Container>
@@ -90,7 +91,7 @@ const Slider = ({ color, title }: Props) => {
             </SwiperSlide>
             {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid mt={1} display={'flex'} alignItems={'center'}> <CardProductSwiper bottom={'4%'} left={'5%'} heightImage={170} widthImage={170} titleBtn={'افزودن به سبد'} width='400px' title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
+                <Grid mt={1} display={'flex'} alignItems={'center'}> <CardProductSwiper hoverStyle={hoverStyle} normalStyle={normalStyle} bottom={'4%'} left={'5%'} heightImage={170} widthImage={170} titleBtn={'افزودن به سبد'} width='400px' title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount}  /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >
