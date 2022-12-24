@@ -5,7 +5,7 @@ import Theme from "../Theme/Theme";
 import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStoreSelectore";
 import MobileCategoryPage from "../Components/MobileCategoryPage/MobileCategoryPage";
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
-import ProductPage from "../Components/MobileProductPage/ProductPage";
+import ProductPage from "../Components/ProductPage/ProductPage";
 
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
         <CssBaseLine />
           {/* <MobileCategoryPage/> */}
           {/* <Slider/> */}
+          {/* <ProductPage /> */}
           <ProductPage />
       </Grid>
     </ThemeProvider>
