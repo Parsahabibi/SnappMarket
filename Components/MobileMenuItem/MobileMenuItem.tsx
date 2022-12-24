@@ -11,7 +11,7 @@ type Props = {}
 const MobileMenuItem = (props: Props) => {
     return (
         <Grid>
-            <Grid bgcolor={'common.white'} container justifyContent={"space-around"} position={'fixed'} bottom={0} left={0} right={0}>
+            <Grid bgcolor={'common.white'} container justifyContent={"space-around"} position={'fixed'} bottom={0} left={0} right={0} pr={2}>
                 <Grid pt={1}>
                     <Link href={""}>
                         <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"primary.main"}>
@@ -24,7 +24,7 @@ const MobileMenuItem = (props: Props) => {
                     <Link href={"/"}>
                         <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"rgb(26, 28, 35)"}>
                             <QrCodeOutlinedIcon style={{width:"25px" , height:"25px"}} />
-                            <Typography variant='subtitle2'>دسته بندی ها</Typography>
+                            <Typography variant='subtitle2'>دسته بندی</Typography>
                         </Grid>
                     </Link>
                 </Grid>

@@ -18,11 +18,11 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine/>
-        {/* <Header/>
-        <MobileMenuItem/> */}
+        <Header/>
+        <MobileMenuItem/>
         {/* <Category/> */}
         {/* <Account /> */}
-        <Basket />
+        {/* <Basket /> */}
         {/* <Search /> */}
       </Grid>
     </ThemeProvider>
