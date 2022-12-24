@@ -60,23 +60,6 @@ const Theme = createTheme({
             },
           },
         },
-        {
-          props: { variant: "contained2" },
-          style: {
-            background: "rgb(51,123,240)",
-            color: "white",
-            fontSize: "1.8rem",
-            borderRadius: "0.5rem",
-            height: "4.5rem",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            padding: "0 1rem",
-            "&:hover": {
-              background: "rgb(36,70,245)",
-            },
-          },
-        }
       ],
     },
   },

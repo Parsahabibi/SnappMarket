@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { Box, Button, Container, Grid, Modal, Typography} from '@mui/material'
+import { Box, Button, ButtonBase, Container, Grid, Modal, Typography } from '@mui/material'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import dataProductPage, { dataSwiperProductPage } from "../MobileProductPage/DataProductPage"
@@ -14,7 +14,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import SwiperCore, { Virtual, Navigation, Pagination} from 'swiper';
+import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
@@ -160,9 +160,22 @@ const ProductPage = (props: Props) => {
                                                     <Typography fontSize={"2.2rem"} fontWeight={500} color={"rgb(117, 117, 117)"}>تومان</Typography>
                                                 </Grid>
                                                 <Grid pr={"250px"}>
-                                                    <Button variant='contained2'>
+                                                    <ButtonBase sx={{
+                                                        background: "rgb(51,123,240)",
+                                                        color: "white",
+                                                        fontSize: "1.8rem",
+                                                        borderRadius: "0.5rem",
+                                                        height: "4.5rem",
+                                                        display: "flex",
+                                                        justifyContent: "center",
+                                                        width: "100%",
+                                                        padding: "0 1rem",
+                                                        ":hover": {
+                                                            background: "rgb(36,70,245)"
+                                                        }
+                                                    }}>
                                                         <Typography variant='h3' color={"common.white"}>افزودن به سبد</Typography>
-                                                    </Button>
+                                                    </ButtonBase>
                                                 </Grid>
                                             </Grid>
                                         </Grid>
