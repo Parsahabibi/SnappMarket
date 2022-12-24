@@ -1,9 +1,7 @@
 import React from "react";
 
-type Props = {};
+interface Props {}
 
-const BasketLayout = (props: Props) => {
-  return <div>BasketLayout</div>;
+export const BasketLayout = (props: Props) => {
+  return <div></div>;
 };
-
-export default BasketLayout;

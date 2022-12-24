@@ -1,17 +1,7 @@
 import React from "react";
-import BasketLayout from "../BasketModal/BasketLayout";
-import ShoppingBasketButton from "../ShoppingBasketButton/ShoppingBasketButton";
-import Grid from "@mui/material/Grid";
 
-type Props = {};
+interface Props {}
 
-const HeaderBasketLayout = (props: Props) => {
-  return (
-    <Grid alignSelf="center">
-      <ShoppingBasketButton />
-      <BasketLayout />
-    </Grid>
-  );
+export const HeaderBasketLayout = (props: Props) => {
+  return <div></div>;
 };
-
-export default HeaderBasketLayout;

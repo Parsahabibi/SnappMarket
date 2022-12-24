@@ -6,14 +6,13 @@ import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStore
 import MobileCategoryPage from "../Components/MobileCategoryPage/MobileCategoryPage";
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
 
-
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          <MobileCategoryPage/>
-          {/* <Slider/> */}
+        <MobileCategoryPage />
+        {/* <Slider/> */}
       </Grid>
     </ThemeProvider>
   );
