@@ -12,6 +12,7 @@ import HeaderCategoryLayout from "../HeaderCategoryLayout/HeaderCategoryLayout";
 import HeaderAddressLayout from "../HeaderAddressLayout/HeaderAddressLayout";
 import HeaderProfileLayout from "../HeaderProfileLAyout/HeaderProfileLayout";
 import HeaderAddressAndChangeShopLayout from "../HeaderAddressAndChangedShopLayout/HeaderAddressAndChangeShopLayout";
+import HeaderBasketLayout from "../HeaderBasketLayout/HeaderBasketLayout";
 
 type Props = {};
 
@@ -27,7 +28,7 @@ const DekstopHeader = (props: Props) => {
       display="flex"
       padding="20px"
       bgcolor="success.main"
-      height="15rem"
+      height="22rem"
       style={styled}
     >
       <Container maxWidth="lg">
@@ -45,16 +46,21 @@ const DekstopHeader = (props: Props) => {
           </Grid>
           <Grid display="flex" justifyContent="space-evenly">
             <HeaderProfileLayout />
-            <ShoppingBasketButton />
+            <HeaderBasketLayout />
           </Grid>
         </Grid>
         <Grid justifyContent="space-between" display="flex">
           <Grid>
             <Grid mt="20px" display="flex" flexDirection="column">
               <HeaderAddressAndChangeShopLayout />
-              <Grid display="flex" mt="15px" position="relative">
+              <Grid
+                display="flex"
+                mt="10px"
+                position="relative"
+                alignSelf="center"
+              >
                 <HeaderCategoryLayout />
-                <Grid alignSelf="center" width={{ xs: "15rem", md: "25rem" }}>
+                <Grid alignSelf="center" width={{ xs: "25rem", md: "33rem" }}>
                   <SearchBar />
                 </Grid>
               </Grid>
@@ -74,19 +80,25 @@ const DekstopHeader = (props: Props) => {
                   color="white"
                   display="flex"
                   justifyContent="flex-end"
+                  fontSize="1.2rem"
                 >
-                  <WatchLaterIcon sx={{ ml: "5px" }} />
+                  <WatchLaterIcon
+                    sx={{ ml: "5px", width: "2rem", height: "2rem" }}
+                  />
                   تحویل از امروز ساعت 16:00
                 </Typography>
               </Grid>
-              <Grid display="flex" justifyContent="flex-end">
+              <Grid display="flex" justifyContent="flex-end" mt="5px">
                 <Typography
                   variant="subtitle2"
                   color="white"
                   display="flex"
                   justifyContent="flex-end"
+                  fontSize="1.2rem"
                 >
-                  <LocalShippingIcon sx={{ ml: "5px" }} />
+                  <LocalShippingIcon
+                    sx={{ ml: "5px", width: "2rem", height: "2rem" }}
+                  />
                   ارسال رایگان برای سفارش بالای 200000 تومان
                 </Typography>
               </Grid>

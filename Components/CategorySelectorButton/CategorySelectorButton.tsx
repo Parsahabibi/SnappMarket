@@ -13,8 +13,8 @@ const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
       onClick={onClick}
       sx={{
         borderRadius: "10px",
-        width: "7rem",
-        height: "2.4rem",
+        width: "12.5rem",
+        height: "4rem",
         bgcolor: "white",
         display: "flex",
         justifyContent: "center",
@@ -25,17 +25,22 @@ const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
       }}
     >
       <WidgetsOutlinedIcon
-        sx={{ ml: "5px", width: "20px", color: "rgb(141,141,141)" }}
+        sx={{
+          ml: "5px",
+          width: "1.8rem",
+          height: "1.8rem",
+          color: "rgb(41,41,41)",
+        }}
       />
       <Typography
         variant="subtitle2"
         sx={{
-          color: "rgb(141,141,141)",
+          color: "rgb(41,41,41)",
           alignSelf: "center",
-          fontSize: "0.9rem",
+          fontSize: "1.3rem",
         }}
       >
-        دسته بندی
+        دسته بندی ها
       </Typography>
     </ButtonBase>
   );

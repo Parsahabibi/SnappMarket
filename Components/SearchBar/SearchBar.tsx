@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 const StyledTextField = styled(TextField)(({ theme }) => ({
-  height: "45px",
+  height: "4rem",
   background: "white",
   borderRadius: "30px",
   "& label": {
@@ -12,7 +12,8 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
   "& .MuiOutlinedInput-root": {
     borderRadius: "30px",
-    height: "45px",
+    height: "4rem",
+    fontSize: "1.3rem",
   },
 }));
 
@@ -21,7 +22,12 @@ const SearchBar = (props: Props) => {
     <StyledTextField
       placeholder="جست و جوی برند یا محصول"
       fullWidth
-      sx={{ position: "relative", alignSelf: "center", mt: "5px" }}
+      sx={{
+        display: "flex",
+        position: "relative",
+        alignSelf: "center",
+        mt: "5px",
+      }}
     ></StyledTextField>
   );
 };

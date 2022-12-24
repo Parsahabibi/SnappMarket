@@ -23,7 +23,12 @@ const ChangeShopStore = ({ onClick }: Props) => {
         }}
         src={Hyperstorelogo}
       />
-      <Typography alignSelf="center" marginLeft="10px" color="white">
+      <Typography
+        alignSelf="center"
+        marginLeft="10px"
+        color="white"
+        fontSize="1.4rem"
+      >
         خرید از هایپراستار صبا
       </Typography>
       <ButtonBase
@@ -31,12 +36,13 @@ const ChangeShopStore = ({ onClick }: Props) => {
           color: "primary.main",
           bgcolor: "white",
           borderRadius: "15px",
-          height: "30px",
+          height: "2.3rem",
+          width: "8.9rem",
           alignSelf: "center",
         }}
         onClick={onClick}
       >
-        <Typography variant="subtitle2" sx={{ fontSize: "0.7rem", mr: "3px" }}>
+        <Typography variant="subtitle2" sx={{ fontSize: "1rem", mr: "3px" }}>
           تغییر فروشگاه
         </Typography>
         <KeyboardArrowDownOutlinedIcon />

@@ -18,8 +18,11 @@ const AddressButton = ({ onClick }: Props) => {
         sx={{ color: "white", width: "20px", height: "20px", ml: "8px" }}
       />
       <Typography
-        sx={{ color: "white", ":hover": { color: "rgb(220, 220, 220)" } }}
-        variant="subtitle2"
+        sx={{
+          fontSize: "1.2rem",
+          color: "white",
+          ":hover": { color: "rgb(220, 220, 220)" },
+        }}
       >
         تهران، دانشگاه تهران، کارگر شمالی، 16 آذر، پارسی تقاطع مهر، خوابگاه 16
         آذر پلاک 23 واحد 22
