@@ -11,20 +11,28 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
   return (
     <ButtonBase
       sx={{
+        minWidth: "15rem",
         ml: "20px",
         alignself: "center",
         background: "transparent",
         color: "white",
         display: "flex",
         alignItems: "center",
+
         ":hover": {
           color: "rgb(220, 220, 220)",
         },
       }}
       onClick={onClick}
     >
-      <Person2OutlinedIcon sx={{ ml: "5px" }} />
-      <Typography>ahmad mohtadi</Typography>
+      <Person2OutlinedIcon
+        sx={{ ml: "5px", width: "3rem", height: "2.5rem", alignSelf: "center" }}
+      />
+      <Typography
+        sx={{ fontSize: "1.5rem", alignSelf: "center", display: "flex" }}
+      >
+        ahmad mohtadi
+      </Typography>
     </ButtonBase>
   );
 };

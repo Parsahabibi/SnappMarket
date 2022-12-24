@@ -17,7 +17,7 @@ const CategoryModal = ({ onClose, open }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       onClose={onClose}
-      sx={{ position: "absolute", top: 225, p: "0 20px 20px 20px" }}
+      sx={{ position: "absolute", top: 210, p: "0 20px 20px 20px" }}
     >
       <Container>
         <Grid
@@ -32,14 +32,24 @@ const CategoryModal = ({ onClose, open }: Props) => {
           <Grid
             sx={{
               pr: "0.5rem",
-              width: "300px",
-              height: "70px",
+              width: "992px",
+              height: "auto",
               ml: "20px",
               cursor: "pointer",
+              display: "flex",
+              flexWrap: "wrap",
             }}
             color="primary.main"
           >
-            <List sx={{ padding: "0" }}>
+            <List
+              sx={{
+                padding: "0",
+                fontSize: "1.4rem",
+                width: "20rem",
+                ml: "10px",
+                p: "10px",
+              }}
+            >
               <ListItem sx={{ padding: "0", margin: "0px" }}>
                 * آرایشی و بهداشتی
               </ListItem>
