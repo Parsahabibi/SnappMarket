@@ -4,9 +4,28 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import dataBasket from "./DataBasketMobileMenu"
 import Image from 'next/image';
+import LinearProgress from '@mui/material/LinearProgress';
 type Props = {}
 
 const Basket = (props: Props) => {
+
+    const [progress, setProgress] = React.useState(0);
+
+    // React.useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setProgress((oldProgress) => {
+    //             if (oldProgress === 100) {
+    //                 return 0;
+    //             }
+    //             const diff = Math.random() * 5;
+    //             return Math.min(oldProgress + diff, 100);
+    //         });
+    //     }, 500);
+
+    //     return () => {
+    //         clearInterval(timer);
+    //     };
+    // }, []);
 
     const [count, setCount] = useState(1)
 
@@ -23,7 +42,9 @@ const Basket = (props: Props) => {
                     <Typography variant='subtitle2' color={'rgb(150,150,150)'} >مبلغ سفارش</Typography>
                     <Typography color={'success.main'} variant='subtitle1'>200,000</Typography>
                 </Grid>
-                <Grid></Grid>
+                <Grid pt={0.5} pb={0.5} pr={2.7} width={"93%"}>
+                    <LinearProgress style={{height:"7px" , borderRadius:"5px" , backgroundColor:"rgb(240,240,240)"}} color='success' variant="determinate" value={progress} />
+                </Grid>
                 <Grid container justifyContent={"space-between"} pr={1.5} pl={1.5}>
                     <Typography variant='subtitle2' color={'rgb(150,150,150)'} >هزینه ارسال</Typography>
                     <Typography color={'success.main'} variant='subtitle1'>رایگان</Typography>
@@ -52,13 +73,13 @@ const Basket = (props: Props) => {
                                         <Typography color={"rgb(180,180,180)"}>{item.oprice}</Typography>
                                     </Grid>
                                 </Grid>
-                                <Grid sx={{display:"flex" , alignItems:"baseline"}} gap={0.5}>
+                                <Grid sx={{ display: "flex", alignItems: "baseline" }} gap={0.5}>
                                     <Typography variant='h3'>{item.price}</Typography>
                                     <Typography variant='subtitle1'>تومان</Typography>
                                 </Grid>
-                                <Grid borderRadius={2} sx={{ display: "flex", alignItems: "center", justifyContent: "center"}} maxWidth={"10rem"} bgcolor={"primary.main"}>
+                                <Grid mb={30} borderRadius={2} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} maxWidth={"10rem"} bgcolor={"primary.main"}>
                                     <Button>
-                                        {count===1 ? <DeleteForeverOutlinedIcon style={{ color: "white" , paddingBottom:"1px" , width:"21px" , height:"21px" }} /> : <Typography variant='h2' color={"common.white"}>-</Typography>}
+                                        {count === 1 ? <DeleteForeverOutlinedIcon style={{ color: "white", paddingBottom: "1px", width: "21px", height: "21px" }} /> : <Typography style={{ width: "20px", height: "20px" }} variant='h2' color={"common.white"}>-</Typography>}
                                     </Button>
                                     <Typography variant='h2' color={"white"}>
                                         {count}
@@ -89,9 +110,10 @@ const Basket = (props: Props) => {
                     borderRadius: "1rem",
                     height: "4.8rem",
                     padding: "0.8rem 0.8rem",
-                    minWidth: "47%"
+                    minWidth: "48%",
+                    marginTop:"0.5rem",
                 }}>
-                    <Typography sx={{ fontSize: "1.4rem" }} color={"common.white"} variant='h2'>ورود / عضویت</Typography>
+                    <Typography color={"common.white"} variant='h3'>ورود / عضویت</Typography>
                 </ButtonBase>
             </Grid>
         </Grid>

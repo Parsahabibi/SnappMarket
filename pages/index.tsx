@@ -21,8 +21,8 @@ export default function Home() {
         {/* <Header/>
         <MobileMenuItem/> */}
         {/* <Category/> */}
-        <Account />
-        {/* <Basket /> */}
+        {/* <Account /> */}
+        <Basket />
         {/* <Search /> */}
       </Grid>
     </ThemeProvider>
