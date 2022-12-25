@@ -18,9 +18,9 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine/>
-        <Header/>
-        <MobileMenuItem/>
-        {/* <Category/> */}
+        {/* <Header/>
+        <MobileMenuItem/> */}
+        <Category/>
         {/* <Account /> */}
         {/* <Basket /> */}
         {/* <Search /> */}

@@ -2200,6 +2200,11 @@ react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-media-hook@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-media-hook/-/react-media-hook-0.5.0.tgz#f830231f31ea80049f8cbaf8058da90ab71e7150"
+  integrity sha512-OupDgOSCjUUWPiXq3HMoRwpsQry4cGf4vKzh2E984Xtm4I01ZFbq8JwCG/RPqXB9h0qxgzoYLbABC+LIZH8deQ==
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
