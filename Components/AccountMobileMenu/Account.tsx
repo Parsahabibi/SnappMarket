@@ -17,7 +17,7 @@ const Account = (props: Props) => {
                     <Typography variant='h3'>حساب کاربری</Typography>
                 </Grid>
             </Grid>
-            <Grid pb={2}>
+            <Grid pb={30}>
                 {
                     data.map(item =>
                         <Grid pt={3.25} key={item.id} container alignItems={'flex-start'}>
