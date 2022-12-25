@@ -20,8 +20,8 @@ export default function Home() {
         <CssBaseLine/>
         {/* <Header/>
         <MobileMenuItem/> */}
-        <Category/>
-        {/* <Account /> */}
+        {/* <Category/> */}
+        <Account />
         {/* <Basket /> */}
         {/* <Search /> */}
       </Grid>
