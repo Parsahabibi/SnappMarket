@@ -12,6 +12,16 @@ type Props = {}
 
 const Search = (props: Props) => {
 
+    const handleChange = ()=>{
+
+    }
+
+
+    const handleClear = ()=>{
+        
+    }
+
+
     const StyledTextField = styled(TextField)(({ theme }) => ({
         width: "100%",
         // height: "4.8rem",
@@ -41,7 +51,7 @@ const Search = (props: Props) => {
         <Grid overflow={"auto"}>
             <Grid bgcolor={"common.white"} container alignItems={"center"} justifyContent={"center"} pt={1} pb={1} borderBottom={0.25} borderColor={'rgb(230, 230, 230)'}>
                 <ArrowForwardIcon style={{ width: "24px", height: "24px" }} />
-                <Grid pr={1.25}>
+                <Grid pr={1.25} width={"85%"}>
                     <StyledTextField
                         hiddenLabel
                         id="filled-hidden-label-small"
