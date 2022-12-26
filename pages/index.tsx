@@ -7,15 +7,14 @@ import MobileCategoryPage from "../Components/MobileCategoryPage/MobileCategoryP
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
 import CategoryPage from "../Components/CategoryPage/CategoryPage";
 
-
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          {/* <MobileCategoryPage/> */}
-          {/* <Slider/> */}
-          <CategoryPage/>
+        <MobileCategoryPage />
+        {/* <Slider/> */}
+        {/* <CategoryPage/> */}
       </Grid>
     </ThemeProvider>
   );
