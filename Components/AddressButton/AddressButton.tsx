@@ -21,6 +21,10 @@ const AddressButton = ({ onClick }: Props) => {
         sx={{
           fontSize: "1.2rem",
           color: "white",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          maxWidth: "22rem",
           ":hover": { color: "rgb(220, 220, 220)" },
         }}
       >
