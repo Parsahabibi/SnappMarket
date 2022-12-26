@@ -12,7 +12,7 @@ const ProductBasketCard = (props: Props) => {
   return (
     <Grid
       display="flex"
-      height="10rem"
+      height="13rem"
       p="20px"
       sx={{
         cursor: "pointer",
@@ -21,7 +21,7 @@ const ProductBasketCard = (props: Props) => {
         },
       }}
     >
-      <Grid>
+      <Grid display="flex" justifyItems="center" alignItems="center">
         <Image
           alt=""
           style={{ height: "7rem", width: "7rem" }}
@@ -34,7 +34,7 @@ const ProductBasketCard = (props: Props) => {
             برنج هندی خوشپخت لوکس
           </Typography>
         </Grid>
-        <Grid display="flex" mt="10px">
+        <Grid display="flex" mt="20px">
           <Grid display="flex" flexDirection="column" minWidth="18rem">
             <Grid display="flex">
               <Grid

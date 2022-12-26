@@ -14,70 +14,72 @@ const BasketLayout = ({ onClose, open }: Props) => {
   return (
     <Drawer onClose={onClose} open={open}>
       <Grid sx={{ width: "40rem" }}>
-        <Grid
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          p="10px"
-          borderBottom="1px solid rgb(244,244,244)"
-        >
+        <Grid sx={{ boxShadow: " rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
+          <Grid
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            p="10px"
+            borderBottom="1px solid rgb(244,244,244)"
+          >
+            <Grid
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              fontSize="1.4rem"
+            >
+              سبد خرید من 4 کالا
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  alignSelf: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  pl: "5px",
+                  color: "rgb(41, 41, 41)",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                  mr: "5px",
+                  ":hover": {
+                    bgcolor: "rgb(238,238,238)",
+                  },
+                }}
+              >
+                <DeleteOutlinedIcon
+                  sx={{
+                    height: "20px",
+                    width: "20px",
+                    mr: "5px",
+                    alignSelf: "center",
+                    display: "flex",
+                  }}
+                />
+              </ButtonBase>
+            </Grid>
+            <Grid alignSelf="center" display="flex">
+              <CloseOutlinedIcon
+                sx={{
+                  cursor: "pointer",
+                  color: "primary.main",
+                  width: "25px",
+                  height: "25px",
+                }}
+              />
+            </Grid>
+          </Grid>
           <Grid
             display="flex"
             alignItems="center"
             justifyContent="center"
-            fontSize="1.4rem"
+            p="20px"
+            height="80px"
+            borderBottom="1px solid rgb(244,244,244)"
+            boxShadow="rgb(0 0 0 / 16%) 0px 0.15rem 0.3rem 0px"
           >
-            سبد خرید من 4 کالا
-            <ButtonBase
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                pl: "5px",
-                color: "rgb(41, 41, 41)",
-                borderRadius: "50%",
-                width: "30px",
-                height: "30px",
-                mr: "5px",
-                ":hover": {
-                  bgcolor: "rgb(238,238,238)",
-                },
-              }}
-            >
-              <DeleteOutlinedIcon
-                sx={{
-                  height: "20px",
-                  width: "20px",
-                  mr: "5px",
-                  alignSelf: "center",
-                  display: "flex",
-                }}
-              />
-            </ButtonBase>
-          </Grid>
-          <Grid alignSelf="center" display="flex">
-            <CloseOutlinedIcon
-              sx={{
-                cursor: "pointer",
-                color: "primary.main",
-                width: "25px",
-                height: "25px",
-              }}
-            />
-          </Grid>
-        </Grid>
-        <Grid
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          p="20px"
-          height="80px"
-          borderBottom="1px solid rgb(244,244,244)"
-          boxShadow="rgb(0 0 0 / 16%) 0px 0.15rem 0.3rem 0px"
-        >
-          <Grid alignSelf="center" color="success.main" fontSize="1.2rem">
-            هزینه ارسال رایگان خواهد بود
+            <Grid alignSelf="center" color="success.main" fontSize="1.2rem">
+              هزینه ارسال رایگان خواهد بود
+            </Grid>
           </Grid>
         </Grid>
         <Grid height="75rem">
