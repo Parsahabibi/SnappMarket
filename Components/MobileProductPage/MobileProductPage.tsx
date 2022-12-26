@@ -1,14 +1,40 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
+import image1 from "../../assets/Images/milkProductPage.jpg"
+import image2 from "../../assets/Images/behind1.jpg"
+
 import Image from "next/image";
-import dataProductPage from "./DataProductPage";
+import dataProductPage, { dataSwiperProductPage } from "./DataProductPage";
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { borderColor } from "@mui/system";
+
 type Props = {};
 
 const MobileProductPage = (props: Props) => {
 
+  const [page, setPage] = useState(0)
+  const swiperRef = useRef<any>(null)
+
+  const handleNextSlide = useCallback(() => {
+    page === dataSwiperProductPage.length ? setPage(prev => 0) : setPage(prev => prev + 1)
+  }, [page])
+  const handlePrevSlide = useCallback(() => {
+    page === 0 ? setPage(dataSwiperProductPage.length - 1) : setPage(prev => prev - 1)
+  }, [page])
+  useEffect(() => {
+    swiperRef.current.swiper.slideTo(page)
+  }, [page])
+
+  const [image, setImage] = useState(image1)
+  //state1
 
   return (
     <Grid bgcolor={"common.white"}>
@@ -25,14 +51,39 @@ const MobileProductPage = (props: Props) => {
           dataProductPage.map(item =>
             <Grid key={item.id}>
               <Grid position={"relative"} width={"100%"} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Image style={{ width: "210px", height: "210px" }} src={item.image} alt={"mahsol"} />
-                <Grid position={"absolute"} bottom={0} left={15}>
-                  <Grid sx={{ cursor: 'pointer' }} mb={2} pt={1} pr={1.25} width={72} height={64} border={1} borderColor={"rgba(35, 71, 251, 0.24)"} borderRadius={"0.8rem"}>
-                    <Image style={{ width: "48px", height: "48px" }} src={item.image} alt={'small'} />
+                <Swiper
+                  ref={swiperRef}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1
+                    },
+                    375: {
+                      slidesPerView: 1
+                    }
+                  }}
+                >
+                  <Grid container alignItems={"center"} justifyContent={"center"}>
+                    {
+                      dataSwiperProductPage.map(
+                        item =>
+                          <SwiperSlide style={{ display: "flex", alignItems: "center", justifyContent: "center" }} key={item.id}>
+                            <Image style={{ width: "210px", height: "210px" }} src={item.image || image} alt={"slider"} />
+                          </SwiperSlide>
+                      )
+                    }
                   </Grid>
-                  <Grid sx={{ cursor: 'pointer' }} width={72} height={64} pt={1} pr={1.25} border={1} borderColor={"rgba(35, 71, 251, 0.24)"} borderRadius={"0.8rem"}>
-                    <Image style={{ width: "48px", height: "48px" }} src={item.image2} alt={'small'} />
-                  </Grid>
+                </Swiper>
+                <Grid zIndex={99} position={"absolute"} bottom={0} left={15}>
+                  <Button style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", cursor: "pointer", width: "72px", height: "64px", border: "0.5px solid rgba(35, 71, 251, 0.24)", borderRadius: "0.8rem" , marginBottom:"15px" }} onClick={handlePrevSlide}>
+                    <Grid pt={1}>
+                      <Image style={{ width: "48px", height: "48px" }} src={item.image} alt={'small'} />
+                    </Grid>
+                  </Button>
+                  <Button style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", cursor: "pointer", width: "72px", height: "64px", border: "0.5px solid rgba(35, 71, 251, 0.24)", borderRadius: "0.8rem" }} onClick={handleNextSlide}>
+                    <Grid pt={1}>
+                      <Image style={{ width: "48px", height: "48px" }} src={item.image2} alt={'small'} />
+                    </Grid>
+                  </Button>
                 </Grid>
               </Grid>
               <Grid container pr={3} pb={1} alignItems={"center"}>
