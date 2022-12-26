@@ -23,8 +23,8 @@ const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
         }}
         bgcolor={"rgba(255, 203, 150, 0.27)"}
         display={"flex"}
-        width={{ lg: "32.5rem", xl: "37rem" }}
-        height={{ lg: "16rem" }}
+        width={{ md: "32.5rem", xl: "37rem", lg: "38rem" }}
+        height={{ lg: "16rem", md: "18rem" }}
       >
         <Grid
           item
@@ -77,7 +77,7 @@ const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
         justifyContent={"center"}
         pt={2}
       >
-        <Typography>{title}</Typography>
+        <Typography fontSize={"1.4rem"}>{title}</Typography>
       </Grid>
     </Grid>
   );

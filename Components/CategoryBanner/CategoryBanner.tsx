@@ -11,7 +11,7 @@ type Props = {};
 const CategoryBanner = (props: Props) => {
   return (
     <Container>
-      <Grid display={{ xs: "none", md: "flex" }} flexDirection={"column"}>
+      <Grid display={{ xs: "none", sm: "flex" }} flexDirection={"column"}>
         <Grid item container display={"flex"} alignItems={"center"} mt={3.5}>
           <Grid
             item
