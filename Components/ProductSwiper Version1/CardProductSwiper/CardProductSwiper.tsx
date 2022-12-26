@@ -75,7 +75,7 @@ const CardProductSwiper = ({
           {" "}
           <Typography
             variant="h3"
-            fontSize={"1.3rem"}
+            fontSize={"1.4rem"}
             sx={{
               whiteSpace: "nowrap",
               overflow: "hidden",
