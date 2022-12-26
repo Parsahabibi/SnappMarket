@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
 import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStoreSelectore";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import CategoryBanner from "../Components/CategoryBanner/CategoryBanner";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <CssBaseLine />
         <MobileStoreSelectore />
         <AboutUs />
+        <CategoryBanner />
       </Grid>
     </ThemeProvider>
   );
