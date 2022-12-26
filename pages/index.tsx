@@ -17,8 +17,8 @@ export default function Home() {
           {/* <MobileCategoryPage/> */}
           {/* <Slider/> */}
           {/* <ProductPage /> */}
-          {/* <ProductPage /> */}
-          <MobileProductPage />
+          <ProductPage />
+          {/* <MobileProductPage /> */}
       </Grid>
     </ThemeProvider>
   );

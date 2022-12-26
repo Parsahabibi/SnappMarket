@@ -7,8 +7,6 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
 
 import Link from 'next/link';
 import 'swiper/css';
@@ -42,7 +40,7 @@ const ProductPage = (props: Props) => {
                     dataProductPage.map(
                         item =>
                             <Container key={item.id}>
-                                <Grid container justifyContent={"space-between"}>
+                                <Grid width={{lg:"88%" , md:"100%"}} container justifyContent={"space-between"}>
                                     <Grid sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
                                         <HomeOutlinedIcon style={{ width: "20px", height: "20px" }} />
                                         <Typography variant='caption'>اسنپ مارکت</Typography>
@@ -59,9 +57,9 @@ const ProductPage = (props: Props) => {
                                             {item.product} {item.company}
                                         </Typography>
                                     </Grid>
-                                    <Grid>
+                                    <Typography>
                                         <CloseOutlinedIcon style={{ width: "20px", height: "20px" }} />
-                                    </Grid>
+                                    </Typography>
                                 </Grid>
                                 <Grid key={item.id} sx={{ display: "flex", alignItems: "center" }}>
                                     <Grid>
@@ -80,9 +78,7 @@ const ProductPage = (props: Props) => {
                                                         dataSwiperProductPage.map(
                                                             item =>
                                                                 <SwiperSlide style={{ display: "flex", alignItems: "center", justifyContent: "center" }} key={item.id}>
-                                                                    <Zoom>
-                                                                        <Image src={item.image} alt={"slider"} />
-                                                                    </Zoom>
+                                                                    <Image src={item.image} alt={"slider"} />
                                                                 </SwiperSlide>
                                                         )
                                                     }
@@ -94,9 +90,17 @@ const ProductPage = (props: Props) => {
                                                     : ''}
                                             </Swiper>
                                         </Grid>
-                                        <Grid container alignItems={"center"} justifyContent={"center"} gap={7}>
-                                            <Image style={{ width: "56px", height: "56px", border: "1px solid rgb(240,240,240)" }} src={item.image} alt={"small"} />
-                                            <Image style={{ width: "56px", height: "56px", border: "1px solid rgb(240,240,240)" }} src={item.image2} alt={"small"} />
+                                        <Grid container alignItems={"center"} justifyContent={"center"} gap={5}>
+                                            <Button style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", cursor: "pointer", width: "72px", height: "64px", border: "0.5px solid rgba(35, 71, 251, 0.24)", borderRadius: "0.8rem" }} onClick={handlePrevSlide}>
+                                                <Grid pt={1}>
+                                                    <Image style={{ width: "48px", height: "48px" }} src={item.image} alt={'small'} />
+                                                </Grid>
+                                            </Button>
+                                            <Button style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", cursor: "pointer", width: "72px", height: "64px", border: "0.5px solid rgba(35, 71, 251, 0.24)", borderRadius: "0.8rem" }} onClick={handleNextSlide}>
+                                                <Grid pt={1}>
+                                                    <Image style={{ width: "48px", height: "48px" }} src={item.image2} alt={'small'} />
+                                                </Grid>
+                                            </Button>
                                         </Grid>
                                     </Grid>
                                     <Grid width={"50rem"} pr={2} container flexDirection={"column"}>
@@ -134,32 +138,30 @@ const ProductPage = (props: Props) => {
                                                 </Grid>
                                             </Link>
                                         </Grid>
-                                        <Grid>
+                                        <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
                                             <Grid pb={0.5} pt={1.5}>
                                                 <Typography variant='h3'>
                                                     قیمت مصرف کننده :
                                                 </Typography>
                                             </Grid>
-                                            <Grid container flexDirection={"column"}>
-                                                <Grid pr={"336px"} container alignItems={"center"}>
-                                                    <Grid pb={0.5} container alignItems={"center"} gap={0.5}>
-                                                        <Typography variant='h2' sx={{ textDecoration: "line-through" }}>
-                                                            {item.oprice}تومان
+                                            <Grid pt={4}>
+                                                <Grid pb={0.5} container alignItems={"center"} justifyContent={"flex-end"} gap={0.5}>
+                                                    <Typography color={"info.light"} variant='h2' sx={{ textDecoration: "line-through" }}>
+                                                        {item.oprice}تومان
+                                                    </Typography>
+                                                    <Grid borderRadius={"1.2rem"} pr={1} pl={1} bgcolor={"secondary.main"} color={"common.white"}>
+                                                        <Typography color={"common.white"} variant='h3'>
+                                                            {item.discount}%
                                                         </Typography>
-                                                        <Grid borderRadius={"1.2rem"} pr={2} pl={2} bgcolor={"secondary.main"} color={"common.white"}>
-                                                            <Typography color={"common.white"} variant='h2'>
-                                                                {item.discount}%
-                                                            </Typography>
-                                                        </Grid>
                                                     </Grid>
                                                 </Grid>
-                                                <Grid pb={2} pr={"364px"} container gap={0.5}>
-                                                    <Typography fontSize={"2.2rem"} fontWeight={500} color={"rgb(117, 117, 117)"}>
+                                                <Grid pb={2} container justifyContent={"flex-end"} gap={0.5}>
+                                                    <Typography fontSize={"2.2rem"} fontWeight={500} color={"info.light"}>
                                                         {item.price}
                                                     </Typography>
-                                                    <Typography fontSize={"2.2rem"} fontWeight={500} color={"rgb(117, 117, 117)"}>تومان</Typography>
+                                                    <Typography fontSize={"2.2rem"} fontWeight={500} color={"info.light"}>تومان</Typography>
                                                 </Grid>
-                                                <Grid pr={"250px"}>
+                                                <Grid>
                                                     <ButtonBase sx={{
                                                         background: "rgb(51,123,240)",
                                                         color: "white",
@@ -169,7 +171,7 @@ const ProductPage = (props: Props) => {
                                                         display: "flex",
                                                         justifyContent: "center",
                                                         width: "100%",
-                                                        padding: "0 1rem",
+                                                        padding: "1rem 8rem",
                                                         ":hover": {
                                                             background: "rgb(36,70,245)"
                                                         }
