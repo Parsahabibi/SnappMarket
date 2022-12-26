@@ -11,7 +11,7 @@ type Props = {
 
 const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
   return (
-    <Grid sx={{ cursor: "pointer", width: "33.33%" }}>
+    <Grid sx={{ cursor: "pointer" }}>
       <Grid
         item
         container
@@ -23,8 +23,8 @@ const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
         }}
         bgcolor={"rgba(255, 203, 150, 0.27)"}
         display={"flex"}
-        width={{ lg: "32.5rem" }}
-        height={{ lg: "17.7rem" }}
+        width={{ lg: "32.5rem", xl: "37rem" }}
+        height={{ lg: "16rem" }}
       >
         <Grid
           item
@@ -48,13 +48,16 @@ const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
           alignItems={"start"}
           paddingRight={{ md: "1.5rem", lg: "1rem" }}
         >
-          <Typography pb={3}>{title}</Typography>
+          <Typography fontSize={"1.8rem"} pb={3}>
+            {title}
+          </Typography>
           <Typography
             sx={{ transform: "skew(-15deg)" }}
             bgcolor={"success.main"}
             color={"common.white"}
             p={"4px 10px "}
             borderRadius={1}
+            fontSize={"1.6rem"}
           >
             {priceReduction}
           </Typography>

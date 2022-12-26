@@ -17,7 +17,7 @@ const ButtonProductCardSwiper = ({ title, icon, bgcolor, value }: Props) => {
           color: bgcolor,
           cursor: "pointer",
           fontSize: "1.2rem",
-          fontWeight: "bold",
+
           lineHeight: "normal",
           fontStretch: "normal",
           fontStyle: "normal",
