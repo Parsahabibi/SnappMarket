@@ -11,7 +11,7 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
   return (
     <ButtonBase
       sx={{
-        minWidth: "15rem",
+        minWidth: "10rem",
         ml: "20px",
         alignself: "center",
         background: "transparent",
@@ -19,6 +19,7 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+
         ":hover": {
           color: "rgb(220, 220, 220)",
         },
@@ -40,7 +41,7 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
           overflow: "hidden",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
-          maxWidth: "8rem",
+          maxWidth: "5rem",
         }}
       >
         ahmad mohtadi

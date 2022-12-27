@@ -37,7 +37,7 @@ const SecondaryHeader = (props: Props) => {
           <Grid sx={{ cursor: "pointer" }}>
             <Image alt="" src={SnappLogo} style={styleLogo} width={70} />
           </Grid>
-          <Grid>
+          <Grid display={{ sm: "none", md: "flex" }}>
             <HeaderAddressLayout />
           </Grid>
           <Grid>
@@ -73,7 +73,9 @@ const SecondaryHeader = (props: Props) => {
               </Typography>
             </Grid>
             <Grid alignSelf="center" position="relative" left={30}>
-              <Typography fontSize="1.4rem">سوالات متداول</Typography>
+              <Typography fontSize="1.4rem" sx={{ cursor: "pointer" }}>
+                سوالات متداول
+              </Typography>
             </Grid>
           </Grid>
         </Container>

@@ -12,7 +12,7 @@ const SecondaryHeaderShopLayout = (props: Props) => {
   const handleModalOpen = () => setSecondaryOpen(true);
   const handleModalClose = () => setSecondaryOpen(false);
   return (
-    <Grid>
+    <Grid height="20px">
       <ChangeShopLayout onClick={handleModalOpen} />
       <AddressAndShopStoreModal
         open={secondaryOpen}
