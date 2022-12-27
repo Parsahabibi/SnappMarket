@@ -5,13 +5,15 @@ import Theme from "../Theme/Theme";
 import DesktopHeader from "../Components/Header/DekstopHeader";
 import HeaderCategoryLayout from "../Components/HeaderCategoryLayout/HeaderCategoryLayout";
 import HeaderAddressLayout from "../Components/HeaderAddressLayout/HeaderAddressLayout";
+import SecondaryHeader from "../Components/Header/SecondaryHeader";
 
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-        <DesktopHeader />
+        {/* <DesktopHeader /> */}
+        <SecondaryHeader />
       </Grid>
     </ThemeProvider>
   );

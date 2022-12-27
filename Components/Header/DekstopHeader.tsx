@@ -59,7 +59,10 @@ const DekstopHeader = (props: Props) => {
                 position="relative"
                 alignSelf="center"
               >
-                <HeaderCategoryLayout />
+                <Grid mt="10px">
+                  <HeaderCategoryLayout />
+                </Grid>
+
                 <Grid alignSelf="center" width={{ xs: "25rem", md: "33rem" }}>
                   <SearchBar />
                 </Grid>
