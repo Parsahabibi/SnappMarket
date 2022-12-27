@@ -1,10 +1,12 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, createTheme, Grid, Typography } from "@mui/material";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 import image1 from "../../assets/Images/milkProductPage.jpg"
 import image2 from "../../assets/Images/behind1.jpg"
+
+// import "../MobileProductPage/"
 
 import Image from "next/image";
 import dataProductPage, { dataSwiperProductPage } from "./DataProductPage";
@@ -19,7 +21,7 @@ import { borderColor } from "@mui/system";
 type Props = {};
 
 const MobileProductPage = (props: Props) => {
-
+  
   const [page, setPage] = useState(0)
   const swiperRef = useRef<any>(null)
 
@@ -42,7 +44,7 @@ const MobileProductPage = (props: Props) => {
         <Grid pr={2}>
           <ArrowForwardIcon style={{ width: "24px", height: "24px" }} />
         </Grid>
-        <Grid pr={"24%"}>
+        <Grid className="header" pr={{xs:"24%" , sm:"39%"}}>
           <Typography variant="h3">جزئیات محصول</Typography>
         </Grid>
       </Grid>
@@ -73,7 +75,7 @@ const MobileProductPage = (props: Props) => {
                     }
                   </Grid>
                 </Swiper>
-                <Grid zIndex={99} position={"absolute"} bottom={0} left={15}>
+                <Grid zIndex={99} position={"absolute"} bottom={0} left={{xs:15 , sm:24}}>
                   <Button style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", cursor: "pointer", width: "72px", height: "64px", border: "0.5px solid rgba(35, 71, 251, 0.24)", borderRadius: "0.8rem" , marginBottom:"15px" }} onClick={handlePrevSlide}>
                     <Grid pt={1}>
                       <Image style={{ width: "48px", height: "48px" }} src={item.image} alt={'small'} />
@@ -113,7 +115,7 @@ const MobileProductPage = (props: Props) => {
                               %{item.discount}
                             </Typography>
                           </Grid>
-                          <Typography fontSize={"1.1rem"} fontWeight={500} sx={{ textDecoration: "line-through", textDecorationColor: "rgb(117 , 117 , 117)", pr: 0.5 }}>
+                          <Typography fontSize={"1.1rem"} fontWeight={500} sx={{ textDecoration: "line-through", textDecorationColor: "info.light", pr: 0.5 }}>
                             {item.oprice}
                           </Typography>
                         </Grid>
