@@ -50,7 +50,7 @@ const Slider = ({ color, title }: Props) => {
 
   return (
     <Container>
-      <Grid style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
+      <Grid display={{xs:'none',sm:'flex'}} flexDirection={'column'} style={styling} bgcolor={color} color={'common.white'} position={'relative'}>
         {page > 0 ?
           <Grid boxShadow={5} position={'absolute'} top={'45%'} right={15} display={'flex'} zIndex={99} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} color={'common.white'}>
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
