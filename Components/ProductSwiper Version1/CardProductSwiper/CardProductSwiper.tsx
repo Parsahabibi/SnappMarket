@@ -9,11 +9,11 @@ import { dataCardSliderType } from "../../../Model/DataCardSliderV1Type";
 const CardProductSwiper = ({ title, image, Price, Weight, priceReduction, Discount }: dataCardSliderType) => {
   return (
   
-      <Grid bgcolor={'common.white'} borderRadius={'0.5rem'} width={'23.4rem'}  px={2}>
+      <Grid bgcolor={'common.white'} borderRadius={'0.5rem'} height={'33.9rem'} width={'23.4rem'}  px={2}>
         <Grid display='flex' justifyContent={'center'} my={1}>
           <Image src={image} alt={title} width={170} height={170} />
         </Grid>
-        <Grid height={50}>
+        <Grid height={40}>
           <Typography variant='h3' >{title}</Typography>
         </Grid>
         <Typography variant='subtitle1'>{Weight}</Typography>

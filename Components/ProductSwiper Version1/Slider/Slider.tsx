@@ -34,6 +34,7 @@ const Slider = ({ color, title }: Props) => {
     backgroundRepeat: 'no-repeat',
 
   }
+
   const [page, setPage] = useState(0)
   const swiperRef = useRef<any>(null)
 
@@ -55,7 +56,7 @@ const Slider = ({ color, title }: Props) => {
             <Button sx={{ color: 'common.white' }} onClick={handlePrevSlide}><ArrowForwardIosIcon /></Button>
           </Grid>
           : ''}
-        <Grid display={'flex'}  justifyContent={'space-between'} >
+        <Grid display={'flex'} justifyContent={'space-between'} >
           <Swiper
             breakpoints={{
               720: {
@@ -77,7 +78,7 @@ const Slider = ({ color, title }: Props) => {
             ref={swiperRef}
             virtual
           >
-            <SwiperSlide>
+            <SwiperSlide style={{maxWidth:'30px'}}>
               <Grid height={'100%'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
                 <Link href={'#'}>
                   <Typography variant='h2' color={'common.white'}>{title}</Typography>
@@ -90,12 +91,12 @@ const Slider = ({ color, title }: Props) => {
               </SwiperSlide>
             ))}
             <SwiperSlide >
-              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'35.7rem'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'33.9rem'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
             </SwiperSlide>
           </Swiper>
           {page < 2 ?
             <Grid position={'absolute'} top={'45%'} left={15} zIndex={99} display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'primary.main'} borderRadius={'50%'} boxShadow={5} >
-              <Button sx={{ color: 'common.white' }} onClick={handleNextSlide}><ArrowBackIosIcon /></Button>
+              <Button sx={{ color: 'common.white',pl:'13px' }} onClick={handleNextSlide}><ArrowBackIosIcon /></Button>
             </Grid>
             : ''}
         </Grid>
