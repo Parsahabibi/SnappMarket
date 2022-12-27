@@ -87,11 +87,11 @@ const Slider = ({ color, title }: Props) => {
             </SwiperSlide>
             {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={''} titleBtn={undefined} widthImage={0} heightImage={0} bottom={''} left={''} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >
-              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'33.9rem'} display={'flex'} sx={{ borderRadius: '5px' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              <Typography  width={'95%'} bgcolor={'common.white'} mt={1} height={'33.9rem'} display={'flex'} sx={{ borderRadius: '5px',cursor:'pointer' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
             </SwiperSlide>
           </Swiper>
           {page < 2 ?
