@@ -5,6 +5,9 @@ import Theme from "../Theme/Theme";
 import DekstopHeader from "../Components/Header/DekstopHeader";
 import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
 import CategoryBanner from "../Components/CategoryBanner/CategoryBanner";
+import AuctionBanner from "../Components/Banner/AuctionBanner";
+import HealthBanner from "../Components/Banner/HealthBanner";
+
 
 
 
@@ -14,7 +17,9 @@ export default function Home() {
       <Grid>
         <CssBaseLine />
           <DekstopHeader/>
-          <Slider color={'red'} title={'تخفیف ویژه'}/>
+         <AuctionBanner/>
+          <Slider color={'primary.main'} title={'حراج اول ماه'}/>
+          <HealthBanner/>
           <CategoryBanner/>
       </Grid>
     </ThemeProvider>
