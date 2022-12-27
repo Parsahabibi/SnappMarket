@@ -2,7 +2,8 @@ import Grid from "@mui/material/Grid";
 import CssBaseLine from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../Theme/Theme";
-import MobileStoreSelectore from "../Components/MobileStoreSelectore/MobileStoreSelectore";
+import DekstopHeader from "../Components/Header/DekstopHeader";
+
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          <MobileStoreSelectore/>
+          <DekstopHeader/>
       </Grid>
     </ThemeProvider>
   );
