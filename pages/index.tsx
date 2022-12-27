@@ -7,6 +7,7 @@ import Slider from "../Components/ProductSwiper Version1/Slider/Slider";
 import CategoryBanner from "../Components/CategoryBanner/CategoryBanner";
 import AuctionBanner from "../Components/Banner/AuctionBanner";
 import HealthBanner from "../Components/Banner/HealthBanner";
+import ShampooBanner from "../Components/Banner/ShampooBanner";
 
 
 
@@ -16,11 +17,13 @@ export default function Home() {
     <ThemeProvider theme={Theme}>
       <Grid>
         <CssBaseLine />
-          <DekstopHeader/>
-         <AuctionBanner/>
-          <Slider color={'primary.main'} title={'حراج اول ماه'}/>
-          <HealthBanner/>
-          <CategoryBanner/>
+        <DekstopHeader />
+        <AuctionBanner />
+        <Slider color={'primary.main'} title={'حراج اول ماه'} />
+        <HealthBanner />
+        <CategoryBanner />
+        <Slider color={'primary.main'} title={'زیبایی و سلامت'} />
+        <ShampooBanner />
       </Grid>
     </ThemeProvider>
   );
