@@ -19,11 +19,11 @@ export default function Home() {
       <Grid>
         <CssBaseLine/>
         {/* <Header/>
-        <MobileMenuItem/> */}
-        {/* <Category/> */}
+        <MobileMenuItem page={'home'}/> */}
+        <Category/>
         {/* <Account /> */}
         {/* <Basket /> */}
-        <Search />
+        {/* <Search /> */}
       </Grid>
     </ThemeProvider>
   );

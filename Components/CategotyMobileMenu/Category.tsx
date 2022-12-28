@@ -42,7 +42,7 @@ const Category = (props: Props) => {
                     }
                 </Grid>
             </Container>
-            <MobileMenuItem />
+            <MobileMenuItem page='category'/>
         </Grid>
 
     )
