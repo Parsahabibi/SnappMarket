@@ -15,13 +15,13 @@ import ShampooBanner from "../Components/Banner/ShampooBanner";
 export default function Home() {
   return (
       <Grid>
-        <DekstopHeader />
-        <AuctionBanner />
-        <Slider color={'primary.main'} title={'حراج اول ماه'} />
-        <HealthBanner />
-        <CategoryBanner />
-        <Slider color={'primary.main'} title={'زیبایی و سلامت'} />
-        <ShampooBanner />
+        <DekstopHeader/>
+        <AuctionBanner/>
+        <Slider color={'primary.main'} title={'حراج اول ماه'}/>
+        <HealthBanner/>
+        <CategoryBanner/>
+        <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
+        <ShampooBanner/>
       </Grid>
   );
 }
