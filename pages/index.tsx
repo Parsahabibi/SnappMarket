@@ -8,6 +8,8 @@ import CategoryBanner from "../Components/CategoryBanner/CategoryBanner";
 import AuctionBanner from "../Components/Banner/AuctionBanner";
 import HealthBanner from "../Components/Banner/HealthBanner";
 import ShampooBanner from "../Components/Banner/ShampooBanner";
+import ProductContainer from "../Components/ProductContainer/ProductContainer";
+import DrinkBanner from "../Components/Banner/DrinkBanner";
 
 
 
@@ -22,6 +24,9 @@ export default function Home() {
         <CategoryBanner/>
         <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
         <ShampooBanner/>
+        <ProductContainer/>
+        <DrinkBanner/>
+        <ProductContainer/>
       </Grid>
   );
 }
