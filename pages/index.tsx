@@ -14,9 +14,7 @@ import ShampooBanner from "../Components/Banner/ShampooBanner";
 
 export default function Home() {
   return (
-    <ThemeProvider theme={Theme}>
       <Grid>
-        <CssBaseLine />
         <DekstopHeader />
         <AuctionBanner />
         <Slider color={'primary.main'} title={'حراج اول ماه'} />
@@ -25,6 +23,5 @@ export default function Home() {
         <Slider color={'primary.main'} title={'زیبایی و سلامت'} />
         <ShampooBanner />
       </Grid>
-    </ThemeProvider>
   );
 }
