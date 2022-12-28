@@ -27,7 +27,6 @@ const DekstopHeader = (props: Props) => {
       flexDirection="column"
       display="flex"
       padding="20px"
-      bgcolor="success.main"
       height="22rem"
       style={styled}
     >
