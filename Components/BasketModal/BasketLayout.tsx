@@ -13,7 +13,7 @@ type Props = {
 const BasketLayout = ({ onClose, open }: Props) => {
   return (
     <Drawer onClose={onClose} open={open} anchor={"left"}>
-      <Grid sx={{ width: "40rem" }}>
+      <Grid sx={{width: "40rem" }}>
         <Grid sx={{ boxShadow: " rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
           <Grid
             display="flex"
@@ -82,7 +82,7 @@ const BasketLayout = ({ onClose, open }: Props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid height="75rem">
+        <Grid>
           <Grid
             flexDirection="column"
             display="flex"
