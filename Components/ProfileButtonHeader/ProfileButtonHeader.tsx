@@ -11,13 +11,14 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
   return (
     <ButtonBase
       sx={{
-        minWidth: "15rem",
+        minWidth: "10rem",
         ml: "20px",
         alignself: "center",
         background: "transparent",
         color: "white",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
 
         ":hover": {
           color: "rgb(220, 220, 220)",
@@ -26,10 +27,22 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
       onClick={onClick}
     >
       <Person2OutlinedIcon
-        sx={{ ml: "5px", width: "3rem", height: "2.5rem", alignSelf: "center" }}
+        sx={{
+          ml: "5px",
+          width: "3rem",
+          height: "2.5rem",
+          display: "flex",
+        }}
       />
       <Typography
-        sx={{ fontSize: "1.5rem", alignSelf: "center", display: "flex" }}
+        sx={{
+          fontSize: "1.5rem",
+          alignSelf: "center",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          maxWidth: "5rem",
+        }}
       >
         ahmad mohtadi
       </Typography>

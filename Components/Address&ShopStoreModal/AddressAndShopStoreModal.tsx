@@ -13,6 +13,7 @@ import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import Modal from "@mui/material/Modal";
 import { Container } from "@mui/system";
+import AddIcon from "@mui/icons-material/Add";
 
 type AddressAndShopProps = {
   open: boolean;
@@ -38,11 +39,12 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
       <Container>
         <Grid
           sx={{
-            width: "45rem",
+            width: "67.8rem",
             display: "flex",
             flexDirection: "column",
-            borderRadius: "10px",
+            borderRadius: "5px",
             bgcolor: "white",
+            minHeight: "39rem",
           }}
         >
           <Grid sx={{ display: "flex", width: "100%", padding: "10px" }}>
@@ -60,17 +62,24 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                   <LocationOnOutlinedIcon
                     sx={{
                       color: "primary.main",
-                      width: "20px",
-                      height: "20px",
+                      width: "24px",
+                      height: "18px",
                       ml: "8px",
                     }}
                   />
-                  <Typography sx={{ color: "primary.main" }}>
+                  <Typography
+                    sx={{ fontSize: "1.4rem", color: "primary.main" }}
+                  >
                     انتخاب آدرس تحویل
                   </Typography>
                 </Grid>
                 <ClearOutlinedIcon
-                  sx={{ color: "rgb(125,125,125)", cursor: "pointer" }}
+                  sx={{
+                    width: "24px",
+                    height: "18px",
+                    color: "rgb(125,125,125)",
+                    cursor: "pointer",
+                  }}
                 />
               </Grid>
               <Grid
@@ -96,7 +105,7 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                       height: "20px",
                     }}
                   />
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" fontSize="1.2rem">
                     تهران، دانشگاه تهران، کارگر شمالی، 16 آذر، پارسی تقاطع مهر،
                     خوابگاه 16 آذر پلاک 23 واحد 22
                   </Typography>
@@ -109,6 +118,9 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                       cursor: "pointer",
                       width: "20px",
                       height: "20px",
+                      ":hover": {
+                        color: "black",
+                      },
                     }}
                   />
                   <DeleteOutlinedIcon
@@ -118,6 +130,9 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                       mr: "10px",
                       width: "20px",
                       height: "20px",
+                      ":hover": {
+                        color: "black",
+                      },
                     }}
                   />
                 </Grid>
@@ -125,12 +140,24 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
               <Grid
                 sx={{
                   mt: "10px",
-                  fontSize: "0.9rem",
+                  fontSize: "1.1rem",
                   color: "primary.main",
                   cursor: "pointer",
+                  fontWeight: "500",
+                  p: "10px",
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
-                + افزودن آدرس
+                <AddIcon
+                  sx={{
+                    alignSelf: "center",
+                    ml: "5px",
+                    width: "15px",
+                    height: "15px",
+                  }}
+                />
+                افزودن آدرس
               </Grid>
               <Grid
                 sx={{
@@ -141,13 +168,18 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                 }}
               >
                 <Grid
-                  sx={{ display: "flex", mt: "20px", color: "primary.main" }}
+                  sx={{
+                    display: "flex",
+                    mt: "20px",
+                    color: "primary.main",
+                    fontSize: "1.4rem",
+                  }}
                 >
                   <ShoppingCartOutlinedIcon
                     sx={{
-                      width: "20px",
-                      height: "20px",
-                      ml: "5px",
+                      width: "15px",
+                      height: "15px",
+                      ml: "8px",
                     }}
                   />
                   انتخاب فروشگاه
@@ -160,11 +192,13 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                       borderRadius: "20px",
                       ":hover": {
                         bgcolor: "rgb(242,247,255)",
-                        ml: "5px",
                       },
                     }}
                   >
-                    <Typography variant="subtitle2"> هایپر استار</Typography>
+                    <Typography variant="subtitle2" fontSize="1.2rem">
+                      {" "}
+                      هایپر استار
+                    </Typography>
                   </ButtonBase>
                   <ButtonBase
                     sx={{
@@ -173,21 +207,30 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                       borderRadius: "20px",
                       ":hover": {
                         bgcolor: "rgb(242,247,255)",
-                        mr: "7px",
                       },
                     }}
                   >
-                    <Typography variant="subtitle2"> مایلی</Typography>
+                    <Typography variant="subtitle2" fontSize="1.2rem">
+                      {" "}
+                      مایلی
+                    </Typography>
                   </ButtonBase>
                 </Grid>
               </Grid>
-              <Grid sx={{ mt: "10px", display: "flex" }}>
+              <Grid
+                sx={{
+                  mt: "10px",
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  mb: "20px",
+                }}
+              >
                 <Grid
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "22rem",
-                    height: "14rem",
+                    width: " calc(50% - 1.2rem) !important",
+                    minHeight: "17rem",
                     ml: "20px",
                     borderRadius: "5px",
                     cursor: "pointer",
@@ -224,11 +267,12 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                           color: "primary.main",
                           borderRadius: "20px",
                           bgcolor: "white",
-
+                          fontSize: "1.2rem",
                           padding: "5px",
                         }}
                       >
-                        20% تخفیف ویژه
+                        <strong> 20% </strong>
+                        تخفیف ویژه
                       </Grid>
                     </Grid>
                   </Grid>
@@ -240,12 +284,12 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                     top={7}
                   >
                     <Typography
-                      sx={{ alignSelf: "center", fontSize: "0.9rem" }}
+                      sx={{ alignSelf: "center", fontSize: "1.2rem" }}
                     >
                       تحویل از امروز ساعت 21:00
                     </Typography>
                     <Typography
-                      sx={{ alignSelf: "center", fontSize: "0.9rem" }}
+                      sx={{ alignSelf: "center", fontSize: "1.2rem" }}
                     >
                       تحویل از امروز ساعت 21:00
                     </Typography>
@@ -255,11 +299,9 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "22rem",
-                    height: "14rem",
-                    mr: "20px",
+                    width: " calc(50% - 1.2rem) !important",
+                    minHeight: "17rem",
                     borderRadius: "5px",
-                    mb: "20px",
                     cursor: "pointer",
                     border: "1px solid rgb(238,238,238)",
                   }}
@@ -297,9 +339,11 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                           borderRadius: "20px",
                           bgcolor: "white",
                           padding: "5px",
+                          fontSize: "1.2rem",
                         }}
                       >
-                        20% تخفیف ویژه
+                        <strong> 70% </strong>
+                        تخفیف ویژه
                       </Grid>
                     </Grid>
                   </Grid>
@@ -311,12 +355,12 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                     top={7}
                   >
                     <Typography
-                      sx={{ alignSelf: "center", fontSize: "0.9rem" }}
+                      sx={{ alignSelf: "center", fontSize: "1.2rem" }}
                     >
                       تحویل از امروز ساعت 21:00
                     </Typography>
                     <Typography
-                      sx={{ alignSelf: "center", fontSize: "0.9rem" }}
+                      sx={{ alignSelf: "center", fontSize: "1.2rem" }}
                     >
                       تحویل از امروز ساعت 21:00
                     </Typography>
