@@ -1,7 +1,7 @@
 // import { Image } from 'next/image';
 interface data{
     id:number,
-    image:any,
+    image:string|any,
     name:string,
     description:string,
     Discount:number,
@@ -9,7 +9,6 @@ interface data{
     price:string
 }
 export default data;
-
 
 export interface image{
     id:number ,
