@@ -21,7 +21,7 @@ const CardProductSwiper = ({ bottom, left, title, image, Price, Weight, priceRed
     </Grid>
     <Grid display='flex' justifyContent={'space-between'} >
       <Typography pt={1.2} sx={{ fontSize: '1.6rem' }} color={'common.black'} pb={2}>{Price}تومان</Typography>
-      <ButtonProductCardSwiper title={''} icon={undefined} bgcolor={''} value={''} />
+      <ButtonProductCardSwiper title={'افزودن به سبد'} icon={undefined} bgcolor={''} value={''} />
     </Grid>
   
 </Grid>
