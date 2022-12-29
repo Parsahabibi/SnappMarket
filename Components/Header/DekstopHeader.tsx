@@ -25,7 +25,7 @@ const DekstopHeader = (props: Props) => {
   return (
     <Grid
       flexDirection="column"
-      display="flex"
+      display={{xs:'none',sm:'flex'}}
       padding="20px"
       height="22rem"
       style={styled}
