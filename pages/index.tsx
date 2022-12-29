@@ -15,6 +15,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Box';
 import {TypographyVariant} from "@mui/material";
 import Header from "../Components/MobileMenuHeader/Header";
+import MobileSwiper from "../Components/MobileSwiper/MobileSwiper";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -25,37 +26,7 @@ export default function Home() {
     }, [])
     return (
         <Grid>
-            {loading ?
-                <Grid sx={{display: 'flex',alignItems:'center' ,justifyContent:'center',width:'100%' , height:'100vh'}}>
-                    <CircularProgress sx={{marginLeft:1}}/>
-                    <Typography fontWeight={900} fontSize={20} color={'info.main'}>
-                        {'در حال بارگذاری صفحه هستیم'}
-                    </Typography>
-                </Grid> :
-                <>
-                    <DekstopHeader/>
-                    <Header/>
-                    <AuctionBanner/>
-                    <Slider color={'primary.main'} title={'حراج اول ماه'}/>
-                    <HealthBanner/>
-                    <CategoryBanner/>
-                    <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
-                    <ShampooBanner/>
-                    <ProductContainer/>
-                    <DrinkBanner/>
-                    <ProductContainer/>
-                    <ProductContainer/>
-                    <ProductContainer/>
-                    <HealthBanner/>
-                    <ProductContainer/>
-                    <ProductContainer/>
-                    <SecondarySwiperContainer/>
-                    <ProductContainer/>
-                    <ProductContainer/>
-                    <AboutUs/>
-                    <DesktopFooter/>
-                </>
-            }
+           <MobileSwiper/>
         </Grid>
     );
 }
