@@ -14,6 +14,7 @@ import {useEffect, useState} from "react";
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Box';
 import {TypographyVariant} from "@mui/material";
+import Header from "../Components/MobileMenuHeader/Header";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -33,6 +34,7 @@ export default function Home() {
                 </Grid> :
                 <>
                     <DekstopHeader/>
+                    <Header/>
                     <AuctionBanner/>
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>

@@ -35,7 +35,7 @@ const Header = (props: Props) => {
         },
     }));
     return (
-        <Grid>
+        <Grid display={{xs:'flex',sm:'none'}} flexDirection={'column'}>
             <Grid sx={{ display: "flex", justifyContent: "space-around", alignItems: "stretch" }} borderBottom={1} borderColor={'rgb(230, 230, 230)'} pt={2} pr={2} pl={2}>
                 {/* color?? */}
                 <Grid container pb={2} alignItems={"flex-end"}>
