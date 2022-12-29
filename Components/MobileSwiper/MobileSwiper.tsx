@@ -30,7 +30,10 @@ const MobileSwiper = ({bgColor , title}:Props) => {
             sx={{ backgroundColor: bgColor }} borderRadius={'0.5rem'} mx={1.5}>
             <Grid display={{ xs: "flex", sm: "none", lg: "none" }} alignItems={"center"} justifyContent={'space-between'}>
                 <Grid display={'flex'}>
-                    <Typography color={'common.white'} fontSize={'1.4rem'} fontWeight={500} m={'0px 0px 0px 0.8rem'}>
+                    <Typography
+                        color={'common.white'}
+                        fontSize={'1.4rem'}
+                        fontWeight={500} m={'0px 0px 0px 0.8rem'}>
                         {title}
                     </Typography>
                     <Box display={"flex"}

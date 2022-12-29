@@ -7,7 +7,7 @@ type Props = {}
 
 const SendGoodsFooter = (props: Props) => {
     return (
-        <Grid  display={'flex'} justifyContent={'space-between'}flexDirection={'row-reverse'} >
+        <Grid mt={3}  display={'flex'} justifyContent={'space-between'}flexDirection={'row-reverse'} >
             {dataGoodsFooter.map(item => (
                 <Grid key={item.id} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
                     <Grid>
