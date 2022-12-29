@@ -88,15 +88,10 @@ const SecondarySwiperContainer = () => {
                             <SwiperSlide>
                                 <Grid display={"flex"}>
                                     <SecondarySwiperCard/>
-                                    <SecondarySwiperCard/>
-                                    <SecondarySwiperCard/>
-                                    <SecondarySwiperCard/>
                                 </Grid>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Grid display={"flex"}>
-                                    <SecondarySwiperCard/>
-                                    <SecondarySwiperCard/>
                                     <SecondarySwiperCard/>
                                     <SeeAllCard/>
                                 </Grid>
