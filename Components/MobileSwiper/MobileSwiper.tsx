@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import {Box, display} from "@mui/system";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SwiperCore, { Navigation, Pagination, Virtual } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,9 +20,10 @@ import { dataMobileCardCategory } from "../../Data/DataMobileCategoryCard/DataMo
 SwiperCore.use([Virtual, Navigation, Pagination]);
 export interface Props {
     bgColor: string,
-    title: string
+    title: string,
+    display:string,
 }
-const MobileSwiper = ({bgColor , title}:Props) => {
+const MobileSwiper = ({bgColor , title , display}:Props) => {
     
     const swiperRef = useRef<any>(null)
     return (
@@ -36,7 +37,7 @@ const MobileSwiper = ({bgColor , title}:Props) => {
                         fontWeight={500} m={'0px 0px 0px 0.8rem'}>
                         {title}
                     </Typography>
-                    <Box display={"flex"}
+                    <Box display={display}
                         alignItems={"center"}
                         justifyContent={"space-between"}
                         marginLeft={5}
