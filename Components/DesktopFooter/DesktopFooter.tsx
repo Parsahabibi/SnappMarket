@@ -11,7 +11,7 @@ type Props = {}
 
 const DesktopFooter = (props: Props) => {
     return (
-       <Grid bgcolor={"common.white"} mt={3} display={{xs:'none',md:'flex'}}>
+       <Grid bgcolor={"common.white"} mt={3} display={{xs:'none',sm:'flex' , md:'flex'}}>
          <Container>
             <SendGoodsFooter />
             <ApplicationFooter />
