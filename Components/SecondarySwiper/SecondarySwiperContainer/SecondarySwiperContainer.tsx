@@ -47,7 +47,7 @@ const SecondarySwiperContainer = () => {
 
     return (
         <Container>
-            <Grid display={{xs:'flex',sm:'flex'}} marginY={3}
+            <Grid display={{xs: 'flex', sm: 'flex'}} marginY={3}
                   paddingY={3}
                   justifyContent={"center"}
                   paddingX={2}
@@ -74,24 +74,26 @@ const SecondarySwiperContainer = () => {
                     */}
 
                     <Swiper breakpoints={{
-                        320:{
-                            slidesPerView:0.1
+                        320: {
+                            slidesPerView: 0.4
+                        },
+                        375: {
+                            slidesPerView: 0.5
+                        },
+                        425:{
+                            slidesPerView:0.5
                         },
                         720: {
-                            slidesPerView: 0.1
+                            slidesPerView: 0.5
                         },
                         900: {
-                            slidesPerView: 0.9
+                            slidesPerView: 0.5
                         }
                     }}>
                         <Grid display={"flex"}>
                             <SwiperSlide>
                                 <Grid display={"flex"}>
                                     <SecondarySwiperCard/>
-                                </Grid>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Grid display={"flex"}>
                                     <SecondarySwiperCard/>
                                     <SeeAllCard/>
                                 </Grid>
