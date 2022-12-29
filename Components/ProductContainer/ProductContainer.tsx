@@ -65,7 +65,7 @@ const ProductContainer = (props: Props) => {
 
     return (
         <Container>
-            <Grid bgcolor={"common.white"} border={0.05} borderColor={"rgb(250,250,250)"} width={"auto"} sx={{ direction: "rtl" }}>
+            <Grid marginY={2} bgcolor={"common.white"} border={0.05} borderColor={"rgb(250,250,250)"} width={"auto"} sx={{ direction: "rtl" }}>
                 <Grid container justifyContent={"space-between"} alignItems={"center"} bgcolor={'common.white'} pt={1.5} pb={1.5}>
                     <Grid pr={3} >
                         <Typography color="common.black" variant='h2'>لبنیات</Typography>
@@ -97,7 +97,7 @@ const ProductContainer = (props: Props) => {
                             : ''}
                         <Grid container justifyContent={"center"} alignItems={"center"} bgcolor={"white"}>
                             {data.map(item => (
-                                <SwiperSlide style={{ width: "auto" , zIndex:1}} key={item.name}>
+                                <SwiperSlide style={{ width: "auto" , zIndex:1 , marginLeft:2 , marginRight:2 , marginTop:4 , marginBottom:4}} key={item.name}>
                                     <Link href={"/"}>
                                         <Grid bgcolor={"common.white"} borderLeft={1} borderColor={'rgb(245,245,245)'} sx={{zIndex:99 , borderRadius: '0px', height: "34rem", ':hover': { boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 36px -18px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px'} }}>
                                             <Grid container justifyContent={"center"} pt={0.75}>
