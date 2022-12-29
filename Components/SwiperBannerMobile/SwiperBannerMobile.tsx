@@ -20,17 +20,17 @@ type Props = {}
 
 const SwiperBannerMobile = (props: Props) => {
     return (
-        <Grid>
+        <Grid display={{xs:'flex',sm:'none'}}>
             <Swiper
                 breakpoints={{
                     320: {
-                        slidesPerView: 1.2
+                        slidesPerView: 1.3
                     },
                     375: {
-                        slidesPerView: 3
+                        slidesPerView: 1.5
                     },
                     425: {
-                        slidesPerView: 3
+                        slidesPerView: 1.7
                     },
                 }}
                 
