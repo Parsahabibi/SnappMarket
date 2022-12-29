@@ -9,15 +9,19 @@ import Image from 'next/image';
 import dataCategory from "./DataCategoryMobileMenu"
 import MobileMenuItem from '../MobileMenuItem/MobileMenuItem';
 interface Props {
-
+  position:string|any,
+  display:string,
+  bgcolor:string|any,
+  pb:number|string,
+  ptop:number|string,
 }
 
-const Category = (props: Props) => {
+const Category = ({position, display,bgcolor,pb,ptop}: Props) => {
     // const padding = useMediaPredicate("(max-width: 321px)");
     return (
         <Grid>
-            <Grid zIndex={99} container position={"fixed"} bgcolor={'rgb(255,255,255)'} pt={2} pb={2}>
-                <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center" , position:"absolute" }} pr={2.5}>
+            <Grid zIndex={99} container position={position} bgcolor={bgcolor} pt={2} pb={pb}>
+                <Grid sx={{ display: display, alignItems: "center", justifyContent: "center" , position:"absolute" }} pr={2.5}>
                     <ArrowForwardIcon style={{ width: 20, height: 20 }} />
                 </Grid>
                 <Grid pr={"37.5%"} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -25,7 +29,7 @@ const Category = (props: Props) => {
                 </Grid>
             </Grid>
             <Container>
-                <Grid container justifyContent={"center"} pt={7} pb={9.5} zIndex={0}>
+                <Grid container justifyContent={"center"} pt={ptop} pb={9.5} zIndex={0}>
                     {
                         dataCategory.map(item =>
                             <Grid container item xs={4} key={item.id}>
