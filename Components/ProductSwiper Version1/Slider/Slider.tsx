@@ -87,7 +87,7 @@ const Slider = ({ color, title }: Props) => {
             </SwiperSlide>
             {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={''} titleBtn={undefined} widthImage={0} heightImage={0} bottom={''} left={''} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={0} heightImage={0} bottom={''} left={''} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >

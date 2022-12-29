@@ -6,9 +6,11 @@ type Props = {
   icon: any;
   bgcolor: string;
   value: string;
+  left:string;
+  bottom:string
 };
 
-const ButtonProductCardSwiper = ({ title, icon, bgcolor, value }: Props) => {
+const ButtonProductCardSwiper = ({ title, icon, bgcolor, value,left,bottom }: Props) => {
   return (
     <Grid>
       <Button
