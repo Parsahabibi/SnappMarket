@@ -1,16 +1,16 @@
 import { Container, Grid } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
-import image1 from '../../assets/Images/ImageBanner/image1.png'
+import image1 from '../../assets/Images/ImageBanner/image9.jpg'
 
 type Props = {}
 
 const AuctionBanner = (props: Props) => {
     return (
-        <Grid display={{xs:'none',sm:'flex'}}>
+        <Grid display={{sm:'flex'}}>
             <Container>
-                <Grid mt={5} mb={4}>
-                    <Image src={image1} alt={'logo'} style={{ width: '100%', height: '100px', borderRadius: '0.5rem' }} />
+                <Grid mt={{xs:2,sm:5}} mb={{xs:2,sm:4}} height={{xs:'60px',sm:'110px'}}>
+                    <Image src={image1} alt={'logo'} style={{ width: '100%', height: '100%', borderRadius: '0.5rem' }} />
                 </Grid>
             </Container>
         </Grid>
