@@ -19,7 +19,7 @@ interface Props {
 const Category = ({position, display,bgcolor,pb,ptop}: Props) => {
     // const padding = useMediaPredicate("(max-width: 321px)");
     return (
-        <Grid>
+        <Grid display={{xs:'flex',sm:'none'}} flexDirection={'column'}>
             <Grid zIndex={99} container position={position} bgcolor={bgcolor} pt={2} pb={pb}>
                 <Grid sx={{ display: display, alignItems: "center", justifyContent: "center" , position:"absolute" }} pr={2.5}>
                     <ArrowForwardIcon style={{ width: 20, height: 20 }} />
