@@ -47,7 +47,7 @@ const SecondarySwiperContainer = () => {
 
     return (
         <Container>
-            <Grid display={"flex"} marginY={3}
+            <Grid display={{xs:'none',sm:'flex'}} marginY={3}
                   paddingY={3}
                   justifyContent={"center"}
                   paddingX={2}
