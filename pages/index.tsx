@@ -16,6 +16,7 @@ import Typography from '@mui/material/Box';
 import {TypographyVariant} from "@mui/material";
 import Header from "../Components/MobileMenuHeader/Header";
 import Category from "../Components/CategotyMobileMenu/Category";
+import SwiperBannerMobile from "../Components/SwiperBannerMobile/SwiperBannerMobile";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -26,13 +27,13 @@ export default function Home() {
     }, [])
     return (
         <Grid>
-            {loading ?
+            {/* {loading ?
                 <Grid sx={{display: 'flex',alignItems:'center' ,justifyContent:'center',width:'100%' , height:'100vh'}}>
                     <CircularProgress sx={{marginLeft:1}}/>
                     <Typography fontWeight={900} fontSize={20} color={'info.main'}>
                         {'در حال بارگذاری صفحه هستیم'}
                     </Typography>
-                </Grid> :
+                </Grid> : */}
                 <>
                     <DekstopHeader/>
                     <Header/>
@@ -41,6 +42,7 @@ export default function Home() {
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>
                     <CategoryBanner/>
+                    <SwiperBannerMobile/>
                     <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
                     <ShampooBanner/>
                     <ProductContainer/>
@@ -57,7 +59,7 @@ export default function Home() {
                     <AboutUs/>
                     <DesktopFooter/>
                 </>
-            }
+            {/* } */}
         </Grid>
     );
 }
