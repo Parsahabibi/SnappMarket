@@ -8,7 +8,7 @@ type Props = {}
 
 const ApplicationFooter = (props: Props) => {
     return (
-        <Grid sx={{ direction: 'rtl' }} container>
+        <Grid marginY={2} borderBottom={1} sx={{ direction: 'rtl' , borderBottomColor:'rgb(238, 238, 238)' }} container>
             <Grid display={'flex'} item container xs={12}>
                 <Grid item container xs={12}sm={8} md={6} lg={8} display={'flex'} flexDirection={'column'} justifyContent={'center'} pl={10}>
                     <Grid display={'flex'} flexDirection={'column'}>
@@ -17,14 +17,14 @@ const ApplicationFooter = (props: Props) => {
                     </Grid>
                     <Grid display={'flex'}flexWrap={'wrap'} gap={1.5}>
                         {dataApplicationFooter.slice(0, 4).map(item => (
-                            <Image src={item.image} alt={item.title} width={item.width} height={item.height} />
+                            <Image key={item.id} src={item.image} alt={item.title} width={item.width} height={item.height} />
                         ))}
                     </Grid>
                    
                 </Grid>
                 <Grid item xs={12} sm={4} md={6}lg={4} display={'flex'}>
                     {dataApplicationFooter.slice(4, 7).map(item => (
-                        <Image src={item.image} alt={item.title} width={item.width} height={item.height} />
+                        <Image key={item.id} src={item.image} alt={item.title} width={250}/>
                     ))}
                    
                 </Grid>

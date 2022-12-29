@@ -6,7 +6,7 @@ import bazzar from '../assets/Images/ImageFooter/bazzar.png'
 import google from '../assets/Images/ImageFooter/google.png'
 import iapps from '../assets/Images/ImageFooter/iapps.png'
 import sibapp from '../assets/Images/ImageFooter/sibapp.png'
-import image5 from '../assets/Images/ImageFooter/image5.png'
+import image5 from '../assets/Images/ImageFooter/newMobile.png'
 
 import { dataApplicationFooterType, dataGoodsFooterType } from "../Model/DataSendGoodsFooterType"
 export const dataGoodsFooter:dataGoodsFooterType[]=[

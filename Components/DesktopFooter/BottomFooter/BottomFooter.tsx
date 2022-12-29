@@ -16,8 +16,9 @@ const BottomFooter = (props: Props) => {
         </Typography>
         <Typography
           sx={{
-            fontSize: "14px",
-            lineHeight: "1.8rem",
+            fontSize: "16px",
+            lineHeight: "2.8rem",
+              marginTop:2,
             color: "rgb(117, 117, 117)",
           }}
         >
@@ -33,12 +34,12 @@ const BottomFooter = (props: Props) => {
         <ul
           style={{
             listStyleType: "none",
-            fontSize: "14px",
-            lineHeight: "2.1rem",
+            fontSize: "18px",
+            lineHeight: "2.5rem",
           }}
         >
           {dataAccessFooter.map((item) => (
-            <Link href={item.href} style={{ color: "rgb(117, 117, 117)" }}>
+            <Link key={item.id} href={item.href} style={{ color: "rgb(117, 117, 117)" }}>
               <li>{item.title}</li>
             </Link>
           ))}
@@ -52,13 +53,13 @@ const BottomFooter = (props: Props) => {
           style={{
             listStyleType: "none",
             fontSize: "14px",
-            lineHeight: "2rem",
+            lineHeight: "2.5rem",
             color: "rgb(117, 117, 117)",
             padding: "0 0 0 30px",
           }}
         >
           {dataContactUsFooter.map((item) => (
-            <li>
+            <li key={item.id}>
               {item.title} {item.value}
             </li>
           ))}
@@ -74,7 +75,7 @@ const BottomFooter = (props: Props) => {
         flexWrap={{ xs: "wrap", lg: "nowrap" }}
       >
         {dataLogoFooter.map((item) => (
-          <Grid bgcolor={"common.white"} boxShadow={3} borderRadius={1}>
+          <Grid key={item.id} bgcolor={"common.white"} boxShadow={3} borderRadius={1}>
             <Image src={item.image} alt={"logo"} width={100} height={100} />
           </Grid>
         ))}

@@ -5,6 +5,8 @@ import SendGoodsFooter from './SendGoodsFooter/SendGoodsFooter'
 import ApplicationFooter from './WebsiteApplicationFooter/ApplicationFooter'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import {Box} from "@mui/system";
+
 type Props = {}
 
 const DesktopFooter = (props: Props) => {
@@ -14,12 +16,28 @@ const DesktopFooter = (props: Props) => {
             <SendGoodsFooter />
             <ApplicationFooter />
             <BottomFooter />
-            <Grid mb={3} pr={40} display={'flex'}  justifyContent={'center'} gap={4} color={'rgb(117,117,117)'} alignItems={'center'}>
-                <InstagramIcon />
-                <TwitterIcon />
-                <Typography sx={{fontSize:'0.8rem'}}>
-                    {'info@snapp.market'}
-                </Typography>
+            <Grid mb={3} pr={40}
+                  display={'flex'} flexDirection={'row-reverse'}
+                  justifyContent={'center'}
+                  gap={3}
+                  color={'rgb(117,117,117)'}
+                  alignItems={'center'}>
+             <Box width={"max-content"}
+                  display={"flex"}
+                  gap={2}
+                  borderTop={1}
+                  paddingTop={1}
+                  paddingX={2}
+                  sx={{borderTopColor: 'rgb(238, 238, 238)'}}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  flexDirection={"row-reverse"}>
+                 <InstagramIcon style={{fontSize:'3rem'}}/>
+                 <TwitterIcon style={{fontSize:'3rem'}}/>
+                 <Typography sx={{fontSize:'1.5rem'}}>
+                     {'info@snapp.market'}
+                 </Typography>
+             </Box>
             </Grid>
         </Container>
        </Grid>
