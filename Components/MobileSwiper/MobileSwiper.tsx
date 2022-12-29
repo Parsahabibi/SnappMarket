@@ -4,7 +4,6 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SwiperCore, {Navigation, Pagination, Virtual} from "swiper";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import React, {useRef} from "react";
-import cheese from '../../assets/Images/cheese.jpg'
 import AddIcon from '@mui/icons-material/Add';
 
 
@@ -44,24 +43,10 @@ const MobileSwiper = () => {
             </Grid>
             <Grid>
                 <Swiper
+                    slidesPerView={1}
                     breakpoints={{
-                        320:{
-                            slidesPerView:0.5
-                        },
-                        720: {
-                            slidesPerView: 3
-                        },
-                        900: {
-                            slidesPerView: 3.5
-                        },
-                        1024: {
-                            slidesPerView: 4
-                        },
-                        1200: {
-                            slidesPerView: 4.8
-                        },
-                        1440: {
-                            slidesPerView: 4.8
+                        320: {
+                            slidesPerView: 0.1
                         },
                     }}
                     ref={swiperRef}
@@ -70,16 +55,18 @@ const MobileSwiper = () => {
 
 
                     {dataMobileCardCategory.slice(7, 15).map(item => (
-                        <SwiperSlide key={item.id} style={{maxWidth: '30px'}}>
+                        <SwiperSlide key={item.id} style={{maxWidth: '30px', display: 'flex'}}>
                             <Grid ml={'1rem'}>
-                                <CardProductSwiper bottom={'85%'} left={'-10%'} heightImage={100} widthImage={100}
-                                                   titleBtn={<AddIcon/>} width='130px' title={item.title}
+                                <CardProductSwiper bottom={'5%'} left={'5%'} heightImage={100} widthImage={100}
+                                                   titleBtn={<AddIcon/>} width='135px' title={item.title}
                                                    image={item.image} Price={item.Price} Weight={item.Weight}
                                                    priceReduction={item.priceReduction} Discount={item.Discount}
                                                    id={0}/>
+
                             </Grid>
                         </SwiperSlide>
                     ))}
+
                 </Swiper>
             </Grid>
         </Grid>
