@@ -16,7 +16,7 @@ const MobileCategoryPage = (props: Props) => {
             <Grid  display={'flex'}  sx={{overflowX:'scroll'}} px={'1.1rem'}>
             {dataMobileCardCategory.slice(0,7).map(item => (
                 <Grid ml={'1rem'} >
-                    <CardProductSwiper bottom={'85%'} left={'-10%'} heightImage={100}widthImage={100} titleBtn={<AddIcon/>} width='130px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount}/>
+                    <CardProductSwiper bottom={'85%'} left={'-10%'} heightImage={100} widthImage={100} titleBtn={<AddIcon />} width='130px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount} id={0}/>
                 </Grid>
             ))}
             </Grid>
@@ -24,7 +24,7 @@ const MobileCategoryPage = (props: Props) => {
             <Grid  display={'flex'}  sx={{overflowX:'scroll'}}px={'1.1rem'}>
             {dataMobileCardCategory.slice(7,15).map(item => (
                 <Grid ml={'1rem'} >
-                    <CardProductSwiper bottom={'85%'} left={'-10%'} heightImage={100}widthImage={100} titleBtn={<AddIcon/>} width='130px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount}/>
+                    <CardProductSwiper bottom={'85%'} left={'-10%'} heightImage={100} widthImage={100} titleBtn={<AddIcon/>} width='130px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount} id={0}/>
                 </Grid>
             ))}
             </Grid>
