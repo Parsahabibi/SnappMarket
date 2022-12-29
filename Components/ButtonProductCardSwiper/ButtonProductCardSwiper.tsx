@@ -21,7 +21,7 @@ const ButtonProductCardSwiper = ({title, icon, bgcolor, value, left, bottom}: Pr
                     position: 'absolute',
                     cursor: "pointer",
                     fontSize: "1.2rem",
-                    width:45,
+                    width:'max-content',
                     left:left,
                     top:bottom,
                     lineHeight: "normal",

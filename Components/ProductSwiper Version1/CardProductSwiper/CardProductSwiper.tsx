@@ -5,8 +5,8 @@ import ButtonProductCardSwiper from '../../ButtonProductCardSwiper/ButtonProduct
 import {dataCardSliderType} from "../../../Model/DataCardSliderV1Type";
 import {Box} from "@mui/system";
 import AddIcon from '@mui/icons-material/Add';
-import {Browser} from "leaflet";
-import pointer = Browser.pointer;
+
+
 
 const CardProductSwiper = ({
                                bottom,
@@ -29,7 +29,7 @@ const CardProductSwiper = ({
                 <Image src={image} alt={title} width={widthImage} height={heightImage}/>
             </Grid>
             <Grid height={40}>
-                <Typography display={{xs:'none'}} variant={'h3'}>{title}</Typography>
+                <Typography display={{xs:'none',sm:'flex'}} variant={'h3'}>{title}</Typography>
                 <Typography variant={'h3'} sx={{fontSize:'12px'}} display={{xs:'block' , lg:'none' , sm:'none'}}>{title}</Typography>
             </Grid>
             <Typography mt={3} variant='subtitle1'>{Weight}</Typography>
