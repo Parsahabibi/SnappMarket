@@ -18,17 +18,20 @@ import { dataMobileCardCategory } from "../../Data/DataMobileCategoryCard/DataMo
 
 // install Virtual module
 SwiperCore.use([Virtual, Navigation, Pagination]);
-
-const MobileSwiper = () => {
+export interface Props {
+    bgColor: string,
+    title: string
+}
+const MobileSwiper = ({bgColor , title}:Props) => {
     
     const swiperRef = useRef<any>(null)
     return (
         <Grid flexDirection={"column"} display={{ xs: "flex", sm: "none", lg: "none" }} padding={'1.2rem 1rem 1.2rem 1.3rem'}
-            sx={{ backgroundColor: 'primary.main' }} borderRadius={'0.5rem'} mx={1.5}>
+            sx={{ backgroundColor: bgColor }} borderRadius={'0.5rem'} mx={1.5}>
             <Grid display={{ xs: "flex", sm: "none", lg: "none" }} alignItems={"center"} justifyContent={'space-between'}>
                 <Grid display={'flex'}>
                     <Typography color={'common.white'} fontSize={'1.4rem'} fontWeight={500} m={'0px 0px 0px 0.8rem'}>
-                        {'حراج اول ماه'}
+                        {title}
                     </Typography>
                     <Box display={"flex"}
                         alignItems={"center"}
@@ -67,8 +70,8 @@ const MobileSwiper = () => {
 
 
                     {dataMobileCardCategory.slice(7, 15).map(item => (
-                        <SwiperSlide>
-                            <Grid ml={'1rem'} key={item.id} style={{ maxWidth: '30px', display: 'flex' }} >
+                        <SwiperSlide key={item.id} >
+                            <Grid ml={'1rem'} style={{ maxWidth: '30px', display: 'flex' }} >
                                 <CardProductSwiper  bottom={'5%'} left={'5%'} heightImage={100} widthImage={100}
                                     titleBtn={<AddIcon />} width='135px' title={item.title}
                                     image={item.image} Price={item.Price} Weight={item.Weight}

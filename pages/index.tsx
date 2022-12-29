@@ -16,29 +16,27 @@ import Typography from '@mui/material/Box';
 import {TypographyVariant} from "@mui/material";
 import Header from "../Components/MobileMenuHeader/Header";
 import Category from "../Components/CategotyMobileMenu/Category";
-import MobileSwiper from "../Components/MobileSwiper/MobileSwiper";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 25)
+        }, 2500)
     }, [])
     return (
         <Grid>
-            {/* {loading ?
+            {loading ?
                 <Grid sx={{display: 'flex',alignItems:'center' ,justifyContent:'center',width:'100%' , height:'100vh'}}>
                     <CircularProgress sx={{marginLeft:1}}/>
                     <Typography fontWeight={900} fontSize={20} color={'info.main'}>
                         {'در حال بارگذاری صفحه هستیم'}
                     </Typography>
-                </Grid> : */}
+                </Grid> :
                 <>
                     <DekstopHeader/>
                     <Header/>
                     <AuctionBanner/>
-                    <MobileSwiper/>
                     <Category position={'relative'} display={'none'} bgcolor={'rgb(255,255,255)'} pb={3}ptop={1}/>
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>
@@ -59,7 +57,7 @@ export default function Home() {
                     <AboutUs/>
                     <DesktopFooter/>
                 </>
-            {/* } */}
+            }
         </Grid>
     );
 }
