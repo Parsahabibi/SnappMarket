@@ -31,10 +31,6 @@ const MobileSwiper = ({bgColor , title}:Props) => {
             <Grid display={{ xs: "flex", sm: "none", lg: "none" }} alignItems={"center"} justifyContent={'space-between'}>
                 <Grid display={'flex'}>
                     <Typography
-                        sx={{whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            maxWidth: '5rem'}}
                         color={'common.white'}
                         fontSize={'1.4rem'}
                         fontWeight={500} m={'0px 0px 0px 0.8rem'}>
