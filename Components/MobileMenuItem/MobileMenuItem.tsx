@@ -13,7 +13,7 @@ type Props = {
 const MobileMenuItem = ({ page }: Props) => {
     return (
         <Grid>
-            <Grid bgcolor={'common.white'} container justifyContent={"space-around"} position={'fixed'} bottom={0} left={0} right={0} pr={2}>
+            <Grid bgcolor={'common.white'} container justifyContent={"space-around"} zIndex={1000} position={'fixed'} bottom={0} left={0} right={0} pr={2}>
                 <Grid pt={1}>
                     <Link href={""}>
                         {

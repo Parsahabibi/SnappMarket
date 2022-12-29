@@ -15,6 +15,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Box';
 import {TypographyVariant} from "@mui/material";
 import Header from "../Components/MobileMenuHeader/Header";
+import Category from "../Components/CategotyMobileMenu/Category";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -36,6 +37,7 @@ export default function Home() {
                     <DekstopHeader/>
                     <Header/>
                     <AuctionBanner/>
+                    <Category position={'relative'} display={'none'} bgcolor={'rgb(255,255,255)'} pb={3}ptop={1}/>
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>
                     <CategoryBanner/>
