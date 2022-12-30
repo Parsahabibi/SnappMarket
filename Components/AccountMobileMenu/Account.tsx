@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import data from "./DataAccountMobileMenu"
+import Link from 'next/link';
 interface Props {
 
 }
@@ -10,9 +11,11 @@ const Account = (props: Props) => {
     return (
         <Grid bgcolor={"common.white"}>
             <Grid border={1} borderColor={"rgb(225,225,225)"} container width={"100%"} bgcolor={"rgb(255,255,255)"}>
-                <Grid pt={2} pr={3}>
-                    <ArrowForwardIcon style={{ width: 20, height: 20 }} />
-                </Grid>
+                <Link href={'/'}>
+                    <Grid pt={2} pr={3}>
+                        <ArrowForwardIcon style={{ width: 20, height: 20 }} />
+                    </Grid>
+                </Link>
                 <Grid pt={2} pr={10} pb={2}>
                     <Typography variant='h3'>حساب کاربری</Typography>
                 </Grid>

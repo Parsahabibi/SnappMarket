@@ -5,6 +5,7 @@ import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined
 import dataBasket from "./DataBasketMobileMenu"
 import Image from 'next/image';
 import LinearProgress from '@mui/material/LinearProgress';
+import Link from 'next/link';
 type Props = {}
 
 const Basket = (props: Props) => {
@@ -32,7 +33,9 @@ const Basket = (props: Props) => {
     return (
         <Grid bgcolor={"white"}>
             <Grid container alignItems={"center"} justifyContent={"space-around"} pt={2} pb={2} borderBottom={0.5} borderColor={'rgb(200,200,200)'} bgcolor={'rgb(255,255,255)'}>
-                <ArrowForwardIcon sx={{ width: 24, height: 24, }} />
+                <Link href={'/'}>
+                    <ArrowForwardIcon sx={{ width: 24, height: 24, }} />
+                </Link>
                 <Typography variant='h3' sx={{ display: "flex", alignItems: "center", pr: 2.5, pl: 2.5 }}>سبد خرید من (1 کالا)</Typography>
                 {/* count */}
                 <DeleteForeverOutlinedIcon sx={{ width: 24, height: 24 }} />
@@ -43,7 +46,7 @@ const Basket = (props: Props) => {
                     <Typography color={'success.main'} variant='subtitle1'>200,000</Typography>
                 </Grid>
                 <Grid pt={0.5} pb={0.5} pr={2.7} width={"93%"}>
-                    <LinearProgress style={{height:"7px" , borderRadius:"5px" , backgroundColor:"rgb(240,240,240)"}} color='success' variant="determinate" value={progress} />
+                    <LinearProgress style={{ height: "7px", borderRadius: "5px", backgroundColor: "rgb(240,240,240)" }} color='success' variant="determinate" value={progress} />
                 </Grid>
                 <Grid container justifyContent={"space-between"} pr={1.5} pl={1.5}>
                     <Typography variant='subtitle2' color={'rgb(150,150,150)'} >هزینه ارسال</Typography>
@@ -111,7 +114,7 @@ const Basket = (props: Props) => {
                     height: "4.8rem",
                     padding: "0.8rem 0.8rem",
                     minWidth: "48%",
-                    marginTop:"0.5rem",
+                    marginTop: "0.5rem",
                 }}>
                     <Typography color={"common.white"} variant='h3'>ورود / عضویت</Typography>
                 </ButtonBase>
