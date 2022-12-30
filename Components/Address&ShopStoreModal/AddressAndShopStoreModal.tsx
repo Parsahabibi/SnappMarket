@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
@@ -73,6 +73,7 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                     انتخاب آدرس تحویل
                   </Typography>
                 </Grid>
+                <Button onClick={onClose}>
                 <ClearOutlinedIcon
                   sx={{
                     width: "24px",
@@ -81,6 +82,7 @@ const AddressAndShopStoreModal = ({ open, onClose }: AddressAndShopProps) => {
                     cursor: "pointer",
                   }}
                 />
+                </Button>
               </Grid>
               <Grid
                 sx={{
