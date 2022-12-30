@@ -47,7 +47,7 @@ const MobileMenuItem = ({ page }: Props) => {
                     </Link>
                 </Grid>
                 <Grid pt={1}>
-                    <Link href={""}>
+                    <Link href={"/profile"}>
                         {
                             page === "basket" ?
                                 <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"primary.main"}>

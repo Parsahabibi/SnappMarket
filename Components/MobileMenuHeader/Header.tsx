@@ -1,6 +1,6 @@
 import { Container, Typography, Grid, TextField, Button, Box } from '@mui/material'
 // import Button from "../../Components/ButtonProductCardSwiper/ButtonProductCardSwiper"
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
@@ -10,12 +10,13 @@ import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 
 import image from "../../assets/Images/hypermarket.jpg"
+import Link from 'next/link';
 
 
 type Props = {}
 
 const Header = (props: Props) => {
-   const [openselect , setOpenSelect] = useState()
+    const [openselect, setOpenSelect] = useState()
     const StyledTextField = styled(TextField)(({ theme }) => ({
         width: "100%",
         // height: "4.8rem",
@@ -35,19 +36,22 @@ const Header = (props: Props) => {
         },
     }));
     return (
-        <Grid display={{xs:'flex',sm:'none'}} flexDirection={'column'}>
+        <Grid display={{ xs: 'flex', sm: 'none' }} flexDirection={'column'}>
             <Grid sx={{ display: "flex", justifyContent: "space-around", alignItems: "stretch" }} borderBottom={1} borderColor={'rgb(230, 230, 230)'} pt={2} pr={2} pl={2}>
                 {/* color?? */}
                 <Grid container pb={2} alignItems={"flex-end"}>
                     <Typography variant='h2'>اطراف شما</Typography>
                     <KeyboardArrowDownIcon style={{ width: "24px", height: "24px" }} />
                 </Grid>
-                <Grid pl={0.25}>
-                    <PersonOutlineOutlinedIcon style={{ width: "24px", height: "24px" }} />
-                </Grid>
+                <Link href={'/profile'}>
+                    <Grid pl={0.25}>
+                        <PersonOutlineOutlinedIcon style={{ width: "24px", height: "24px" }} />
+                    </Grid>
+                </Link>
+
             </Grid>
             <Container>
-                <Grid mb={2} sx={{ display: "flex", alignItems: "center" , justifyContent:"space-between" }}>
+                <Grid mb={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <Grid container>
                         <Grid pt={2}>
                             <Grid display={"flex"} border={1} borderRadius={"50%"} borderColor={"rgb(230, 230, 230)"}>
@@ -60,7 +64,7 @@ const Header = (props: Props) => {
                         </Grid>
                     </Grid>
                     <Grid>
-                        <Button style={{width:"115px"}} variant='outlined' sx={{ padding: '0.8rem 1.2rem', marginRight: 'auto', height: "3.7rem" }}>
+                        <Button style={{ width: "115px" }} variant='outlined' sx={{ padding: '0.8rem 1.2rem', marginRight: 'auto', height: "3.7rem" }}>
                             <Grid container alignItems={"center"}>
                                 تغییر فروشگاه
                                 <KeyboardArrowDownIcon style={{ width: "24px", height: "24px" }} />
