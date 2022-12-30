@@ -68,12 +68,7 @@ const Header = (props: Props) => {
                 </Link>
 
             </Grid>
-            <Grid mb={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-
-                <Grid pl={0.25}>
-                    <PersonOutlineOutlinedIcon style={{ width: "24px", height: "24px" }} />
-                </Grid>
-            </Grid>
+           
             <Container>
                 <Grid mb={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <Grid container>
