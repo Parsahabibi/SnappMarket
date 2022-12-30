@@ -43,7 +43,7 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
           whiteSpace: "nowrap",
           
         }}
-        maxWidth={{xs:'0rem' ,sm:'10rem',lg:'30rem'}}
+        maxWidth={{xs:'0rem' ,sm:'8rem',md:'10rem',lg:'8rem'}}
       >
         mohammad sohrabi
       </Typography>
