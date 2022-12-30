@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import MobileStoreSelectoreCard from "./MobileStoreSelectoreCard/MobileStoreSelectoreCard";
 import { Divider, Grid, Typography } from "@mui/material";
 import {
@@ -9,12 +9,26 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
 import { Container } from "@mui/system";
 import ButtonProductCardSwiper from "../ButtonProductCardSwiper/ButtonProductCardSwiper";
-import CardStore from "./MobileStoreSelectoreCard/CardStore";
-type Props = {};
 
-const MobileStoreSelectore = (props: Props) => {
+import CardStore from "./MobileStoreSelectoreCard/CardStore";
+type Props = {
+    close:boolean,
+    setClose:any,
+};
+
+const MobileStoreSelectore = ({close , setClose}: Props) => {
+
+    const manageClose = ()=>{
+        setClose(!close)
+    }
   return (
-    <Grid display={{ xs: "flex", sm: "none" }} flexDirection={"column"}>
+    <Grid bgcolor={'common.white'}
+          width={"100%"}
+          height={"100vh"}
+          position={"absolute"}
+          zIndex={1000}
+          top={0}
+          display={{ xs:"flex" , sm: "none" }} flexDirection={"column"}>
       <Grid
         display={"flex"}
         justifyContent={"space-between"}
@@ -36,7 +50,7 @@ const MobileStoreSelectore = (props: Props) => {
             <KeyboardArrowDownIcon sx={{ width: "30px", height: "30px" }} />{" "}
           </Typography>
         </Grid>
-        <Grid>
+        <Grid onClick={manageClose}>
           <CloseIcon sx={{ width: "25px", height: "25px" }} />
         </Grid>
       </Grid>
