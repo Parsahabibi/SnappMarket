@@ -12,7 +12,7 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
     <ButtonBase
       sx={{
         minWidth: "10rem",
-        ml: "20px",
+        ml: {sm:'0px',lg:'20px'},
         alignself: "center",
         background: "transparent",
         color: "white",
@@ -41,10 +41,11 @@ const ProfileButtonHeader = ({ onClick }: ProfileButtonProps) => {
           overflow: "hidden",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
-          maxWidth: "5rem",
+          
         }}
+        maxWidth={{xs:'0rem' ,sm:'10rem',lg:'30rem'}}
       >
-        ahmad mohtadi
+        mohammad sohrabi
       </Typography>
     </ButtonBase>
   );

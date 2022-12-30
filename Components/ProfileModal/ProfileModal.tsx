@@ -16,7 +16,7 @@ const ProfileModal = ({ open, onClose }: Props) => {
     <Modal
       open={open}
       onClose={onClose}
-      sx={{ position: "absolute", top: 85, right: 1150 }}
+      sx={{ position: "absolute", top: {sm:'11%',md:'7%',lg:'6%'}, right: {sm:'55%',md:'66.5%',lg:'64%'} }}
     >
       <Container>
         <Grid
@@ -27,7 +27,7 @@ const ProfileModal = ({ open, onClose }: Props) => {
         >
           <Grid>
             <Grid bgcolor="rgb(250,250,250)" p="10px 10px 0 0" fontSize="14px">
-              ahmad mohtadi
+              mohammad sohrabi
             </Grid>
             <Grid
               p="0px 10px 10px 0"

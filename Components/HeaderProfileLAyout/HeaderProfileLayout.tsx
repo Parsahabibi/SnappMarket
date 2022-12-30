@@ -10,12 +10,7 @@ const HeaderProfileLayout = (props: Props) => {
   const handleModalOpen = () => setOpen(true);
   const handleModalClose = () => setOpen(false);
   return (
-    <Grid
-      display="flex"
-      alignItems="center"
-      position="relative"
-      alignSelf="center"
-    >
+    <Grid position={'relative'}>
       <ProfileButtonHeader onClick={handleModalOpen} />
       <ProfileModal open={open} onClose={handleModalClose} />
     </Grid>
