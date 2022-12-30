@@ -8,24 +8,27 @@ import Image from 'next/image';
 
 import dataCategory from "./DataCategoryMobileMenu"
 import MobileMenuItem from '../MobileMenuItem/MobileMenuItem';
+import Link from 'next/link';
 interface Props {
-  position:string|any,
-  display:string,
-  bgcolor:string|any,
-  pb:number|string,
-  ptop:number|string,
+    position: string | any,
+    display: string,
+    bgcolor: string | any,
+    pb: number | string,
+    ptop: number | string,
 }
 
-const Category = ({position, display,bgcolor,pb,ptop}: Props) => {
+const Category = ({ position, display, bgcolor, pb, ptop }: Props) => {
     // const padding = useMediaPredicate("(max-width: 321px)");
     return (
-        <Grid display={{xs:'flex',sm:'none'}} flexDirection={'column'}>
+        <Grid display={{ xs: 'flex', sm: 'none' }} flexDirection={'column'}>
             <Grid zIndex={99} container position={position} bgcolor={bgcolor} pt={2} pb={pb}>
-                <Grid sx={{ display: display, alignItems: "center", justifyContent: "center" , position:"absolute" }} pr={2.5}>
-                    <ArrowForwardIcon style={{ width: 20, height: 20 }} />
-                </Grid>
+                <Link href={'/'}>
+                    <Grid sx={{ display: display, alignItems: "center", justifyContent: "center", position: "absolute" }} pr={2.5}>
+                        <ArrowForwardIcon style={{ width: 20, height: 20 }} />
+                    </Grid>
+                </Link>
                 <Grid pr={"37.5%"} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <Typography sx={{ display: "flex", alignItems: "center", justifyContent: "center"}} variant='h3'>دسته بندی ها</Typography>
+                    <Typography sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} variant='h3'>دسته بندی ها</Typography>
                 </Grid>
             </Grid>
             <Container>
@@ -46,7 +49,7 @@ const Category = ({position, display,bgcolor,pb,ptop}: Props) => {
                     }
                 </Grid>
             </Container>
-            <MobileMenuItem page='category'/>
+            <MobileMenuItem page='category' />
         </Grid>
 
     )

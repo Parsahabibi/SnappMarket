@@ -15,7 +15,7 @@ const MobileMenuItem = ({ page }: Props) => {
         <Grid>
             <Grid bgcolor={'common.white'} container justifyContent={"space-around"} zIndex={1000} position={'fixed'} bottom={0} left={0} right={0} pr={2}>
                 <Grid pt={1}>
-                    <Link href={""}>
+                    <Link href={'/'}>
                         {
                             page === 'home' ?
                                 <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={'primary.main'}>
@@ -31,7 +31,7 @@ const MobileMenuItem = ({ page }: Props) => {
                     </Link>
                 </Grid>
                 <Grid pt={1}>
-                    <Link href={"/"}>
+                    <Link href={"/categories"}>
                         {
                             page === "category" ?
                                 <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"primary.main"}>
