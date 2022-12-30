@@ -7,11 +7,12 @@ type Props = {};
 
 const HeaderBasketLayout = (props: Props) => {
   const [open, setOpen] = useState(false);
-  const handleModalOpen = () => setOpen(true);
-  const handleModalClose = () => setOpen(false);
+  const handleModalOpen = () => setOpen(!open);
+  const handleModalClose = () => setOpen(!open);
+  
   return (
     <Grid alignSelf="center">
-      <ShoppingBasketButton onClick={handleModalOpen} />
+      <ShoppingBasketButton handleModalOpen={handleModalOpen} />
       <BasketLayout open={open} onClose={handleModalClose} />
     </Grid>
   );

@@ -58,14 +58,18 @@ const BasketLayout = ({ onClose, open }: Props) => {
               </ButtonBase>
             </Grid>
             <Grid alignSelf="center" display="flex">
+              <Button onClick={onClose}>
               <CloseOutlinedIcon
                 sx={{
+                 
                   cursor: "pointer",
                   color: "primary.main",
                   width: "25px",
                   height: "25px",
+                  
                 }}
               />
+              </Button>
             </Grid>
           </Grid>
           <Grid

@@ -6,10 +6,10 @@ import ButtonBase from "@mui/material/ButtonBase";
 import { Box } from "@mui/system";
 
 type Props = {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleModalOpen: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const ShoppingBasketButton = ({ onClick }: Props) => {
+const ShoppingBasketButton = ({ handleModalOpen }: Props) => {
   return (
     <Grid>
       <ButtonBase
@@ -21,7 +21,7 @@ const ShoppingBasketButton = ({ onClick }: Props) => {
           display: "flex",
           justifyContent: "space-evenly",
         }}
-        onClick={onClick}
+        onClick={handleModalOpen}
       >
         <ShoppingBagOutlinedIcon
           sx={{ color: "primary.main", width: "2rem", height: "2rem" }}
