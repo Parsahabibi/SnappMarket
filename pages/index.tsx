@@ -43,7 +43,7 @@ export default function Home() {
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>
                     <CategoryBanner/>
-                    <MobileSwiper bgColor={'common.white'} title={'لبنیات'} display={'none'}/>
+                    <MobileSwiper color={'common.white'} bgColor={'primary.main'} title={'زیبایی و سلامت'} display={'flex'}/>
                     <SwiperBannerMobile/>
                     <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
                     <ShampooBanner/>
