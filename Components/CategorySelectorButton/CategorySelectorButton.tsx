@@ -4,15 +4,17 @@ import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import { Typography } from "@mui/material";
 
 type CategorySelectorProps = {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleModalOpen: React.MouseEventHandler<HTMLButtonElement>;
+  borderRadius:string
 };
 
-const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
+const CategorySelectorButton = ({ handleModalOpen,borderRadius }: CategorySelectorProps) => {
+  console.log(handleModalOpen)
   return (
     <ButtonBase
-      onClick={onClick}
+      onClick={handleModalOpen}
       sx={{
-        borderRadius: "10px",
+        borderRadius: borderRadius,
         width: "12.5rem",
         height: "4rem",
         bgcolor: "white",
@@ -20,7 +22,7 @@ const CategorySelectorButton = ({ onClick }: CategorySelectorProps) => {
         justifyContent: "center",
         position: "relative",
         p: "5px",
-        ml: "20px",
+        ml: "10px",
       }}
     >
       <WidgetsOutlinedIcon

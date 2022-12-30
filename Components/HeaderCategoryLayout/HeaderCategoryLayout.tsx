@@ -12,7 +12,7 @@ const HeaderCategoryLayout = (props: Props) => {
 
   return (
     <Grid>
-      <CategorySelectorButton onClick={handleModalOpen} />
+      <CategorySelectorButton handleModalOpen={handleModalOpen} borderRadius ={open ? '0.5rem 0.5rem 0 0' : '0.5rem'}/>
       <CategoryModal onClose={handleModalClose} open={open} />
     </Grid>
   );
