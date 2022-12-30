@@ -28,13 +28,13 @@ export default function Home() {
     }, [])
     return (
         <Grid>
-            {/* {loading ?
+            {loading ?
                 <Grid sx={{display: 'flex',alignItems:'center' ,justifyContent:'center',width:'100%' , height:'100vh'}}>
                     <CircularProgress sx={{marginLeft:1}}/>
                     <Typography fontWeight={900} fontSize={20} color={'info.main'}>
                         {'در حال بارگذاری صفحه هستیم'}
                     </Typography>
-                </Grid> : */}
+                </Grid> :
                 <>
                     <DekstopHeader/>
                     <Header/>
@@ -61,7 +61,7 @@ export default function Home() {
                     <AboutUs/>
                     <DesktopFooter/>
                 </>
-            {/* } */}
+             }
         </Grid>
     );
 }
