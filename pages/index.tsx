@@ -17,6 +17,7 @@ import {TypographyVariant} from "@mui/material";
 import Header from "../Components/MobileMenuHeader/Header";
 import Category from "../Components/CategotyMobileMenu/Category";
 import SwiperBannerMobile from "../Components/SwiperBannerMobile/SwiperBannerMobile";
+import MobileSwiper from "../Components/MobileSwiper/MobileSwiper";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -42,6 +43,7 @@ export default function Home() {
                     <Slider color={'primary.main'} title={'حراج اول ماه'}/>
                     <HealthBanner/>
                     <CategoryBanner/>
+                    <MobileSwiper bgColor={'common.white'} title={'لبنیات'} display={'none'}/>
                     <SwiperBannerMobile/>
                     <Slider color={'primary.main'} title={'زیبایی و سلامت'}/>
                     <ShampooBanner/>
