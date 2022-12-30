@@ -26,7 +26,7 @@ const SearchBar = (props: Props) => {
         display: "flex",
         position: "relative",
         alignSelf: "center",
-        mt: "5px",
+        mt: "9px",
       }}
     ></StyledTextField>
   );
