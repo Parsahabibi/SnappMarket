@@ -16,7 +16,7 @@ const ProfileModal = ({ open, onClose }: Props) => {
     <Modal
       open={open}
       onClose={onClose}
-      sx={{ position: "absolute", top: {sm:'11%',md:'7%',lg:'12%'}, right: {sm:'55%',md:'66.5%',lg:'66%'} }}
+      sx={{ position: "absolute", top: {sm:'11%',md:'7%',lg:'12%'}, right: {sm:'58%',md:'66.5%',lg:'70.5%'} }}
     >
       <Container>
         <Grid
