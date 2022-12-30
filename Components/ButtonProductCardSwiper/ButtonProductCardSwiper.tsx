@@ -17,7 +17,7 @@ const ButtonProductCardSwiper = ({title, icon, bgcolor, value, left, bottom}: Pr
             <Button
                 variant="outlined"
                 sx={{
-                    color: `${bgcolor}`,
+                    color: bgcolor,
                     position: 'absolute',
                     cursor: "pointer",
                     fontSize: "1.2rem",
