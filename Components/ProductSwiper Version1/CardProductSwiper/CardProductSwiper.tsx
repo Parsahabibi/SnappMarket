@@ -1,77 +1,163 @@
-import {Button, Grid, Typography} from '@mui/material'
-import Image from 'next/image'
-import React from 'react'
-import ButtonProductCardSwiper from '../../ButtonProductCardSwiper/ButtonProductCardSwiper'
-import {dataCardSliderType} from "../../../Model/DataCardSliderV1Type";
-import {Box} from "@mui/system";
-import AddIcon from '@mui/icons-material/Add';
-
+import { Button, Grid, Typography } from "@mui/material";
+import Image from "next/image";
+import React, { useState } from "react";
+import ButtonProductCardSwiper from "../../ButtonProductCardSwiper/ButtonProductCardSwiper";
+import { dataCardSliderType } from "../../../Model/DataCardSliderV1Type";
+type Props = {
+  title: string;
+  image: any | string;
+  Weight: number | string;
+  Discount: number | string;
+  Price: string;
+  priceReduction: number | string;
+  width: string;
+  titleBtn: string | any;
+  widthImage: number;
+  heightImage: number;
+  bottom: string;
+  left: string;
+  hoverStyle: {};
+  normalStyle: {};
+};
 
 const CardProductSwiper = ({
-                               bottom,
-                               left,
-                               title,
-                               image,
-                               Price,
-                               Weight,
-                               priceReduction,
-                               Discount,
-                               width,
-                               titleBtn,
-                               heightImage,
-                               widthImage
-                           }: dataCardSliderType) => {
-    const styling = {
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        maxWidth: '200px'
-    }
-    return (
-        <Grid bgcolor={'common.white'} sx={{boxShadow:'0 0 4px rgba(0,0,0,0.2)',cursor: 'pointer', position: 'relative'}}
-              borderRadius={'0.5rem'}
-              height={"max-content"}
-              width={width}
-              px={2}>
-            <Grid display='flex' justifyContent={'center'} my={1}>
-                <Image src={image} alt={title} width={widthImage} height={heightImage}/>
-            </Grid>
-            <Grid height={20} sx={styling}>
-                <Typography display={{xs: 'none', sm: 'flex'}} variant={'h3'}>{title}</Typography>
-                <Typography variant={'h3'} sx={{fontSize: '12px'}}
-                            display={{xs: 'block', lg: 'none', sm: 'none'}}>{title}</Typography>
-            </Grid>
-            <Typography mt={3} variant='subtitle1'>{Weight}</Typography>
-            <Grid display='flex' alignItems={'center'} gap={1} py={1.5}>
-                <Typography variant='body2'>{Discount}</Typography>
-                <Typography sx={{textDecoration: 'line-through', fontSize: '1.2rem', fontWeight: '500'}}
-                            color={'info.main'}>{priceReduction}</Typography>
-            </Grid>
-            <Grid display={{xs: 'none', lg: 'flex', sm: 'flex'}} justifyContent={'space-between'}>
-                <Typography display={{xs: 'none'}} pt={1.2} sx={{fontSize: '1.6rem'}} color={'common.black'}
-                            pb={2}>{Price}تومان</Typography>
-                <ButtonProductCardSwiper title={titleBtn} icon={undefined} bgcolor={''} value={''} bottom={bottom}
-                                         left={left}/>
-            </Grid>
-            <Box bgcolor={'common.'}
-                 color={'primary.main'}
-                 border={0.5}
-                 borderRadius={50}
-                 padding={1}
-                 sx={{
-                     position: 'absolute',
-                     width: 30,
-                     height: 30,
-                     cursor: 'pointer',
-                     left: left, top: bottom,
-                 }}
-                 display={{xs: 'flex', lg: 'none', sm: 'none'}}
-                 alignItems={'center'} justifyContent={'center'}>
-                <AddIcon sx={{width: 20, height: 20}}/>
-            </Box>
+  bottom,
+  left,
+  title,
+  image,
+  Price,
+  Weight,
+  priceReduction,
+  Discount,
+  width,
+  titleBtn,
+  heightImage,
+  widthImage,
+  normalStyle,
+  hoverStyle,
+}: Props) => {
+  const [hover, setHover] = useState(false);
 
+  const onMouseEnter = () => {
+    setHover(true);
+  };
+
+  const onMouseLeave = () => {
+    setHover(false);
+  };
+
+  return (
+    <Grid
+      display="flex"
+      gap={2}
+      width={width}
+      sx={{ cursor: "pointer" }}
+      style={hover ? hoverStyle : normalStyle}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <Grid
+        position={"relative"}
+        bgcolor={"common.white"}
+        borderRadius={"0.5rem"}
+        width={234}
+        px={2}
+      >
+        <Grid display="flex" justifyContent={"center"} my={1}>
+          <Image
+            src={image}
+            alt={title}
+            width={widthImage}
+            height={heightImage}
+          />
         </Grid>
-    )
-}
+        <Grid height={60}>
+          {" "}
+          <Typography
+            variant="h3"
+            fontSize={"1.4rem"}
+            sx={{
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              maxWidth: "10rem",
+              fontStretch: "normal",
+              letterSpacing: "normal",
+            }}
+          >
+            {title}
+          </Typography>
+        </Grid>
+        <Typography variant="subtitle1" fontSize={"1.2rem"}>
+          {Weight}
+        </Typography>
+        <Grid display="flex" alignItems={"center"} gap={1} py={1}>
+          <Typography
+            sx={{
+              bgcolor: "secondary.main",
+              color: "common.white",
+              borderRadius: 1,
+              p: "2px 4px",
+              fontSize: "1.4rem",
+            }}
+          >
+            {Discount}
+          </Typography>
+          <Typography
+            sx={{
+              textDecoration: "line-through",
+              fontSize: "1.2rem",
+              fontWeight: "500",
+            }}
+            color={"info.main"}
+          >
+            {priceReduction}
+          </Typography>
+        </Grid>
+        <Grid display="flex" justifyContent={"space-between"}>
+          <Typography
+            pt={1.2}
+            sx={{ fontSize: "1.2rem" }}
+            color={"common.black"}
+            pb={2}
+          >
+            {Price}تومان
+          </Typography>
+          <Grid position={"absolute"} sx={{ bottom: bottom, left: left }}>
+            <Grid display={{ xs: "none", sm: "flex" }}>
+              {" "}
+              <ButtonProductCardSwiper
+                title={titleBtn}
+                bgcolor={""}
+                value={""}
+                icon={""}
+              />
+            </Grid>
+            <Button
+              sx={{
+                fontWeight: 400,
+                cursor: "pointer",
+                display: { xs: "flex", sm: "none" },
+              }}
+            >
+              <Typography
+                border={"0.1rem solid rgba(35, 71, 251, 0.24)"}
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                width={"3rem"}
+                height={"3rem"}
+                boxShadow={1}
+                borderRadius={"50%"}
+              >
+                {titleBtn}
+              </Typography>
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+};
 
-export default CardProductSwiper
+export default CardProductSwiper;
