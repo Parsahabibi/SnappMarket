@@ -1,9 +1,7 @@
 import {DataBaseDairy} from './CategoryDairy'
 
 
-export const getDairy = (dairy:string) => {
-    return new Promise((resolve, reject)=>{
-        resolve(DataBaseDairy)
-    })
-}
+export const getDairy = new Promise((resolve , reject)=>{
+    return resolve (DataBaseDairy)
+})
 
