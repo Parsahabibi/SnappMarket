@@ -1,70 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import QrCodeOutlinedIcon from '@mui/icons-material/QrCodeOutlined';
+import { dataMobileMenuItem } from '../../Data/DataMobileMenuItem/DataMobileMenuItem';
 
 type Props = {
-    page: string
+    Id: number
 }
 
-const MobileMenuItem = ({ page }: Props) => {
+const MobileMenuItem = ({ Id }: Props) => {
+
+    const [active, setActive] = useState(Id);
+    const handleActive = (id: number) => {
+        setActive(id)
+    }
+    console.log(active)
     return (
         <Grid>
             <Grid bgcolor={'common.white'} container justifyContent={"space-around"} zIndex={1000} position={'fixed'} bottom={0} left={0} right={0} pr={2}>
-                <Grid pt={1}>
-                    <Link href={'/'}>
-                        {
-                            page === 'home' ?
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={'primary.main'}>
-                                    <HomeOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography color={"primary.main"} variant='subtitle2'>خانه</Typography>
-                                </Grid>
-                                :
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"common.black"}>
-                                    <HomeOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography variant='subtitle2'>خانه</Typography>
-                                </Grid>
-                        }
-                    </Link>
+                <Grid pt={1} display={'flex'} justifyContent={'space-around'} width={'100%'}>
+                    {dataMobileMenuItem.map(item => (
+                        <Link href={item.href} onClick={() => handleActive(item.id)}>
+                            {
+                                active === item.id ?
+                                    <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={'primary.main'}>
+                                        {item.icon}
+                                        <Typography color={"primary.main"} variant='subtitle2'>{item.title}</Typography>
+                                    </Grid>
+                                    :
+                                    <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"common.black"}>
+                                        {item.icon}
+                                        <Typography variant='subtitle2'>{item.title}</Typography>
+                                    </Grid>
+                            }
+                        </Link>
+                    ))}
                 </Grid>
-                <Grid pt={1}>
-                    <Link href={"/categories"}>
-                        {
-                            page === "category" ?
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"primary.main"}>
-                                    <QrCodeOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography color={"primary.main"} variant='subtitle2'>دسته بندی</Typography>
-                                </Grid>
-                                :
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"common.black"}>
-                                    <QrCodeOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography variant='subtitle2'>دسته بندی</Typography>
-                                </Grid>
-                        }
-                    </Link>
-                </Grid>
-                <Grid pt={1}>
-                    <Link href={"/basket"}>
-                        {
-                            page === "basket" ?
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"primary.main"}>
-                                    <ShoppingCartOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography variant='subtitle2'>سبد خرید</Typography>
-                                </Grid>
-                                :
-                                <Grid container flexDirection={"column"} alignItems={"center"} justifyContent={"center"} color={"rgb(26, 28, 35)"}>
-                                    <ShoppingCartOutlinedIcon style={{ width: "25px", height: "25px" }} />
-                                    <Typography variant='subtitle2'>سبد خرید</Typography>
-                                </Grid>
-                        }
-                    </Link>
-                </Grid>
+
             </Grid>
         </Grid>
     )
 }
 
-export default MobileMenuItem
+export default React.memo(MobileMenuItem) 
