@@ -9,7 +9,7 @@ type Props = {
   Weight: number | string;
   Discount: number | string;
   Price: string;
-  priceReduction: number | string;
+  priceReduction: number | string |undefined;
   width: string;
   titleBtn: string | any;
   widthImage: number;
@@ -18,6 +18,7 @@ type Props = {
   left: string;
   hoverStyle: {};
   normalStyle: {};
+  id:number
 };
 
 const CardProductSwiper = ({
@@ -51,6 +52,7 @@ const CardProductSwiper = ({
       display="flex"
       gap={2}
       width={width}
+      height={'max-content'}
       sx={{ cursor: "pointer" }}
       style={hover ? hoverStyle : normalStyle}
       onMouseEnter={onMouseEnter}
@@ -71,7 +73,7 @@ const CardProductSwiper = ({
             height={heightImage}
           />
         </Grid>
-        <Grid height={60}>
+        <Grid height={30}>
           {" "}
           <Typography
             variant="h3"
@@ -130,8 +132,7 @@ const CardProductSwiper = ({
                 title={titleBtn}
                 bgcolor={""}
                 value={""}
-                icon={""}
-              />
+                icon={""} left={""} bottom={""}              />
             </Grid>
             <Button
               sx={{
