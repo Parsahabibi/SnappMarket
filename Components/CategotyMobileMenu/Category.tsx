@@ -20,7 +20,7 @@ interface Props {
 }
 
 const Category = ({ position, display, bgcolor, pb, ptop,x,y }: Props) => {
-    // const padding = useMediaPredicate("(max-width: 321px)");
+  
     return (
         <Grid display={{ xs: 'flex', sm: 'none' }} flexDirection={'column'}>
             <Grid zIndex={99} container position={position} bgcolor={bgcolor} pt={2} pb={pb}>
@@ -51,7 +51,7 @@ const Category = ({ position, display, bgcolor, pb, ptop,x,y }: Props) => {
                     }
                 </Grid>
             </Container>
-            <MobileMenuItem page='category' />
+            <MobileMenuItem Id={1}/>
         </Grid>
 
     )
