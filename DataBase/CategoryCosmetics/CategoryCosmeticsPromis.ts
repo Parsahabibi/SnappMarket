@@ -1,8 +1,6 @@
 import {DataBaseCosmetics} from './CategoryCosmetics'
 
-export const getCosmetics = (cosmetics:string) => {
-    return new Promise((resolve, reject)=>{
-        resolve(DataBaseCosmetics)
-    })
-}
+export const getCosmetics = new Promise(resolve => {
+    return DataBaseCosmetics
+})
 

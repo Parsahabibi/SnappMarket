@@ -21,6 +21,7 @@ import MobileSwiper from "../Components/MobileSwiper/MobileSwiper";
 import EggBanner from "../Components/Banner/EggBanner";
 import Banner from "../Components/Banner/Banner";
 
+
 export default function Home() {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
             setLoading(false)
         }, 2500)
     }, [])
+
     return (
         <Grid>
             {loading ?

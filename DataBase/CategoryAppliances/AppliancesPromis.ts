@@ -6,4 +6,3 @@ export const getCosmetics = (appliances:string) => {
         resolve(DataBaseAppliances)
     })
 }
-
