@@ -15,9 +15,11 @@ interface Props {
     bgcolor: string | any,
     pb: number | string,
     ptop: number | string,
+    x:number,
+    y:number
 }
 
-const Category = ({ position, display, bgcolor, pb, ptop }: Props) => {
+const Category = ({ position, display, bgcolor, pb, ptop,x,y }: Props) => {
     // const padding = useMediaPredicate("(max-width: 321px)");
     return (
         <Grid display={{ xs: 'flex', sm: 'none' }} flexDirection={'column'}>
@@ -34,7 +36,7 @@ const Category = ({ position, display, bgcolor, pb, ptop }: Props) => {
             <Container>
                 <Grid container justifyContent={"center"} pt={ptop} pb={9.5} zIndex={0}>
                     {
-                        dataCategory.map(item =>
+                        dataCategory.slice(x,y).map(item =>
                             <Grid container item xs={4} key={item.id}>
                                 <Grid container alignItems={"center"} justifyContent={"center"}>
                                     <Image style={{ position: "relative" }} width={100} height={100} src={item.image} alt={"labaniat"} />
