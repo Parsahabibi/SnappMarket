@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import { BorderBottom, BorderTop, Info, Label } from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-
+import AddIcon from '@mui/icons-material/Add';
 import Theme from "../../Theme/Theme"
 
 import data from "./DataProductContainer"
@@ -41,15 +41,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Container } from '@mui/system';
+import CardProductSwiper from '../ProductSwiper Version1/CardProductSwiper/CardProductSwiper';
 
 // import { makeStyles, useTheme, Typography } from '@material-ui/core'
 
 interface Props {
-
+    title: string,
+    dis: string,
+    x: number,
+    y: number
 }
 //transition:"box-shadow 0.2s ease-in-out 0s"
-const ProductContainer = (props: Props) => {
+const ProductContainer = ({ title, dis, x, y }: Props) => {
+    const hoverStyle = {
 
+    }
+
+    const normalStyle = {
+    }
     const [page, setPage] = useState(0)
     const swiperRef = useRef<any>(null)
 
@@ -68,10 +77,10 @@ const ProductContainer = (props: Props) => {
             <Grid marginY={2} bgcolor={"common.white"} border={0.05} borderColor={"rgb(250,250,250)"} width={"auto"} sx={{ direction: "rtl" }}>
                 <Grid container justifyContent={"space-between"} alignItems={"center"} bgcolor={'common.white'} pt={1.5} pb={1.5}>
                     <Grid pr={3} >
-                        <Typography color="common.black" variant='h2'>لبنیات</Typography>
+                        <Typography color="common.black" variant='h2'>{title}</Typography>
                     </Grid>
                     <Grid pl={3} sx={{ display: 'flex' }}>
-                        <Link href={"www.google.com"}><Typography variant='caption' color="primary.main">مشاهده بیشتر</Typography></Link>
+                        <Link href={"www.google.com"}><Typography variant='caption' color="primary.main">{dis}</Typography></Link>
                         <KeyboardArrowLeftIcon style={{ width: "24px", height: "24px" }} sx={{ color: "primary.main" }} />
                     </Grid>
                 </Grid>
@@ -79,6 +88,16 @@ const ProductContainer = (props: Props) => {
                     <Swiper
                         ref={swiperRef}
                         breakpoints={{
+                            320: {
+                                slidesPerView: 2.2
+                            },
+                            375: {
+                                slidesPerView: 2.6,
+                                spaceBetween: 10
+                            },
+                            425: {
+                                slidesPerView: 3.2
+                            },
                             720: {
                                 slidesPerView: 3.2
                             },
@@ -97,9 +116,9 @@ const ProductContainer = (props: Props) => {
                             : ''}
                         <Grid container justifyContent={"center"} alignItems={"center"} bgcolor={"white"}>
                             {data.map(item => (
-                                <SwiperSlide style={{ width: "auto" , zIndex:1 , marginLeft:2 , marginRight:2 , marginTop:4 , marginBottom:4}} key={item.name}>
+                                <SwiperSlide style={{ width: "auto", zIndex: 1, marginLeft: 2, marginRight: 2, marginTop: 4, marginBottom: 4 }} key={item.name}>
                                     <Link href={"/"}>
-                                        <Grid bgcolor={"common.white"} borderLeft={1} borderColor={'rgb(245,245,245)'} sx={{zIndex:99 , borderRadius: '0px', height: "34rem", ':hover': { boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 36px -18px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px'} }}>
+                                        <Grid display={{ xs: 'none', sm: 'flex' }} flexDirection={'column'} bgcolor={"common.white"} borderLeft={1} borderColor={'rgb(245,245,245)'} sx={{ zIndex: 99, borderRadius: '0px', height: "34rem", ':hover': { boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 36px -18px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px' } }}>
                                             <Grid container justifyContent={"center"} pt={0.75}>
                                                 <Grid sx={{ ':hover': { transition: "transform 0.3s", transform: 'translateY(-4px)' } }}>
                                                     <Image src={item.image} alt={item.name} style={{ width: "153px", height: "153px" }} />
@@ -119,7 +138,7 @@ const ProductContainer = (props: Props) => {
                                                 <Grid container alignItems={"baseline"} mr={0.25}>
                                                     <Grid ml={1} p={1} container justifyContent={"center"} alignItems={"center"} sx={{ width: 30, height: 25, color: "common.white", borderRadius: "5px", textAlign: "center" }}>
                                                         {
-                                                            item.Discount <= 10 ? <Typography variant='h2' p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}%</Typography> : <Typography variant='h2' p={0.5} borderRadius={1} bgcolor={"secondary.main"} color="common.white">{item.Discount}%</Typography>//null??
+                                                            item.Discount <= 10 ? <Typography variant='h2' p={0.5} border={1} borderRadius={1} borderColor={"secondary.main"} color="secondary.main">{item.Discount}</Typography> : <Typography variant='h2' p={0.5} borderRadius={1} bgcolor={"secondary.main"} color="common.white">{item.Discount}</Typography>//null??
                                                         }
                                                     </Grid>
                                                     <Grid sx={{ textDecoration: "line-through" }}>
@@ -143,18 +162,25 @@ const ProductContainer = (props: Props) => {
                                                 </Grid>
                                             </CardContent>
                                         </Grid>
+                                        <Grid bgcolor={'rgb(244,246,251)'} display={{ xs: 'flex', sm: 'none' }} flexDirection={'column'} width={'1.7rem'} >
+                                            <CardProductSwiper bottom={'85%'} left={'5%'} heightImage={100} widthImage={100}
+                                                titleBtn={<AddIcon />} width='135px' title={item.name}
+                                                image={item.image} Price={item.price} Weight={item.description}
+                                                priceReduction={item.oprice} Discount={item.Discount}
+                                                id={0} hoverStyle={hoverStyle} normalStyle={normalStyle} />
+                                        </Grid>
                                     </Link>
                                 </SwiperSlide>
                             ))}
                         </Grid>
                         <SwiperSlide>
-                            <Card sx={{ display: "flex", alignItems: "center", height: "34rem", width: "auto" }}>
+                            <Card sx={{ display: "flex", alignItems: "center", height: "max-content", width: "auto" }}>
                                 <Grid container justifyContent={"center"} alignItems={"center"} flexDirection={"column"}>
                                     <Grid container flexDirection={'row'} flexWrap={'nowrap'} sx={{ opacity: '0.3' }} justifyContent={"space-between"} borderBottom={0.5}>
                                         {
                                             imageTop.map(item =>
                                                 <Grid key={item.id} sx={{ display: "flex", mr: "10px", borderLeft: "0.5px solid rgb(66,66,66)", mb: "20px" }}>
-                                                    <Image style={{ marginLeft: "15px" }} width={55} height={55} src={item.image} alt={"image1"} />
+                                                    <Image style={{ marginLeft: "15px" }} width={x} height={y} src={item.image} alt={"image1"} />
                                                 </Grid>
                                             )
                                         }
@@ -171,7 +197,7 @@ const ProductContainer = (props: Props) => {
                                         {
                                             imageBottom.map(item =>
                                                 <Grid key={item.id} sx={{ display: "flex", mr: "10px", borderLeft: "0.5px solid rgb(66,66,66)", mt: "20px" }}>
-                                                    <Image style={{ marginLeft: "15px" }} width={55} height={55} src={item.image} alt={"image1"} />
+                                                    <Image style={{ marginLeft: "15px" }} width={x} height={y} src={item.image} alt={"image1"} />
                                                 </Grid>
                                             )
                                         }
