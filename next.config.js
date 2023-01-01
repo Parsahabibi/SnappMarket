@@ -6,14 +6,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000',
-        pathname: '',
-      },
-    ],
+   domains:['cdn.snapp.market']
   },
 }
 
