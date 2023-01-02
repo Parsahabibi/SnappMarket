@@ -29,6 +29,7 @@
     "react-medium-image-zoom": "^5.1.2",
     "react-redux": "^8.0.5",
     "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
