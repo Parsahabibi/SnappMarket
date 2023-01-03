@@ -7,11 +7,11 @@ const FilterPriceCategory = (props: Props) => {
    
 
     return (
-        <Grid mt={'0.8rem'}>
-            <FormGroup style={{ borderRadius: '0.5rem', direction: 'ltr', backgroundColor: 'white', border: '0.1rem solid rgba(163, 163, 163, 0.25)', margin: '1.6rem auto' }}>
+        <Grid>
+            <FormGroup style={{ borderRadius: '0.5rem', direction: 'ltr', backgroundColor: 'white', border: '0.1rem solid rgba(163, 163, 163, 0.25)', margin: '0rem auto' ,padding:'0.5rem 0px'}}>
                 <FormControlLabel style={{ display: 'flex', justifyContent: 'space-around', }} control={<Switch />} label="فقط کالا های موجود" />
             </FormGroup>
-            <FormGroup style={{ borderRadius: '0.5rem', direction: 'ltr', backgroundColor: 'white', border: '0.1rem solid rgba(163, 163, 163, 0.25)', margin: '1.6rem auto' }}>
+            <FormGroup style={{ borderRadius: '0.5rem', direction: 'ltr', backgroundColor: 'white', border: '0.1rem solid rgba(163, 163, 163, 0.25)', margin: '1.6rem auto',padding:'0.5rem 0px' }}>
                 <FormControlLabel style={{ display: 'flex', justifyContent: 'space-around', }} control={<Switch />} label="فقط کالا های تخفیف دار" />
             </FormGroup>
             
