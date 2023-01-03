@@ -8,13 +8,16 @@ type Props = {
     bgcolor: string;
     value: string;
     left: string;
-    bottom: string
+    bottom: string;
+    onClick:any
 };
 
-const ButtonProductCardSwiper = ({title, icon, bgcolor, value, left, bottom}: Props) => {
+const ButtonProductCardSwiper = ({title, icon, bgcolor, value, left, bottom,onClick}: Props) => {
+  
     return (
         <Grid>
             <Button
+            onClick={onClick}
                 variant="outlined"
                 sx={{
                     color: bgcolor,
