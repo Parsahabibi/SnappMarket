@@ -1,24 +1,27 @@
-import {ButtonBase, Drawer, Grid, Typography, Button} from "@mui/material";
+import { ButtonBase, Drawer, Grid, Typography, Button } from "@mui/material";
 import React from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import ProductBasketCard from "../ProductBasketCard/ProductBasketCard";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import {clearCart} from "../../redux/Slice/Slice";
-import {useSelector, useDispatch} from "react-redux";
+import { clearCart, decreaseItemFromCart } from "../../redux/Slice/Slice";
+import { useSelector, useDispatch } from "react-redux";
 
 type Props = {
     open: boolean;
     onClose: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const BasketLayout = ({onClose, open}: Props) => {
+const BasketLayout = ({ onClose, open }: Props) => {
     const dispatch = useDispatch();
     const cartItems = useSelector((state: any) => state.cart);
+    const totalCount = cartItems.reduce((prev: any, p: any) => prev + p.count, 0);
+    const totalPrice = cartItems.reduce((prev: any, p: any) => prev + p.price * p.count, 0);
+    console.log(totalPrice)
     return (
         <Drawer onClose={onClose} open={open} anchor={"left"}>
-            <Grid sx={{width: "40rem"}}>
-                <Grid sx={{boxShadow: " rgba(0, 0, 0, 0.1) 0px 4px 12px"}}>
+            <Grid sx={{ width: "40rem" }}>
+                <Grid sx={{ boxShadow: " rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
                     <Grid
                         display="flex"
                         justifyContent="space-between"
@@ -32,7 +35,7 @@ const BasketLayout = ({onClose, open}: Props) => {
                             justifyContent="center"
                             fontSize="1.4rem"
                         >
-                            سبد خرید من 4 کالا
+                            سبد خرید من {totalCount} کالا
                             <ButtonBase
                                 onClick={() => dispatch(clearCart())}
                                 sx={{
@@ -51,15 +54,18 @@ const BasketLayout = ({onClose, open}: Props) => {
                                     },
                                 }}
                             >
-                                <DeleteOutlinedIcon
-                                    sx={{
-                                        height: "20px",
-                                        width: "20px",
-                                        mr: "5px",
-                                        alignSelf: "center",
-                                        display: "flex",
-                                    }}
-                                />
+                                <Button onClick={()=>dispatch(decreaseItemFromCart())}>
+                                    <DeleteOutlinedIcon
+
+                                        sx={{
+                                            height: "20px",
+                                            width: "20px",
+                                            mr: "5px",
+                                            alignSelf: "center",
+                                            display: "flex",
+                                        }}
+                                    />
+                                </Button>
                             </ButtonBase>
                         </Grid>
                         <Grid alignSelf="center" display="flex">
@@ -101,9 +107,9 @@ const BasketLayout = ({onClose, open}: Props) => {
                     >
                         {cartItems.length ? (
                             <>
-                                {cartItems.map((item:any)=> (
+                                {cartItems.map((item: any) => (
                                     <Grid key={item.id}>
-                                        <ProductBasketCard/>
+                                        <ProductBasketCard totalCount={item.totalCount} title={item.title} image={item.image} price={item.price} totalPrice={item.totalPrice} />
                                     </Grid>
                                 ))}
                             </>
@@ -118,7 +124,7 @@ const BasketLayout = ({onClose, open}: Props) => {
                     p="10px"
                     borderTop="1px solid rgb(244,244,244)"
                     bgcolor="white"
-                    sx={{position: "absolute", bottom: 2, width: "100%"}}
+                    sx={{ position: "absolute", bottom: 2, width: "100%" }}
                 >
                     <Grid
                         bgcolor="rgb(242,247,255)"
@@ -129,8 +135,8 @@ const BasketLayout = ({onClose, open}: Props) => {
                         alignItems="center"
                         mb="5px"
                     >
-                        <Typography sx={{color: "primary.main", fontSize: "1.4rem"}}>
-                            23٬220 تومان سود خرید{" "}
+                        <Typography sx={{ color: "primary.main", fontSize: "1.4rem" }}>
+                            {totalPrice} تومان سود خرید{" "}
                         </Typography>
                     </Grid>
                     <Grid>
@@ -151,7 +157,7 @@ const BasketLayout = ({onClose, open}: Props) => {
                                     p="5px"
                                     borderRadius="5px"
                                 >
-                                    23,220 تومان
+                                    {totalPrice} تومان
                                 </Grid>
                             </Button>
                         </Grid>
