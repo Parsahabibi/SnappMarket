@@ -22,10 +22,12 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 
 type Props = {
   title: string,
-  color: string
+  color: string,
+  x:number,
+  y:number
 }
 
-const Slider = ({ color, title}: Props) => {
+const Slider = ({ color, title,x,y}: Props) => {
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
     width: "100%",
@@ -89,7 +91,7 @@ const Slider = ({ color, title}: Props) => {
                 </Link>
               </Grid>
             </SwiperSlide>
-            {dataCard.map(slide => (
+            {dataCard.slice(x,y).map(slide => (
               <SwiperSlide key={slide.id}>
                 <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} /></Grid>
               </SwiperSlide>

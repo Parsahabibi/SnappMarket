@@ -43,12 +43,12 @@ export default function Home() {
                     <DekstopHeader />
                     <Header />
                     <AuctionBanner />
-                    <Slider color={'primary.main'} title={'حراج اول ماه'} />
+                    <Slider color={'primary.main'} title={'حراج اول ماه'} x={0}y={10}/>
                     <MobileSwiper color={'common.white'} bgColor={'primary.main'} title={'زیبایی و سلامت'} display={'flex'} display2={'none'}/>
                     <Category position={'relative'} display={'none'} bgcolor={'rgb(255,255,255)'} pb={1} ptop={1} x={0} y={15} />
                     <HealthBanner />
                     <CategoryBanner />
-                    <Slider color={'primary.main'} title={'زیبایی و سلامت'} />
+                    <Slider color={'primary.main'} title={'زیبایی و سلامت'} x={0} y={10} />
                     <ShampooBanner />
                     <Grid display={{ xs: 'flex', sm: 'none' }}mt={-10}>
                         <ProductContainer title={"لبنیات"} dis={"همه"} x={40} y={40} />
