@@ -6,9 +6,15 @@ import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import AddIcon from "@mui/icons-material/Add";
 
-type Props = {};
+type Props = {
+  totalCount:number;
+  title:string;
+  image:string;
+  price:number;
+  totalPrice:number
+};
 
-const ProductBasketCard = (props: Props) => {
+const ProductBasketCard = ({totalPrice,price,image,title,totalCount}: Props) => {
   return (
     <Grid
       display="flex"
@@ -25,13 +31,13 @@ const ProductBasketCard = (props: Props) => {
         <Image
           alt=""
           style={{ height: "7rem", width: "7rem" }}
-          src={EasyLife}
+          src={image}
         />
       </Grid>
       <Grid display="flex" flexDirection="column" mr="20px">
         <Grid>
           <Typography variant="subtitle1" sx={{ fontSize: "1.3rem" }}>
-            برنج هندی خوشپخت لوکس
+            {title}
           </Typography>
         </Grid>
         <Grid display="flex" mt="20px">
@@ -57,11 +63,11 @@ const ProductBasketCard = (props: Props) => {
                 fontSize="1.4rem"
                 sx={{ textDecorationLine: "line-through" }}
               >
-                29,99
+                {price}
               </Grid>
             </Grid>
             <Grid mt="5px" sx={{ fontSize: "1.3rem" }}>
-              399,000 هزار تومان
+            {totalPrice }هزار تومان
             </Grid>
           </Grid>
           <Grid display="flex">
@@ -93,7 +99,7 @@ const ProductBasketCard = (props: Props) => {
               fontSize="2rem"
               flexGrow="1"
             >
-              1
+              {totalCount}
             </Grid>
             <Grid
               display="flex"
