@@ -14,6 +14,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Container } from '@mui/system';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../../../redux/Slice/Slice';
 
 
 // install Virtual module
@@ -28,6 +30,7 @@ type Props = {
 }
 
 const Slider = ({ color, title, x, y }: Props) => {
+  const dispatch = useDispatch();
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
     width: "100%",
@@ -93,7 +96,7 @@ const Slider = ({ color, title, x, y }: Props) => {
             </SwiperSlide>
             {DataBaseDairy[0].Dairy.filter(item => (item.Discount != '')).slice(x, y).map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={slide.id} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} onClick={()=>dispatch(addItemToCart(slide.id))} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >

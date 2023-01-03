@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import ButtonProductCardSwiper from "../../ButtonProductCardSwiper/ButtonProductCardSwiper";
 import { dataCardSliderType } from "../../../Model/DataCardSliderV1Type";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../../redux/Slice/Slice";
 type Props = {
   title: string;
   image: any | string;
@@ -18,7 +20,8 @@ type Props = {
   left: string;
   hoverStyle: {};
   normalStyle: {};
-  id:number
+  id:number|any;
+  onClick:any|number
 };
 
 const CardProductSwiper = ({
@@ -36,9 +39,10 @@ const CardProductSwiper = ({
   widthImage,
   normalStyle,
   hoverStyle,
+  onClick
 }: Props) => {
   const [hover, setHover] = useState(false);
-
+  const dispatch = useDispatch();
   const onMouseEnter = () => {
     setHover(true);
   };
@@ -132,9 +136,10 @@ const CardProductSwiper = ({
                 title={titleBtn}
                 bgcolor={""}
                 value={""}
-                icon={""} left={""} bottom={""}              />
+                icon={""} left={""} bottom={""} onClick={()=>dispatch(onClick)} />
             </Grid>
             <Button
+            onClick={()=>dispatch(onClick)}
               sx={{
                 fontWeight: 400,
                 cursor: "pointer",
