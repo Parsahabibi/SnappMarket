@@ -18,7 +18,7 @@ const ProductCardCategoryPage = (props: Props) => {
       {
         dataCard.map(item => (
           <Grid>
-            <CardProductSwiper hoverStyle={hoverStyle} normalStyle={normalStyle} bottom={'4%'} left={'5%'} heightImage={170} widthImage={170} titleBtn={'افزودن به سبد'} width='232.5px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount}  />
+            <CardProductSwiper hoverStyle={hoverStyle} normalStyle={normalStyle} bottom={'15%'} left={'50%'} heightImage={170} widthImage={170} titleBtn={'افزودن به سبد'} width='232.5px' title={item.title} image={item.image} Price={item.Price} Weight={item.Weight} priceReduction={item.priceReduction} Discount={item.Discount} id={0}  />
           </Grid>
         ))
       }
