@@ -7,7 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { DataBaseDairy } from '../../../DataBase/CategoryDairy/CategoryDairy'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -23,11 +23,11 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 type Props = {
   title: string,
   color: string,
-  x:number,
-  y:number
+  x: number,
+  y: number
 }
 
-const Slider = ({ color, title,x,y}: Props) => {
+const Slider = ({ color, title, x, y }: Props) => {
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
     width: "100%",
@@ -91,13 +91,15 @@ const Slider = ({ color, title,x,y}: Props) => {
                 </Link>
               </Grid>
             </SwiperSlide>
-            {dataCard.slice(x,y).map(slide => (
+            {DataBaseDairy[0].Dairy.filter(item => (item.Discount != '')).slice(x, y).map(slide => (
               <SwiperSlide key={slide.id}>
                 <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >
-              <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'32rem'} display={'flex'} sx={{ borderRadius: '5px', cursor: 'pointer' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              <Link href={'/categories'}>
+                <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'32.1rem'} display={'flex'} sx={{ borderRadius: '5px', cursor: 'pointer' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+              </Link>
             </SwiperSlide>
           </Swiper>
           {page < 2 ?
