@@ -48,7 +48,7 @@ export default function Home() {
                     <Category position={'relative'} display={'none'} bgcolor={'rgb(255,255,255)'} pb={1} ptop={1} x={0} y={15} />
                     <HealthBanner />
                     <CategoryBanner />
-                    <Slider color={'primary.main'} title={'زیبایی و سلامت'} x={0} y={10} />
+                    <Slider color={'primary.main'} title={'زیبایی و سلامت'} x={11} y={20} />
                     <ShampooBanner />
                     <Grid display={{ xs: 'flex', sm: 'none' }}mt={-10}>
                         <ProductContainer title={"لبنیات"} dis={"همه"} x={40} y={40} />
