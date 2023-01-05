@@ -96,7 +96,7 @@ const Slider = ({ color, title, x, y }: Props) => {
             </SwiperSlide>
             {DataBaseDairy[0].Dairy.filter(item => (item.Discount != '')).slice(x, y).map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={slide.id} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} onClick={()=>dispatch(addItemToCart(slide.id))} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} price={slide.price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={slide.id} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} {...slide} onClick={()=>dispatch(addItemToCart(slide))} /></Grid>
               </SwiperSlide>
             ))}
             <SwiperSlide >
