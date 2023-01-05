@@ -57,7 +57,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "30,000",
+        price: 30000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -79,7 +79,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "29,000",
+        price: 29000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -101,7 +101,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتر",
         priceReduction: "29,800",
         Discount: "25%",
-        Price: "22,350",
+        price: 22350,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -123,7 +123,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتر",
         priceReduction: "28,900",
         Discount: "20%",
-        Price: "23,120",
+        price: 23120,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -145,7 +145,7 @@ export const DataBaseDairy = [
         Weight: "125 میلی لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "87,600",
+        price: 87600,
         Brand: "دنت",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -167,7 +167,7 @@ export const DataBaseDairy = [
         Weight: " 1لیتری ",
         priceReduction: "33,000",
         Discount: "12%",
-        Price: "29,040",
+        price: 29040,
         Brand: "روزانه",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -189,7 +189,7 @@ export const DataBaseDairy = [
         Weight: "200 میلی لیتر",
         priceReduction: "11,400",
         Discount: "14%",
-        Price: "9,804",
+        price: 90400,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -211,7 +211,7 @@ export const DataBaseDairy = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "7,300",
+        price: 70000,
         Brand: "دنت",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -233,7 +233,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "30,000",
+        price: 30000,
         Brand: "پگاه",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -255,7 +255,7 @@ export const DataBaseDairy = [
         Weight: "1 لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "31,000",
+        price: 31000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -277,7 +277,7 @@ export const DataBaseDairy = [
         Weight: "200 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "9,000",
+        price: 9000,
         Brand: "پاک",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -299,7 +299,7 @@ export const DataBaseDairy = [
         Weight: "300 گرم",
         priceReduction: "",
         Discount: "",
-        Price: "35,000",
+        price: 35000,
         Brand: "کالین",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -321,7 +321,7 @@ export const DataBaseDairy = [
         Weight: "180 گرمی",
         priceReduction: "55,500",
         Discount: "28%",
-        Price: "39,960",
+        price: 39960,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -343,7 +343,7 @@ export const DataBaseDairy = [
         Weight: "400 گرمی",
         priceReduction: "39,800",
         Discount: "25%",
-        Price: "29,850",
+        price: 29850,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -365,7 +365,7 @@ export const DataBaseDairy = [
         Weight: "515 گرمی",
         priceReduction: "61,000",
         Discount: "19%",
-        Price: "49,410",
+        price: 49410,
         Brand: "روزانه",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -387,7 +387,7 @@ export const DataBaseDairy = [
         Weight: "200 گرم",
         priceReduction: "32,500",
         Discount: "19%",
-        Price: "26,325",
+        price: 26325,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -409,7 +409,7 @@ export const DataBaseDairy = [
         Weight: "340 گرمی",
         priceReduction: "45,000",
         Discount: "19%",
-        Price: "36,450",
+        price: 36450,
         Brand: "روزانه",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -431,7 +431,7 @@ export const DataBaseDairy = [
         Weight: "100 گرمی",
         priceReduction: "",
         Discount: "",
-        Price: "26,000",
+        price: 26000,
         Brand: "کالین",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -453,7 +453,7 @@ export const DataBaseDairy = [
         Weight: "180 گرمی",
         priceReduction: "55,500",
         Discount: "28%",
-        Price: "39,960",
+        price: 39960,
         Brand: "کالین",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -475,7 +475,7 @@ export const DataBaseDairy = [
         Weight: "1202 گیلو گرمی",
         priceReduction: "200,300",
         Discount: "20%",
-        Price: "160,240",
+        price: 162400,
         Brand: "202",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -497,7 +497,7 @@ export const DataBaseDairy = [
         Weight: "1 گیلو گرمی",
         priceReduction: "249,000",
         Discount: "11%",
-        Price: "221,610",
+        price: 226100,
         Brand: "کالین",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -519,7 +519,7 @@ export const DataBaseDairy = [
         Weight: "250 گرمی",
         priceReduction: "35,000",
         Discount: "19%",
-        Price: "28,350",
+        price: 28350,
         Brand: "آلیما",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -541,7 +541,7 @@ export const DataBaseDairy = [
         Weight: "450 گرمی",
         priceReduction: "43,000",
         Discount: "15%",
-        Price: "36,550",
+        price: 36550,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -563,7 +563,7 @@ export const DataBaseDairy = [
         Weight: "۱.۸ کیلوگرمی",
         priceReduction: "56,900",
         Discount: "25%",
-        Price: "42,675",
+        price: 42675,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -585,7 +585,7 @@ export const DataBaseDairy = [
         Weight: " ۴۵۰ گرم",
         priceReduction: "43,000",
         Discount: "15%",
-        Price: "36,550",
+        price: 36550,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -607,7 +607,7 @@ export const DataBaseDairy = [
         Weight: "۱.۹ کیلوگرمی",
         priceReduction: "49,900",
         Discount: "25%",
-        Price: "37,425",
+        price: 37425,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -629,7 +629,7 @@ export const DataBaseDairy = [
         Weight: " ۵۰۰ گرم",
         priceReduction: "35,000",
         Discount: "11%",
-        Price: "31,150",
+        price: 31150,
         Brand: "می ماس",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -651,7 +651,7 @@ export const DataBaseDairy = [
         Weight: "۱۲۵ گرمی",
         priceReduction: "12,600",
         Discount: "25%",
-        Price: "9,450",
+        price: 95000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -673,7 +673,7 @@ export const DataBaseDairy = [
         Weight: "۲.۲ کیلوگرمی",
         priceReduction: "85,000",
         Discount: "20%",
-        Price: "68,000",
+        price: 68000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -695,7 +695,7 @@ export const DataBaseDairy = [
         Weight: "۴۰۰ گرم",
         priceReduction: "37,000",
         Discount: "20%",
-        Price: "29,600",
+        price: 29600,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -717,7 +717,7 @@ export const DataBaseDairy = [
         Weight: "۱۲۵ گرم",
         priceReduction: "12,600",
         Discount: "11%",
-        Price: "11,214",
+        price: 11214,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -739,7 +739,7 @@ export const DataBaseDairy = [
         Weight: "۱.۹ کیلوگرمی",
         priceReduction: "55,000",
         Discount: "25%",
-        Price: "41,250",
+        price: 41250,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -761,7 +761,7 @@ export const DataBaseDairy = [
         Weight: "۲۵۰ گرمی",
         priceReduction: "19,000",
         Discount: "11%",
-        Price: "16,910",
+        price: 16910,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -783,7 +783,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "26,900",
         Discount: "18%",
-        Price: "22,058",
+        price: 22058,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -805,7 +805,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "27,900",
         Discount: "20%",
-        Price: "22,320",
+        price: 22320,
         Brand: " هراز ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -827,7 +827,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "26,900",
         Discount: "20%",
-        Price: "21,520",
+        price: 21520,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -849,7 +849,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "27,000",
         Discount: "25%",
-        Price: "20,250",
+        price: 20250,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -871,7 +871,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "29,800",
         Discount: "15%",
-        Price: "25,330",
+        price: 25330,
         Brand: "هراز ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -893,7 +893,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "27,000",
         Discount: "9%",
-        Price: "24,570",
+        price: 24570,
         Brand: " عالیس ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -915,7 +915,7 @@ export const DataBaseDairy = [
         Weight: "۱.۵ لیتری",
         priceReduction: "26,000",
         Discount: "23%",
-        Price: "20,020",
+        price: 20020,
         Brand: "صباح",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -937,7 +937,7 @@ export const DataBaseDairy = [
         Weight: "۹۰۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "10,900",
+        price: 10900,
         Brand: "هراز",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -959,7 +959,7 @@ export const DataBaseDairy = [
         Weight: "۹۰۰ گرمی",
         priceReduction: "",
         Discount: "",
-        Price: "12,000",
+        price: 12000,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -981,7 +981,7 @@ export const DataBaseDairy = [
         Weight: "۹۰۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "10,900",
+        price: 10900,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -1003,7 +1003,7 @@ export const DataBaseDairy = [
         Weight: "۲۷۵ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "7,500",
+        price: 70000,
         Brand: "عالیس",
         Seller: "هایپر استار",
         ProductFeatures: [
