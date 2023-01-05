@@ -5,16 +5,21 @@ import EasyLife from "../../assets/Images/image6.jpg";
 import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import AddIcon from "@mui/icons-material/Add";
+import { Button } from "@mui/material";
 
 type Props = {
   totalCount:number;
   title:string;
   image:string;
   price:number;
-  totalPrice:number
+  totalPrice:number;
+  onClick:any;
+  onclick:any;
+  Discount:any
 };
 
-const ProductBasketCard = ({totalPrice,price,image,title,totalCount}: Props) => {
+const ProductBasketCard = ({totalPrice,price,image,title,totalCount,onClick,onclick,Discount}: Props) => {
+  console.log(onClick)
   return (
     <Grid
       display="flex"
@@ -52,7 +57,7 @@ const ProductBasketCard = ({totalPrice,price,image,title,totalCount}: Props) => 
                 display="flex"
                 justifyContent="center"
               >
-                %13
+                {Discount}
               </Grid>
               <Grid
                 display="flex"
@@ -87,7 +92,7 @@ const ProductBasketCard = ({totalPrice,price,image,title,totalCount}: Props) => 
                 },
               }}
             >
-              <DeleteOutlinedIcon sx={{ width: "20px", height: "20px" }} />
+              <Button onClick={onClick}><DeleteOutlinedIcon sx={{ width: "20px", height: "20px" }} /></Button>
             </Grid>
             <Grid
               display="flex"
@@ -115,11 +120,11 @@ const ProductBasketCard = ({totalPrice,price,image,title,totalCount}: Props) => 
                 cursor: "pointer",
                 ":hover": {
                   bgcolor: "primary.main",
-                  color: "white",
+                  color: "common.white",
                 },
               }}
             >
-              <AddIcon sx={{ width: "20px", height: "20px" }} />
+              <Button onClick={onclick}><AddIcon sx={{ width: "20px", height: "20px" }} /></Button>
             </Grid>
           </Grid>
         </Grid>
