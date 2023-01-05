@@ -4,8 +4,9 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import ProductBasketCard from "../ProductBasketCard/ProductBasketCard";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import { clearCart, decreaseItemFromCart } from "../../redux/Slice/Slice";
+import { addItemToCart, clearCart, decreaseItemFromCart } from "../../redux/Slice/Slice";
 import { useSelector, useDispatch } from "react-redux";
+
 
 type Props = {
     open: boolean;
@@ -17,7 +18,8 @@ const BasketLayout = ({ onClose, open }: Props) => {
     const cartItems = useSelector((state: any) => state.cart);
     const totalCount = cartItems.reduce((prev: any, p: any) => prev + p.count, 0);
     const totalPrice = cartItems.reduce((prev: any, p: any) => prev + p.price * p.count, 0);
-    console.log(totalPrice)
+    // console.log(totalPrice)
+
     return (
         <Drawer onClose={onClose} open={open} anchor={"left"}>
             <Grid sx={{ width: "40rem" }}>
@@ -54,7 +56,7 @@ const BasketLayout = ({ onClose, open }: Props) => {
                                     },
                                 }}
                             >
-                                <Button onClick={()=>dispatch(decreaseItemFromCart())}>
+                                <Button onClick={() => dispatch(decreaseItemFromCart(payload.id))}>
                                     <DeleteOutlinedIcon
 
                                         sx={{
@@ -107,9 +109,9 @@ const BasketLayout = ({ onClose, open }: Props) => {
                     >
                         {cartItems.length ? (
                             <>
-                                {cartItems.map((item: any) => (
-                                    <Grid key={item.id}>
-                                        <ProductBasketCard totalCount={item.totalCount} title={item.title} image={item.image} price={item.price} totalPrice={item.totalPrice} />
+                                {cartItems.map((p: any) => (
+                                    <Grid key={p.id}>
+                                        <ProductBasketCard onclick={() => dispatch(addItemToCart(p))} onClick={() => dispatch(decreaseItemFromCart(p))} totalCount={p.count} title={p.title} image={p.image} price={p.price} totalPrice={p.price * p.count} Discount={p.Discount} />
                                     </Grid>
                                 ))}
                             </>
