@@ -6,19 +6,19 @@ import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import { Button } from "@mui/material";
-
+import RemoveIcon from '@mui/icons-material/Remove';
 type Props = {
-  totalCount:number;
-  title:string;
-  image:string;
-  price:number;
-  totalPrice:number;
-  onClick:any;
-  onclick:any;
-  Discount:any
+  totalCount: number;
+  title: string;
+  image: string;
+  price: number;
+  totalPrice: number;
+  onClick: any;
+  onclick: any;
+  Discount: any
 };
 
-const ProductBasketCard = ({totalPrice,price,image,title,totalCount,onClick,onclick,Discount}: Props) => {
+const ProductBasketCard = ({ totalPrice, price, image, title, totalCount, onClick, onclick, Discount }: Props) => {
   console.log(onClick)
   return (
     <Grid
@@ -72,27 +72,29 @@ const ProductBasketCard = ({totalPrice,price,image,title,totalCount,onClick,oncl
               </Grid>
             </Grid>
             <Grid mt="5px" sx={{ fontSize: "1.3rem" }}>
-            {totalPrice }هزار تومان
+              {totalPrice}هزار تومان
             </Grid>
           </Grid>
           <Grid display="flex">
             <Grid
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              width="32px"
-              height="32px"
-              borderRadius="100%"
-              color="primary.main"
+               display="flex"
+               justifyContent="center"
+               alignItems="center"
+               width="3.2rem"
+               height="3.2rem"
+               borderRadius="50%"
+               border="0.1px solid rgb(233,237,254)"
+               color="primary.main"
+               fontSize="1.2rem"
               sx={{
                 cursor: "pointer",
                 ":hover": {
                   bgcolor: "primary.main",
-                  color: "white",
+                  color: "#fff",
                 },
               }}
             >
-              <Button onClick={onClick}><DeleteOutlinedIcon sx={{ width: "20px", height: "20px" }} /></Button>
+              {totalCount > 1 ? <Button onClick={onClick}><RemoveIcon sx={{ width: "20px", height: "20px" }} /></Button> : <Button onClick={onClick}><DeleteOutlinedIcon sx={{ width: "20px", height: "20px" }} /></Button>}
             </Grid>
             <Grid
               display="flex"
