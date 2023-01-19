@@ -43,14 +43,14 @@ export default function Home() {
                     <DekstopHeader />
                     <Header />
                     <AuctionBanner />
-                    <Slider color={'primary.main'} title={'حراج اول ماه'} x={0}y={10}/>
-                    <MobileSwiper color={'common.white'} bgColor={'primary.main'} title={'زیبایی و سلامت'} display={'flex'} display2={'none'}/>
+                    <Slider color={'primary.main'} title={'حراج اول ماه'} x={0} y={10} />
+                    <MobileSwiper color={'common.white'} bgColor={'primary.main'} title={'نوشیدنی'} display={'flex'} display2={'none'} />
                     <Category position={'relative'} display={'none'} bgcolor={'rgb(255,255,255)'} pb={1} ptop={1} x={0} y={15} />
                     <HealthBanner />
                     <CategoryBanner />
                     <Slider color={'primary.main'} title={'زیبایی و سلامت'} x={11} y={20} />
                     <ShampooBanner />
-                    <Grid display={{ xs: 'flex', sm: 'none' }}mt={-10}>
+                    <Grid display={{ xs: 'flex', sm: 'none' }} mt={-10}>
                         <ProductContainer title={"لبنیات"} dis={"همه"} x={40} y={40} />
                     </Grid>
                     <Grid display={{ xs: 'none', sm: 'flex' }}>
@@ -62,7 +62,7 @@ export default function Home() {
                     <Grid display={{ xs: 'none', sm: 'flex' }}>
                         <ProductContainer title={"خواربار و نان"} dis={"مشاهده بیشتر"} x={85} y={85} />
                     </Grid>
-                    <EggBanner/>
+                    <EggBanner />
                     <DrinkBanner />
                     <Grid display={{ xs: 'flex', sm: 'none' }}>
                         <ProductContainer title={"دستمال و شوینده"} dis={"همه"} x={40} y={40} />
@@ -76,8 +76,8 @@ export default function Home() {
                     <Grid display={{ xs: 'none', sm: 'flex' }}>
                         <ProductContainer title={"تنقلات"} dis={"مشاهده بیشتر"} x={85} y={85} />
                     </Grid>
-                    <SwiperBannerMobile/>
-                    <Banner/>
+                    <SwiperBannerMobile />
+                    <Banner />
                     <Grid display={{ xs: 'flex', sm: 'none' }}>
                         <ProductContainer title={"نوشیدنی"} dis={"همه"} x={40} y={40} />
                     </Grid>
