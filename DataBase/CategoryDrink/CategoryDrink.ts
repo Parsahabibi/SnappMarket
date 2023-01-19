@@ -1,54 +1,54 @@
-import image1 from "../../assets/Images/ImageDataBase/Drink/image1.jpg";
-import image2 from "../../assets/Images/ImageDataBase/Drink/image2.jpg";
-import image3 from "../../assets/Images/ImageDataBase/Drink/image3.jpg";
-import image4 from "../../assets/Images/ImageDataBase/Drink/image4.jpg";
-import image5 from "../../assets/Images/ImageDataBase/Drink/image5.jpg";
-import image6 from "../../assets/Images/ImageDataBase/Drink/image6.jpg";
-import image7 from "../../assets/Images/ImageDataBase/Drink/image7.jpg";
-import image8 from "../../assets/Images/ImageDataBase/Drink/image8.jpg";
-import image9 from "../../assets/Images/ImageDataBase/Drink/image9.jpg";
-import image10 from "../../assets/Images/ImageDataBase/Drink/image10.jpg";
-import image11 from "../../assets/Images/ImageDataBase/Drink/image11.jpg";
-import image12 from "../../assets/Images/ImageDataBase/Drink/image12.jpg";
-import image13 from "../../assets/Images/ImageDataBase/Drink/image13.jpg";
-import image14 from "../../assets/Images/ImageDataBase/Drink/image14.jpg";
-import image15 from "../../assets/Images/ImageDataBase/Drink/image15.jpg";
-import image16 from "../../assets/Images/ImageDataBase/Drink/image16.jpg";
-import image17 from "../../assets/Images/ImageDataBase/Drink/image17.jpg";
-import image18 from "../../assets/Images/ImageDataBase/Drink/image18.jpg";
-import image19 from "../../assets/Images/ImageDataBase/Drink/image19.jpg";
-import image20 from "../../assets/Images/ImageDataBase/Drink/image20.jpg";
-import image21 from "../../assets/Images/ImageDataBase/Drink/image21.jpg";
-import image22 from "../../assets/Images/ImageDataBase/Drink/image22.jpg";
-import image23 from "../../assets/Images/ImageDataBase/Drink/image23.jpg";
-import image24 from "../../assets/Images/ImageDataBase/Drink/image24.jpg";
-import image25 from "../../assets/Images/ImageDataBase/Drink/image25.jpg";
-import image26 from "../../assets/Images/ImageDataBase/Drink/image26.jpg";
-import image27 from "../../assets/Images/ImageDataBase/Drink/image27.jpg";
-import image28 from "../../assets/Images/ImageDataBase/Drink/image28.jpg";
-import image29 from "../../assets/Images/ImageDataBase/Drink/image29.jpg";
-import image30 from "../../assets/Images/ImageDataBase/Drink/image30.jpg";
-import image31 from "../../assets/Images/ImageDataBase/Drink/image31.jpg";
-import image32 from "../../assets/Images/ImageDataBase/Drink/image32.jpg";
-import image33 from "../../assets/Images/ImageDataBase/Drink/image33.jpg";
-import image34 from "../../assets/Images/ImageDataBase/Drink/image34.jpg";
-import image35 from "../../assets/Images/ImageDataBase/Drink/image35.jpg";
-import image36 from "../../assets/Images/ImageDataBase/Drink/image36.jpg";
-import image37 from "../../assets/Images/ImageDataBase/Drink/image37.jpg";
-import image38 from "../../assets/Images/ImageDataBase/Drink/image38.jpg";
-import image39 from "../../assets/Images/ImageDataBase/Drink/image39.jpg";
-import image40 from "../../assets/Images/ImageDataBase/Drink/image40.jpg";
-import image41 from "../../assets/Images/ImageDataBase/Drink/image41.jpg";
-import image42 from "../../assets/Images/ImageDataBase/Drink/image42.jpg";
-import image43 from "../../assets/Images/ImageDataBase/Drink/image43.jpg";
-import image44 from "../../assets/Images/ImageDataBase/Drink/image44.jpg";
+import image1 from "../../assets/Images/ImageDataBase/Drinks/image1.jpg";
+import image2 from "../../assets/Images/ImageDataBase/Drinks/image2.jpg";
+import image3 from "../../assets/Images/ImageDataBase/Drinks/image3.jpg";
+import image4 from "../../assets/Images/ImageDataBase/Drinks/image4.jpg";
+import image5 from "../../assets/Images/ImageDataBase/Drinks/image5.jpg";
+import image6 from "../../assets/Images/ImageDataBase/Drinks/image6.jpg";
+import image7 from "../../assets/Images/ImageDataBase/Drinks/image7.jpg";
+import image8 from "../../assets/Images/ImageDataBase/Drinks/image8.jpg";
+import image9 from "../../assets/Images/ImageDataBase/Drinks/image9.jpg";
+import image10 from "../../assets/Images/ImageDataBase/Drinks/image10.jpg";
+import image11 from "../../assets/Images/ImageDataBase/Drinks/image11.jpg";
+import image12 from "../../assets/Images/ImageDataBase/Drinks/image12.jpg";
+import image13 from "../../assets/Images/ImageDataBase/Drinks/image13.jpg";
+import image14 from "../../assets/Images/ImageDataBase/Drinks/image14.jpg";
+import image15 from "../../assets/Images/ImageDataBase/Drinks/image15.jpg";
+import image16 from "../../assets/Images/ImageDataBase/Drinks/image16.jpg";
+import image17 from "../../assets/Images/ImageDataBase/Drinks/image17.jpg";
+import image18 from "../../assets/Images/ImageDataBase/Drinks/image18.jpg";
+import image19 from "../../assets/Images/ImageDataBase/Drinks/image19.jpg";
+import image20 from "../../assets/Images/ImageDataBase/Drinks/image20.jpg";
+import image21 from "../../assets/Images/ImageDataBase/Drinks/image21.jpg";
+import image22 from "../../assets/Images/ImageDataBase/Drinks/image22.jpg";
+import image23 from "../../assets/Images/ImageDataBase/Drinks/image23.jpg";
+import image24 from "../../assets/Images/ImageDataBase/Drinks/image24.jpg";
+import image25 from "../../assets/Images/ImageDataBase/Drinks/image25.jpg";
+import image26 from "../../assets/Images/ImageDataBase/Drinks/image26.jpg";
+import image27 from "../../assets/Images/ImageDataBase/Drinks/image27.jpg";
+import image28 from "../../assets/Images/ImageDataBase/Drinks/image28.jpg";
+import image29 from "../../assets/Images/ImageDataBase/Drinks/image29.jpg";
+import image30 from "../../assets/Images/ImageDataBase/Drinks/image30.jpg";
+import image31 from "../../assets/Images/ImageDataBase/Drinks/image31.jpg";
+import image32 from "../../assets/Images/ImageDataBase/Drinks/image32.jpg";
+import image33 from "../../assets/Images/ImageDataBase/Drinks/image33.jpg";
+import image34 from "../../assets/Images/ImageDataBase/Drinks/image34.jpg";
+import image35 from "../../assets/Images/ImageDataBase/Drinks/image35.jpg";
+import image36 from "../../assets/Images/ImageDataBase/Drinks/image36.jpg";
+import image37 from "../../assets/Images/ImageDataBase/Drinks/image37.jpg";
+import image38 from "../../assets/Images/ImageDataBase/Drinks/image38.jpg";
+import image39 from "../../assets/Images/ImageDataBase/Drinks/image39.jpg";
+import image40 from "../../assets/Images/ImageDataBase/Drinks/image40.jpg";
+import image41 from "../../assets/Images/ImageDataBase/Drinks/image41.jpg";
+import image42 from "../../assets/Images/ImageDataBase/Drinks/image42.jpg";
+import image43 from "../../assets/Images/ImageDataBase/Drinks/image43.jpg";
+import image44 from "../../assets/Images/ImageDataBase/Drinks/image44.jpg";
 
 export const DataBaseDrink = [
   {
     id: 3,
     name: "نوشیدنی",
     categories: ["نوشابه","ماءالشعیر","آبمیوه","چای و دمنوش",],
-    Drink: [
+    Drinks: [
       {
         id: 1,
         category: "نوشابه",
@@ -57,7 +57,7 @@ export const DataBaseDrink = [
         Weight: " ۱.۵ لیتری",
         priceReduction: "107,060",
         Discount: "11%",
-        Price: "95,284",
+        price: 95284,
         Brand: "کوکاکولا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -79,7 +79,7 @@ export const DataBaseDrink = [
         Weight: " ۱.۵ لیتری",
         priceReduction: "1.7,070",
         Discount: "25%",
-        Price: "80,303",
+        price: 80303,
         Brand: "سون آپ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -101,7 +101,7 @@ export const DataBaseDrink = [
         Weight: "۱.۵ لیتری",
         priceReduction: "107,070",
         Discount: "25%",
-        Price: "80,303",
+        price: 80303,
         Brand: "میرندا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -123,7 +123,7 @@ export const DataBaseDrink = [
         Weight: "۲۵۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "120,000",
+        price: 120000,
         Brand: "کوکاکولا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -145,7 +145,7 @@ export const DataBaseDrink = [
         Weight: "۱.۵ لیتری",
         priceReduction: "17,845",
         Discount: "10%",
-        Price: "16,061",
+        price: 16061,
         Brand: "کوکاکولا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -167,7 +167,7 @@ export const DataBaseDrink = [
         Weight: "  ۱.۵ لیتری",
         priceReduction: "107,060",
         Discount: "6%",
-        Price: "100,637",
+        price: 100637,
         Brand: "فانتا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -189,7 +189,7 @@ export const DataBaseDrink = [
         Weight: "۱.۵ لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "107,060",
+        price: 107060,
         Brand: "فانتا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -209,9 +209,9 @@ export const DataBaseDrink = [
         image: image8,
         title: "نوشابه لیمویی سون آپ ۱.۵ لیتری",
         Weight: "۱.۵ لیتری",
-        priceReduction: "17,845",
+        priceReduction: 17845,
         Discount: "20%",
-        Price: "14,276",
+        price: 14276,
         Brand: "سون آپ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -233,7 +233,7 @@ export const DataBaseDrink = [
         Weight: "۱.۵ لیتری",
         priceReduction: "17,845",
         Discount: "20%",
-        Price: "14,276",
+        price: 14276,
         Brand: "میرندا ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -253,9 +253,9 @@ export const DataBaseDrink = [
         image: image10,
         title: "نوشابه کولا لاکیدو کاله ۱.۵ لیتری",
         Weight: "۱.۵ لیتری",
-        priceReduction: "17,800",
+        priceReduction: 17800,
         Discount: "25%",
-        Price: "13,350",
+        price: 13350,
         Brand: "کاله",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -275,9 +275,9 @@ export const DataBaseDrink = [
         image: image11,
         title: "نوشابه کولا پپسی ۳۰۰ میلی لیتری",
         Weight: "۳۰۰ میلی لیتری",
-        priceReduction: "7,200",
+        priceReduction: 7200,
         Discount: "20%",
-        Price: "5,760",
+        price: 5760,
         Brand: "پپسی",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -297,9 +297,9 @@ export const DataBaseDrink = [
         image: image12,
         title: "ماءالشعیر سیب جوجو ۱ لیتری",
         Weight: "۱ لیتری",
-        priceReduction: "15,650",
+        priceReduction: 15650,
         Discount: "12%",
-        Price: "13,772",
+        price: 13772,
         Brand: "جوجو ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -321,7 +321,7 @@ export const DataBaseDrink = [
         Weight: "۳۳۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "13,300",
+        price: 13300,
         Brand: "جوجو",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -343,7 +343,7 @@ export const DataBaseDrink = [
         Weight: "۳۳۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "13,655",
+        price: 13655,
         Brand: "هی دی",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -365,7 +365,7 @@ export const DataBaseDrink = [
         Weight: "۱ لیتری",
         priceReduction: "15,652",
         Discount: "20%",
-        Price: "12,522",
+        price: 12522,
         Brand: "دلستر",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -385,9 +385,9 @@ export const DataBaseDrink = [
         image: image16,
         title: "ماءالشعیر لیمویی مالت ایچ ۱ لیتر",
         Weight: "۱ لیتر",
-        priceReduction: "19,000",
+        priceReduction: 19000,
         Discount: "19%",
-        Price: "15,390",
+        price: 15390,
         Brand: "سن ایچ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -407,9 +407,9 @@ export const DataBaseDrink = [
         image: image17,
         title: "ماءالشعیر مالت شمس ۱ لیتری",
         Weight: "۱ لیتری",
-        priceReduction: "22,000",
+        priceReduction: 22000,
         Discount: "25%",
-        Price: "16,500",
+        price: 16500,
         Brand: " شمس",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -429,9 +429,9 @@ export const DataBaseDrink = [
         image: image18,
         title: "ماءالشعیر لیمویی جوجو ۱ لیتری",
         Weight: "۱ لیتری",
-        priceReduction: "15,650",
+        priceReduction: 15650,
         Discount: "12%",
-        Price: "13,772",
+        price: 13772,
         Brand: "جوجو",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -451,9 +451,9 @@ export const DataBaseDrink = [
         image: image19,
         title: "ماءالشعیر لیمویی دلستر ۳۳۰ میلی لیتری",
         Weight: "۳۳۰ میلی لیتری",
-        priceReduction: "13,327",
+        priceReduction: 13327,
         Discount: "20%",
-        Price: "10,662",
+        price: 10662,
         Brand: "دلستر",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -473,9 +473,9 @@ export const DataBaseDrink = [
         image: image20,
         title: "ماءالشعیر کلاسیک دلستر ۳۳۰ میلی لیتری",
         Weight: "۳۳۰ میلی لیتری",
-        priceReduction: "13,327",
+        priceReduction: 13327,
         Discount: "20%",
-        Price: "10,662",
+        price: 10662,
         Brand: "دلستر ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -497,7 +497,7 @@ export const DataBaseDrink = [
         Weight: " ۱ لیتری",
         priceReduction: "15,650",
         Discount: "12%",
-        Price: "13,772",
+        price: 13772,
         Brand: "جوجو ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -517,9 +517,9 @@ export const DataBaseDrink = [
         image: image22,
         title: "ماءالشعیر هلو دلستر ۳۳۰ میلی لیتری",
         Weight: " ۳۳۰ میلی لیتری",
-        priceReduction: "13و327",
+        priceReduction:"13,327",
         Discount: "20%",
-        Price: "10و662",
+        price: 10662,
         Brand: "دلستر",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -541,7 +541,7 @@ export const DataBaseDrink = [
         Weight: "۷۵۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "26,000",
+        price: 26000,
         Brand: "سن ایچ ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -563,7 +563,7 @@ export const DataBaseDrink = [
         Weight: " ۲۵۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "18,000",
+        price: 18000,
         Brand: " آیسی مانکی",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -585,7 +585,7 @@ export const DataBaseDrink = [
         Weight: "  ۱ لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "45,000",
+        price: 45000,
         Brand: "سن ایچ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -607,7 +607,7 @@ export const DataBaseDrink = [
         Weight: "۲۵۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "18,000",
+        price: 18000,
         Brand: "آیسی مانکی",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -629,7 +629,7 @@ export const DataBaseDrink = [
         Weight: " ۱ لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "45,000",
+        price: 45000,
         Brand: "سن ایچ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -651,7 +651,7 @@ export const DataBaseDrink = [
         Weight: "۱ لیتری",
         priceReduction: "20,000",
         Discount: "19%",
-        Price: "16,200",
+        price: 16200,
         Brand: "سن ایچ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -673,7 +673,7 @@ export const DataBaseDrink = [
         Weight: "۲۰۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "10,000",
+        price: 10000,
         Brand: "سن ایچ ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -695,7 +695,7 @@ export const DataBaseDrink = [
         Weight: "۱ لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "45,000",
+        price: 45000,
         Brand: "سن ایچ ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -717,7 +717,7 @@ export const DataBaseDrink = [
         Weight: "۷۵۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "48,000",
+        price: 48000,
         Brand: "سان استار",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -739,7 +739,7 @@ export const DataBaseDrink = [
         Weight: "۲۰۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "10,000",
+        price: 10000,
         Brand: "سن ایچ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -761,7 +761,7 @@ export const DataBaseDrink = [
         Weight: "۲۰۰ میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "7,300",
+        price: 7300,
         Brand: "سان تاپ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -783,7 +783,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "26,900",
       //   Discount: "18%",
-      //   Price: "22,058",
+      //   price: "22,058",
       //   Brand: "هراز",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -805,7 +805,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "27,900",
       //   Discount: "20%",
-      //   Price: "22,320",
+      //   price: "22,320",
       //   Brand: " هراز ",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -827,7 +827,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "26,900",
       //   Discount: "20%",
-      //   Price: "21,520",
+      //   price: "21,520",
       //   Brand: "هراز",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -849,7 +849,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "27,000",
       //   Discount: "25%",
-      //   Price: "20,250",
+      //   price: "20,250",
       //   Brand: "کاله",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -871,7 +871,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "29,800",
       //   Discount: "15%",
-      //   Price: "25,330",
+      //   price: "25,330",
       //   Brand: "هراز ",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -893,7 +893,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "27,000",
       //   Discount: "9%",
-      //   Price: "24,570",
+      //   price: "24,570",
       //   Brand: " عالیس ",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -915,7 +915,7 @@ export const DataBaseDrink = [
       //   Weight: "۱.۵ لیتری",
       //   priceReduction: "26,000",
       //   Discount: "23%",
-      //   Price: "20,020",
+      //   price: "20,020",
       //   Brand: "صباح",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -937,7 +937,7 @@ export const DataBaseDrink = [
       //   Weight: "۹۰۰ میلی لیتری",
       //   priceReduction: "",
       //   Discount: "",
-      //   Price: "10,900",
+      //   price: "10,900",
       //   Brand: "هراز",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -959,7 +959,7 @@ export const DataBaseDrink = [
       //   Weight: "۹۰۰ گرمی",
       //   priceReduction: "",
       //   Discount: "",
-      //   Price: "12,000",
+      //   price: "12,000",
       //   Brand: "کاله",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -981,7 +981,7 @@ export const DataBaseDrink = [
       //   Weight: "۹۰۰ میلی لیتری",
       //   priceReduction: "",
       //   Discount: "",
-      //   Price: "10,900",
+      //   price: "10,900",
       //   Brand: "کاله",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
@@ -1003,7 +1003,7 @@ export const DataBaseDrink = [
       //   Weight: "۲۷۵ میلی لیتری",
       //   priceReduction: "",
       //   Discount: "",
-      //   Price: "7,500",
+      //   price: "7,500",
       //   Brand: "عالیس",
       //   Seller: "هایپر استار",
       //   ProductFeatures: [
