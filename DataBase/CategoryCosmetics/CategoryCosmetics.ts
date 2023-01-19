@@ -7,7 +7,7 @@ import image6 from "../../assets/Images/ImageDataBase/Cosmetics/image6.jpg";
 import image7 from "../../assets/Images/ImageDataBase/Cosmetics/image7.jpg";
 import image8 from "../../assets/Images/ImageDataBase/Cosmetics/image8.jpg";
 import image9 from "../../assets/Images/ImageDataBase/Cosmetics/image9.jpg";
-import image10 from "../../assets/Images/ImageDataBase/Cosmetics/image10.jpg";
+import image10 from "../../assets/Images/ImageDataBase/Cosmetics/image45.jpg";
 import image11 from "../../assets/Images/ImageDataBase/Cosmetics/image11.jpg";
 import image12 from "../../assets/Images/ImageDataBase/Cosmetics/image12.jpg";
 import image13 from "../../assets/Images/ImageDataBase/Cosmetics/image13.jpg";
@@ -65,7 +65,7 @@ export const DataBaseCosmetics = [
         Weight: "4.5گرم ",
         priceReduction: "49,034",
         Discount: "20%",
-        Price: "39,و228",
+        price: 39228,
         Brand: "هیدرودرم",
         Seller: "هایپراستار",
         ProductFeatures: [
@@ -87,7 +87,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "2,721",
+        price: 2721,
         Brand: "زینگر",
         Seller: "هایپراستار",
         ProductFeatures: [{}],
@@ -100,7 +100,7 @@ export const DataBaseCosmetics = [
         Weight: "100 گرم",
         priceReduction: "",
         Discount: "",
-        Price: "8,880",
+        price: 8880,
         Brand: "گل پر",
         Seller: "هایپراستار",
         ProductFeatures: [
@@ -122,7 +122,7 @@ export const DataBaseCosmetics = [
         Weight: "45 عدد",
         priceReduction: "128,000",
         Discount: "66%",
-        Price: "43,520",
+        price: 43520,
         Brand: "کامان",
         Seller: "هایپراستار",
         ProductFeatures: [
@@ -144,7 +144,7 @@ export const DataBaseCosmetics = [
         Weight: "10عدد ",
         priceReduction: "",
         Discount: "",
-        Price: "13,800",
+        price: 13800,
         Brand: "یونی لد",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -166,7 +166,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "111,943",
+        price: 111943,
         Brand: "بدون برند",
         Seller: "هایپر استار",
         ProductFeatures: [{}],
@@ -179,7 +179,7 @@ export const DataBaseCosmetics = [
         Weight: "3عدد ",
         priceReduction: "",
         Discount: "",
-        Price: "64,000",
+        price: 64000,
         Brand: "بدون برند",
         Seller: "هایپراستار",
         ProductFeatures: [{}],
@@ -192,7 +192,7 @@ export const DataBaseCosmetics = [
         Weight: "40 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "3,971",
+        price: 3971,
         Brand: "سیترای",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -214,7 +214,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "132,000",
+        price: 132000,
         Brand: "زینگر",
         Seller: "هایپر استار",
         ProductFeatures: [{}],
@@ -227,7 +227,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "148,000",
+        price: 148000,
         Brand: "زینگر",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -249,7 +249,7 @@ export const DataBaseCosmetics = [
         Weight: "45عددی",
         priceReduction: "57,900",
         Discount: "20%",
-        Price: "46,320",
+        price: 46320,
         Brand: "نینو",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -271,7 +271,7 @@ export const DataBaseCosmetics = [
         Weight: "50 میلی لیتری",
         priceReduction: "82,615",
         Discount: "14%",
-        Price: "71,049",
+        price: 71049,
         Brand: "آردن",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -293,7 +293,7 @@ export const DataBaseCosmetics = [
         Weight: "50 میلی لیتری",
         priceReduction: "82,346",
         Discount: "20%",
-        Price: "65,877",
+        price: 65877,
         Brand: "آردن",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -315,7 +315,7 @@ export const DataBaseCosmetics = [
         Weight: "100 میلی لیتری",
         priceReduction: "38,000",
         Discount: "30%",
-        Price: "26,600",
+        price: 26600,
         Brand: "رینوزیت",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -337,7 +337,7 @@ export const DataBaseCosmetics = [
         Weight: "20 میلی لیتری",
         priceReduction: "157,119",
         Discount: "20%",
-        Price: "125,696",
+        price: 125696,
         Brand: "آردن",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -359,7 +359,7 @@ export const DataBaseCosmetics = [
         Weight: "250 میلی لیتری",
         priceReduction: "79,000",
         Discount: "15%",
-        Price: "67,150",
+        price: 67150,
         Brand: "سی گل",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -381,7 +381,7 @@ export const DataBaseCosmetics = [
         Weight: "40 میلی لیتری",
         priceReduction: "88,000",
         Discount: "15%",
-        Price: "74,800",
+        price: 74800,
         Brand: "سیزه",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -403,7 +403,7 @@ export const DataBaseCosmetics = [
         Weight: "50 میلی لیتری",
         priceReduction: "73,894",
         Discount: "14%",
-        Price: "63,549",
+        price: 63549,
         Brand: "آردن",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -425,7 +425,7 @@ export const DataBaseCosmetics = [
         Weight: "40 میلی لیتر",
         priceReduction: "160,000",
         Discount: "15%",
-        Price: "136,000",
+        price: 136000,
         Brand: "سینره",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -447,7 +447,7 @@ export const DataBaseCosmetics = [
         Weight: "250 میلی لیتر",
         priceReduction: "59,900",
         Discount: "40%",
-        Price: "35,940",
+        price: 35940,
         Brand: "سوپکس",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -469,7 +469,7 @@ export const DataBaseCosmetics = [
         Weight: "80 عددی",
         priceReduction: "43,500",
         Discount: "3%",
-        Price: "42,195",
+        price: 42195,
         Brand: "سون کویین",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -491,7 +491,7 @@ export const DataBaseCosmetics = [
         Weight: "50 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "150,000",
+        price: 150000,
         Brand: "کاسمکولوژی",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -513,7 +513,7 @@ export const DataBaseCosmetics = [
         Weight: "400 میلی لیتر",
         priceReduction: "121,000",
         Discount: "25%",
-        Price: "90,750",
+        price: 90750,
         Brand: "کامان",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -535,7 +535,7 @@ export const DataBaseCosmetics = [
         Weight: "60 میلی لیتری",
         priceReduction: "115,000",
         Discount: "2%",
-        Price: "112,700",
+        price: 112700,
         Brand: "سینره",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -557,7 +557,7 @@ export const DataBaseCosmetics = [
         Weight: "250 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "66,100",
+        price: 66100,
         Brand: "بیول",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -580,7 +580,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "44,000",
+        price: 44000,
         Brand: "سی گل",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -602,7 +602,7 @@ export const DataBaseCosmetics = [
         Weight: "500 میلی لیتر",
         priceReduction: "155,000",
         Discount: "19%",
-        Price: "125,550",
+        price: 125500,
         Brand: "کریستال",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -624,7 +624,7 @@ export const DataBaseCosmetics = [
         Weight: "350 میلی لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "90,040",
+        price: 90040,
         Brand: "لیمپیو",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -647,7 +647,7 @@ export const DataBaseCosmetics = [
         Weight: "500 میلی لیتر",
         priceReduction: "155,000",
         Discount: "19%",
-        Price: "125,550",
+        price: 125550,
         Brand: "کریستال",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -669,7 +669,7 @@ export const DataBaseCosmetics = [
         Weight: "80 میلی لیتری",
         priceReduction: "135,400",
         Discount: "25%",
-        Price: "101,550",
+        price: 101550,
         Brand: "بیول",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -691,7 +691,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "72,600",
+        price: 72600,
         Brand: "تاپ شاپ",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -713,7 +713,7 @@ export const DataBaseCosmetics = [
         Weight: "250 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "99,000",
+        price: 99000,
         Brand: "بیول",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -735,7 +735,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتری",
         priceReduction: "90,646",
         Discount: "19%",
-        Price: "73,424",
+        price: 73424,
         Brand: "فولیکا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -757,7 +757,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "58,700",
+        price:58700,
         Brand: "تاپ شاپ",
         Seller: "هایپر استارت",
         ProductFeatures: [
@@ -779,7 +779,7 @@ export const DataBaseCosmetics = [
         Weight: "60 میلی لیتر",
         priceReduction: "75,000",
         Discount: "19%",
-        Price: "60,750",
+        price: 60750,
         Brand: "سی گل",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -801,7 +801,7 @@ export const DataBaseCosmetics = [
         Weight: "150 میلی لیتری",
         priceReduction: "45,000",
         Discount: "15%",
-        Price: "38,250",
+        price: 38250,
         Brand: "سینره",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -823,7 +823,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "66,015",
+        price: 66015,
         Brand: "بیول",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -845,7 +845,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتری",
         priceReduction: "",
         Discount: "",
-        Price: "70,000",
+        price: 70000,
         Brand: "کریستال",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -867,7 +867,7 @@ export const DataBaseCosmetics = [
         Weight: "6 میلی لیتری",
         priceReduction: "107,000",
         Discount: "19%",
-        Price: "86,670",
+        price: 86070,
         Brand: "سینره",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -889,7 +889,7 @@ export const DataBaseCosmetics = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "363,000",
+        price: 363000,
         Brand: "رز",
         Seller: "هایپر استار",
         ProductFeatures: [{}],
@@ -902,7 +902,7 @@ export const DataBaseCosmetics = [
         Weight: "250 میلی لیتری",
         priceReduction: "45,100",
         Discount: "10%",
-        Price: "40,590",
+        price: 40590,
         Brand: "بیول",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -924,7 +924,7 @@ export const DataBaseCosmetics = [
         Weight: "150 میلی لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "52,877",
+        price: 52877,
         Brand: "فولیکا",
         Seller: "هایپر استار",
         ProductFeatures: [
@@ -946,7 +946,7 @@ export const DataBaseCosmetics = [
         Weight: "200 میلی لیتر",
         priceReduction: "",
         Discount: "",
-        Price: "68,250",
+        price: 68250,
         Brand: "",
         Seller: "",
         ProductFeatures: [
@@ -968,7 +968,7 @@ export const DataBaseCosmetics = [
         Weight: "50 میلی لیتر",
         priceReduction: "100,000",
         Discount: "25%",
-        Price: "75,000",
+        price:75000,
         Brand: "زی فام",
         Seller: "هایپر استار",
         ProductFeatures: [
