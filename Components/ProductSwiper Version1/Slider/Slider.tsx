@@ -26,10 +26,11 @@ type Props = {
   title: string,
   color: string,
   x: number,
-  y: number
+  y: number,
+  Data:{}|[]|any
 }
 
-const Slider = ({ color, title, x, y }: Props) => {
+const Slider = ({ color, title, x, y,Data }: Props) => {
   const dispatch = useDispatch();
   const styling = {
     backgroundImage: `url('${backgroundImage.src}')`,
@@ -94,7 +95,7 @@ const Slider = ({ color, title, x, y }: Props) => {
                 </Link>
               </Grid>
             </SwiperSlide>
-            {DataBaseDairy[0].Dairy.filter(item => (item.Discount != '')).slice(x, y).map(slide => (
+            {Data.filter((item):any => (item.Discount != '')).slice(x, y).map((slide):any => (
               <SwiperSlide key={slide.id}>
                 <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} price={slide.price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={slide.id} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} {...slide} onClick={()=>dispatch(addItemToCart(slide))} /></Grid>
               </SwiperSlide>
