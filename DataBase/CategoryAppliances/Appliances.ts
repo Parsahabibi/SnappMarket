@@ -15,7 +15,7 @@ import image14 from "../../assets/Images/ImageDataBase/Appliances/image14.jpg";
 import image15 from "../../assets/Images/ImageDataBase/Appliances/image15.jpg";
 import image16 from "../../assets/Images/ImageDataBase/Appliances/image16.jpg";
 import image17 from "../../assets/Images/ImageDataBase/Appliances/image17.jpg";
-import image18 from "../../assets/Images/ImageDataBase/Appliances/image18.jpg";
+import image18 from "../../assets/Images/ImageDataBase/Appliances/image17.jpg";
 import image19 from "../../assets/Images/ImageDataBase/Appliances/image19.jpg";
 import image20 from "../../assets/Images/ImageDataBase/Appliances/image20.jpg";
 import image21 from "../../assets/Images/ImageDataBase/Appliances/image21.jpg";
@@ -55,7 +55,7 @@ export const DataBaseAppliances = [
         Weight: " 2 عددی",
         priceReduction: "12,900",
         Discount: "%15",
-        Price: "10,965",
+        price: 10965,
         Brand: "کملیون",
       },
       {
@@ -66,7 +66,7 @@ export const DataBaseAppliances = [
         Weight: " 2 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "27,900",
+        price: 27900,
         Brand: "کملیون",
       },
       {
@@ -77,7 +77,7 @@ export const DataBaseAppliances = [
         Weight: " 2 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "12,900",
+        price: 12900,
         Brand: "کملیون",
       },
       {
@@ -88,7 +88,7 @@ export const DataBaseAppliances = [
         Weight: " 2 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "27,900",
+        price: "27,900",
         Brand: "کملیون",
       },
       {
@@ -99,7 +99,7 @@ export const DataBaseAppliances = [
         Weight: " 12 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "12,900",
+        price: 12900,
         Brand: "کملیون",
       },
       {
@@ -110,7 +110,7 @@ export const DataBaseAppliances = [
         Weight: " 4 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "20,900",
+        price: 20900,
         Brand: "کملیون",
       },
       {
@@ -121,7 +121,7 @@ export const DataBaseAppliances = [
         Weight: " 4 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "20,900",
+        price:20900,
         Brand: "کملیون",
       },
       {
@@ -132,7 +132,7 @@ export const DataBaseAppliances = [
         Weight: " 8 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "42,900",
+        price: 42900,
         Brand: "کملیون",
       },
       {
@@ -143,7 +143,7 @@ export const DataBaseAppliances = [
         Weight: " 4 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "48,900",
+        price: 48900,
         Brand: "کملیون",
       },
       {
@@ -154,7 +154,7 @@ export const DataBaseAppliances = [
         Weight: " 4 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "48,900",
+        price: 48900,
         Brand: "کملیون",
       },
       {
@@ -165,7 +165,7 @@ export const DataBaseAppliances = [
         Weight: " 4 عددی",
         priceReduction: "",
         Discount: "",
-        Price: "48,900",
+        price: 46900,
         Brand: "کملیون",
       },
       {
@@ -176,7 +176,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "43,900",
         Discount: "11%",
-        Price: "39,071",
+        price: 39071,
         Brand: "سیدکو",
       },
       {
@@ -187,7 +187,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "36,900",
         Discount: "11%",
-        Price: "32,841",
+        price: 32841,
         Brand: "سیدکو",
       },
       {
@@ -198,7 +198,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "38,500",
         Discount: "12%",
-        Price: "33,880",
+        price: 33880,
         Brand: "سیدکو",
       },
       {
@@ -209,7 +209,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "59,900",
         Discount: "11%",
-        Price: "53,311",
+        price: 53331,
         Brand: "سیدکو",
       },
       {
@@ -220,7 +220,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "38,900",
+        price: 38900,
         Brand: "سیدکو",
       },
       {
@@ -231,7 +231,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "59,900",
+        price: 59900,
         Brand: "سیدکو",
       },
       {
@@ -242,7 +242,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "81,900",
+        price: 81900,
         Brand: "سیدکو",
       },
       {
@@ -253,7 +253,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "79,600",
+        price: 79600,
         Brand: "سیدکو",
       },
       {
@@ -264,7 +264,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "44,500",
         Discount: "3%",
-        Price: "43,165",
+        price: 43165,
         Brand: "سیدکو",
       },
       {
@@ -275,7 +275,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "44,000",
+        price:44000,
         Brand: "سیدکو",
       },
       {
@@ -286,7 +286,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "44,000",
+        price: 40000,
         Brand: "سیدکو",
       },
       {
@@ -298,7 +298,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "24,750,000",
         Discount: "7%",
-        Price: "23,017,500",
+        price: 23017500,
         ProductFeatures: [
           {
             id: 43,
@@ -326,7 +326,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "22,015,000",
+        price: 22015000,
         ProductFeatures: [
           {
             id: 44,
@@ -354,7 +354,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "25,385,000",
+        price: 25385000,
         ProductFeatures: [
           {
             id: 45,
@@ -382,7 +382,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "31,500,000",
+        price: 31500000,
         ProductFeatures: [
           {
             id: 46,
@@ -410,7 +410,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "13,750,000",
+        price: 13750000,
         ProductFeatures: [
           {
             id: 47,
@@ -439,7 +439,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "15,230,000",
+        price: 15230000,
         ProductFeatures: [
           {
             id: 48,
@@ -468,7 +468,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "15,230,000",
+        price: 12550000,
         ProductFeatures: [
           {
             id: 49,
@@ -497,7 +497,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "20,955,000",
+        price: 206550000,
         ProductFeatures: [
           {
             id: 50,
@@ -526,7 +526,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "25,990,000",
+        price: 25900000,
         ProductFeatures: [
           {
             id: 51,
@@ -554,7 +554,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "3,359,000",
+        price: 3600000,
         ProductFeatures: [
           {
             id: 52,
@@ -582,7 +582,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "13,080,000",
+        price: 13900000,
         ProductFeatures: [
           {
             id: 53,
@@ -610,7 +610,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,360,000",
+        price: 17400000,
         ProductFeatures: [
           {
             id: 54,
@@ -638,7 +638,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,542,000",
+        price: 18000000,
         ProductFeatures: [
           {
             id: 55,
@@ -666,7 +666,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,530,000",
+        price: 17530000,
         ProductFeatures: [
           {
             id: 56,
@@ -694,7 +694,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,800,000",
+        price: 17800000,
         ProductFeatures: [
           {
             id: 57,
@@ -722,7 +722,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,410,000",
+        price: 17410000,
         ProductFeatures: [
           {
             id: 58,
@@ -750,7 +750,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "17,690,000",
+        price: 17690000,
         ProductFeatures: [
           {
             id: 59,
@@ -778,7 +778,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "13,859,000",
+        price: 13856000,
         ProductFeatures: [
           {
             id: 60,
@@ -806,7 +806,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "13,330,000",
+        price: 13330000,
         ProductFeatures: [
           {
             id: 61,
@@ -834,7 +834,7 @@ export const DataBaseAppliances = [
         Weight: "",
         priceReduction: "",
         Discount: "",
-        Price: "3,084,000",
+        price: 3084000,
         ProductFeatures: [
           {
             id: 62,
