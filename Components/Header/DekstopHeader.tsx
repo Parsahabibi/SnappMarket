@@ -29,6 +29,11 @@ const DekstopHeader = (props: Props) => {
       padding="20px"
       height="22rem"
       style={styled}
+      position={'fixed'}
+      right={'0px'}
+      top={'0px'}
+      left={'0px'}
+      zIndex={1000}
     >
       <Container maxWidth="lg">
         <Grid
