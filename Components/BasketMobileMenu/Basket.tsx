@@ -10,6 +10,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Divider from '@mui/material/Divider';
 import { addItemToCart, clearCart, decreaseItemFromCart } from "../../redux/Slice/Slice";
 import { useSelector, useDispatch } from "react-redux";
+import ModalDeleteBasket from '../BasketModal/ModalDeleteBasket';
 type Props = {}
 
 const Basket = (props: Props) => {
@@ -36,7 +37,19 @@ const Basket = (props: Props) => {
     // }, []);
 
     const [count, setCount] = useState(1)
+    const handleDeleteBasket = () => {
+        dispatch(clearCart())
 
+    }
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpenModal(!openModal);
+    };
+
+    const handleClose = () => {
+        setOpenModal(!openModal);
+    };
     return (
         <Grid bgcolor={"white"} position={'relative'}>
             <Grid position={'fixed'} right={0} left={0}>
@@ -45,8 +58,9 @@ const Basket = (props: Props) => {
                         <ArrowForwardIcon sx={{ width: 24, height: 24, }} />
                     </Link>
                     <Typography variant='h3' sx={{ display: "flex", alignItems: "center", pr: 2.5, pl: 2.5 }}>سبد خرید من ({totalCount} کالا)</Typography>
-                    <Typography sx={{ cursor: 'pointer' }} onClick={() => dispatch(clearCart())}>
+                    <Typography sx={{ cursor: 'pointer' }}  onClick={handleClickOpen}>
                         <DeleteForeverOutlinedIcon sx={{ width: 24, height: 24 }} />
+                        <ModalDeleteBasket open={openModal} handleClose={handleClose} handleDeleteBasket={handleDeleteBasket} totalCount={totalCount}/>
                     </Typography>
 
                 </Grid>

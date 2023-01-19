@@ -6,6 +6,7 @@ import ProductBasketCard from "../ProductBasketCard/ProductBasketCard";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import { addItemToCart, clearCart, decreaseItemFromCart } from "../../redux/Slice/Slice";
 import { useSelector, useDispatch } from "react-redux";
+import ModalDeleteBasket from "./ModalDeleteBasket";
 
 
 type Props = {
@@ -18,8 +19,19 @@ const BasketLayout = ({ onClose, open }: Props) => {
     const cartItems = useSelector((state: any) => state.cart);
     const totalCount = cartItems.reduce((prev: any, p: any) => prev + p.count, 0);
     const totalPrice = cartItems.reduce((prev: any, p: any) => prev + p.price * p.count, 0);
-    // console.log(totalPrice)
+    const handleDeleteBasket = () => {
+        dispatch(clearCart())
 
+    }
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpenModal(!openModal);
+    };
+
+    const handleClose = () => {
+        setOpenModal(!openModal);
+    };
     return (
         <Drawer onClose={onClose} open={open} anchor={"left"}>
             <Grid sx={{ width: "40rem" }}>
@@ -39,7 +51,7 @@ const BasketLayout = ({ onClose, open }: Props) => {
                         >
                             سبد خرید من {totalCount} کالا
                             <ButtonBase
-                                onClick={() => dispatch(clearCart())}
+                                onClick={handleClickOpen}
                                 sx={{
                                     display: "flex",
                                     alignSelf: "center",
@@ -56,7 +68,8 @@ const BasketLayout = ({ onClose, open }: Props) => {
                                     },
                                 }}
                             >
-                                <Button onClick={() => dispatch(decreaseItemFromCart(payload.id))}>
+                                <ModalDeleteBasket totalCount={totalCount} open={openModal} handleClose={handleClose} handleDeleteBasket={handleDeleteBasket}/>
+                                <Button>
                                     <DeleteOutlinedIcon
 
                                         sx={{
