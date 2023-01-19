@@ -10,8 +10,8 @@ type Props = {
   image: any | string;
   Weight: number | string;
   Discount: number | string;
-  price: string|number;
-  priceReduction: number | string |undefined;
+  price: string | number;
+  priceReduction: number | string | undefined;
   width: string;
   titleBtn: string | any;
   widthImage: number;
@@ -20,8 +20,8 @@ type Props = {
   left: string;
   hoverStyle: {};
   normalStyle: {};
-  id:number|any;
-  onClick:any|number
+  id: number | any;
+  onClick: any | number
 };
 
 const CardProductSwiper = ({
@@ -41,7 +41,7 @@ const CardProductSwiper = ({
   hoverStyle,
   onClick
 }: Props) => {
- 
+
   const [hover, setHover] = useState(false);
   const dispatch = useDispatch();
   const onMouseEnter = () => {
@@ -96,30 +96,34 @@ const CardProductSwiper = ({
           </Typography>
         </Grid>
         <Typography variant="subtitle1" fontSize={"1.2rem"}>
-          {Weight}
+          {Weight === ''? <Grid height={15}></Grid>:<Typography>{Weight}</Typography>}
         </Typography>
         <Grid display="flex" alignItems={"center"} gap={1} py={1}>
-          <Typography
-            sx={{
-              bgcolor: "secondary.main",
-              color: "common.white",
-              borderRadius: 1,
-              p: "2px 4px",
-              fontSize: "1.4rem",
-            }}
-          >
-            {Discount}
-          </Typography>
-          <Typography
-            sx={{
-              textDecoration: "line-through",
-              fontSize: "1.2rem",
-              fontWeight: "500",
-            }}
-            color={"info.main"}
-          >
-            {priceReduction}
-          </Typography>
+          {Discount === '' ? <Grid height={25}></Grid> :
+            <Typography
+              sx={{
+                bgcolor: "secondary.main",
+                color: "common.white",
+                borderRadius: 1,
+                p: "2px 4px",
+                fontSize: "1.4rem",
+              }}
+            >
+              {Discount}
+            </Typography>}
+          <Grid>
+            {Discount === '' ? <Grid></Grid> :
+              <Typography
+                sx={{
+                  textDecoration: "line-through",
+                  fontSize: "1.2rem",
+                  fontWeight: "500",
+                }}
+                color={"info.main"}
+              >
+                {priceReduction}
+              </Typography>}
+          </Grid>
         </Grid>
         <Grid display="flex" justifyContent={"space-between"}>
           <Typography
@@ -137,10 +141,10 @@ const CardProductSwiper = ({
                 title={titleBtn}
                 bgcolor={""}
                 value={""}
-                icon={""} left={""} bottom={""} onClick={()=>dispatch(onClick)} />
+                icon={""} left={""} bottom={""} onClick={() => dispatch(onClick)} />
             </Grid>
             <Button
-            onClick={()=>dispatch(onClick)}
+              onClick={() => dispatch(onClick)}
               sx={{
                 fontWeight: 400,
                 cursor: "pointer",
