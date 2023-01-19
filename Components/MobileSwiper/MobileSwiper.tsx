@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useRef } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
+import { addItemToCart } from '../../redux/Slice/Slice';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -16,6 +16,8 @@ import Link from 'next/link';
 import CardProductSwiper from "../ProductSwiper Version1/CardProductSwiper/CardProductSwiper";
 import { dataMobileCardCategory } from "../../Data/DataMobileCategoryCard/DataMobileCategoryCard";
 import { dataCard } from "../../Data/DataCardProductSwiperV1/DataCardProductSwiperV1";
+import { useDispatch } from "react-redux";
+import { DataBaseDrink } from "../../DataBase/CategoryDrink/CategoryDrink";
 
 // install Virtual module
 SwiperCore.use([Virtual, Navigation, Pagination]);
@@ -29,6 +31,8 @@ export interface Props {
 }
 
 const MobileSwiper = ({ bgColor, title, display, color,display2 }: Props) => {
+  const dispatch = useDispatch();
+
     const hoverStyle = {
 
     }
@@ -85,14 +89,14 @@ const MobileSwiper = ({ bgColor, title, display, color,display2 }: Props) => {
                     ref={swiperRef}
                     virtual
                 >
-                    {dataMobileCardCategory.slice(7, 15).map(item => (
+                    {DataBaseDrink[0].Drinks.filter(item => (item.Discount != '')).slice(7, 15).map(item => (
                         <SwiperSlide key={item.id}>
                             <Grid marginY={1} marginX={1} ml={'1rem'} style={{ maxWidth: '30px', display: 'flex' }}>
-                                <CardProductSwiper bottom={'5%'} left={'5%'} heightImage={100} widthImage={100}
-                                    titleBtn={<AddIcon />} width='135px' title={item.title}
-                                    image={item.image} Price={item.Price} Weight={item.Weight}
-                                    priceReduction={item.priceReduction} Discount={item.Discount}
-                                    id={0} hoverStyle={hoverStyle} normalStyle={normalStyle} />
+                                <CardProductSwiper bottom={'80%'} left={'5%'} heightImage={100} widthImage={100}
+                                titleBtn={<AddIcon />} width='135px' title={item.title}
+                                image={item.image} price={item.price} Weight={item.Weight}
+                                priceReduction={item.priceReduction} Discount={item.Discount}
+                                id={0} hoverStyle={hoverStyle} normalStyle={normalStyle} {...item} onClick={()=>dispatch(addItemToCart(item))} />
 
                             </Grid>
                         </SwiperSlide>
@@ -125,7 +129,7 @@ const MobileSwiper = ({ bgColor, title, display, color,display2 }: Props) => {
                 >
                      {dataCard.map(slide => (
               <SwiperSlide key={slide.id}>
-                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} Price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} /></Grid>
+                <Grid my={1} display={'flex'} alignItems={'flex-start'}> <CardProductSwiper title={slide.title} image={slide.image} price={slide.Price} Weight={slide.Weight} priceReduction={slide.priceReduction} Discount={slide.Discount} id={0} width={'23.4rem'} titleBtn={'افزودن به سبد'} widthImage={170} heightImage={170} bottom={'15%'} left={'50%'} hoverStyle={hoverStyle} normalStyle={normalStyle} {...slide} onClick={()=>dispatch(addItemToCart(slide))} /></Grid>
               </SwiperSlide>
             ))}
 
