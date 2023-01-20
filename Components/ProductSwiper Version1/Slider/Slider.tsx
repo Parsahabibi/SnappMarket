@@ -102,7 +102,7 @@ const Slider = ({ color, title, x, y,Data }: Props) => {
             ))}
             <SwiperSlide >
               <Link href={'/categories'}>
-                <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'32.1rem'} display={'flex'} sx={{ borderRadius: '5px', cursor: 'pointer' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
+                <Typography width={'95%'} bgcolor={'common.white'} mt={1} height={'31.5rem'} display={'flex'} sx={{ borderRadius: '5px', cursor: 'pointer' }} justifyContent={'center'} alignItems={'center'} color={'secondary.main'} >{'مشاهده بیشتر'}</Typography>
               </Link>
             </SwiperSlide>
           </Swiper>
