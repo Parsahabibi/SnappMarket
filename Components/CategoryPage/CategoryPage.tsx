@@ -8,7 +8,7 @@ type Props = {};
 
 const CategoryPage = (props: Props) => {
   return (
-    <Grid display={{ xs: 'none', sm: 'flex' }} flexDirection={'column'}>
+    <Grid mt={30} display={{ xs: 'none', sm: 'flex' }} flexDirection={'column'}>
       <Grid display={"flex"} justifyContent={"space-around"} item xs={12}>
         <Grid width={"25%"} position="relative">
           <SidebarCategoryPage />

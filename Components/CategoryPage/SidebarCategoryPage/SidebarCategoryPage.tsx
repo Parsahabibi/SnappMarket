@@ -10,7 +10,7 @@ const SidebarCategoryPage = (props: Props) => {
       display="flex"
       flexDirection="column"
       position="sticky"
-      top="0"
+      top="24.5rem"
       height="auto"
     >
       <FilterCategory />
