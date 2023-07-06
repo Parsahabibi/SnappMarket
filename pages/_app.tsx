@@ -16,6 +16,7 @@ export default function App({Component, pageProps}: AppProps) {
                 <ThemeProvider theme={Theme}>
                     <Component {...pageProps} />
                     <CssBaseLine/>
+                    
                 </ThemeProvider>
             </PersistGate>
         </Provider>
